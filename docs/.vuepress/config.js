@@ -14,8 +14,8 @@ module.exports = {
     }
   },
   themeConfig: {
-    repo: 'https://gitlab.cc-asp.fraunhofer.de/diva',
-    repoLabel: "GitLab",
+    repo: 'https://github.com/FraunhoferISST/diva',
+    repoLabel: "GitHub",
     editLinks: false,
     editLinkText: '',
     lastUpdated: false,
