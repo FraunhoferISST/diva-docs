@@ -14,7 +14,7 @@ Schema-drive development engages us to first clearly define the data model and t
 However, the most important benefit comes from the fact that thanks to the JSON Schema tools we were able to implement 
 fully automated validation of the data in our services. 
 
-You will find all the schemas in the [`schemata/json-schema/`](https://gitlab.cc-asp.fraunhofer.de/diva/drm/-/tree/master/schemata/json-schema) directory.
+You will find all the schemas in the [`core/schemata/json-schema/`](https://github.com/FraunhoferISST/diva/blob/master/core/schemata/json-schema) directory.
 The directory is structured like follows:
 
 + `artifacts` - common reusable definitions
@@ -40,7 +40,7 @@ With the bottom-to-top approach, we include the subordinated schemas in the mast
 Basically, for example, the resource schema contains all the schemas definition of the sub-resources. 
 The advantages of this way of constructing the schemas are especially evident in automated validation.
 
-We will take a [Resource](https://gitlab.cc-asp.fraunhofer.de/diva/drm/-/tree/master/schemata/json-schema/resource) example to demonstrate the approach:
+We will take a [Resource](https://github.com/FraunhoferISST/diva/blob/master/core/schemata/json-schema/resource/resource.json) example to demonstrate the approach:
 
 ```json
 {

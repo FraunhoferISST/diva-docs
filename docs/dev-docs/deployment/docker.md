@@ -12,7 +12,7 @@ Also note that deployment with docker is not suitable for Production. Nonetheles
 environment to quickly spin up most of the components like Kafka, Gateway and other services.
 :::
 
-All things related to docker are located in the [`docker/`](https://gitlab.cc-asp.fraunhofer.de/diva/drm/-/tree/master/docker)
+All things related to docker are located in the [`docker/`](https://github.com/FraunhoferISST/diva/blob/master/docker)
 directory. Here we have prepared a script which you can use to directly boot 
 all components, with default environment setup. If you need a quick start,
 just execute the following commands:
@@ -69,10 +69,7 @@ In general, you will find multiple Docker Compose files that have the following 
 
 + [`docker-compose.faas.yml`](https://github.com/FraunhoferISST/diva/blob/master/docker/docker-compose.faas.yml) - FaaS services configuration useful only
 for local development to build and test images
-
-+ [`docker-compose.override.yml`](https://gitlab.cc-asp.fraunhofer.de/diva/drm/-/blob/master/docker/docker-compose.override.yml) - useful for [local development](#local-development), if
-  the image is not already in the container registry. The services `image` filed points in this file to local source directory
-
+  
 + [`docker-compose.airflow.yml`](https://github.com/FraunhoferISST/diva/blob/master/docker/docker-compose.airflow.yml) - Airflow configuration
 
 + [`docker-compose.profiling.yml`](https://github.com/FraunhoferISST/diva/blob/master/docker/docker-compose.profiling.yml) - external profiling services
@@ -225,7 +222,7 @@ docker-compose push base-python3
 
 As mentioned earlier, docker is not optimal for production deployment. However, it could be useful to quickly deliver to the world a 
 DIVA instance in an experimental environment. For this purpose, we provide an example reverse proxy configuration in 
-[`docker/proxy/`](https://gitlab.cc-asp.fraunhofer.de/diva/drm/-/tree/master/docker/proxy/) that allows 
+[`docker/proxy/`](https://github.com/FraunhoferISST/diva/blob/master/docker/proxy/) that allows 
 to easily expose DIVA with Docker Compose.
 
 This simple nginx reverse proxy configuration serves as an example of how Diva could be exposed to the world. The proxy

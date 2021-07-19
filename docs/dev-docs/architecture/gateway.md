@@ -24,6 +24,6 @@ is required by most services through the OpenAPI specification.
 
 ## Configuration
 
-The Gateway is configured through the [kong.yml](https://gitlab.cc-asp.fraunhofer.de/diva/drm/-/blob/master/kong-gateway/kong.yml)
+The Gateway is configured through the [kong.yml](https://github.com/FraunhoferISST/diva/blob/master/core/kong-gateway/kong.yml)
 Here you can regulate access to the service and enable or disable authentication for some routes or methods.
 To understand the configuration, we recommend reading the documentation on Kong

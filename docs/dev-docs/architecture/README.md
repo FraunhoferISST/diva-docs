@@ -34,7 +34,7 @@ Management Services API's with fully automated data validation process.
 We have two levels of hierarchy in our model, with the Entity on top. Entity is a logical high level 
 abstraction that represents common properties of the underlying entities and does **not** exists physically. The entities
 [User](../../about/README.md#user), [Resource](../../about/README.md#resource), [Asset](../../about/README.md#asset) etc. inherit properties like `id`, `entityType` and `created` from Entity.
-You will find schemas for all entities in [`schemata/`](https://gitlab.cc-asp.fraunhofer.de/diva/drm/-/tree/master/schemata) directory.
+You will find schemas for all entities in [`core/schemata/`](https://github.com/FraunhoferISST/diva/tree/master/core/schemata) directory.
 
 Although the entities are not coupled with each other, they can have relations. All entities are created 
 by an actor (User or Service). An Asset can group multiple Resources, Asset and Resources can have multiple Reviews and History entries.
@@ -81,17 +81,16 @@ a valid JWT have access to the backend through the API Gateway.
 
 **Schema registry**
 
-[Schema Registry](https://gitlab.cc-asp.fraunhofer.de/diva/drm/-/tree/master/services/schema-registry) 
+[Schema Registry](https://github.com/FraunhoferISST/diva/tree/master/core/services/schema-registry) 
 holds and exposes all schemas through the API endpoint, including [JSON Schemas](./json-schemas.md) and
 AsyncAPI Schemas. All interested services contact the Schema Registry and load the required schemas once at start time. 
 
 **Messaging**
 
 We use Kafka as the event bus for the asynchronous communications between the components. The messages structure is regulated
-through the [AsyncAPI schema](https://gitlab.cc-asp.fraunhofer.de/diva/drm/-/blob/master/schemata/asyncapi/asyncapi.yml). The management Service
+through the [AsyncAPI schema](https://github.com/FraunhoferISST/diva/tree/master/core/schemata/asyncapi/asyncapi.yml). The management Service
 produces events indicating data changes on corresponding topics. To guaranty consistency and integrity of the exchanged data,
-the services validate the messages against [AsyncAPI schema](https://gitlab.cc-asp.fraunhofer.de/diva/drm/-/blob/master/schemata/asyncapi/asyncapi.yml) 
-while consuming and producing them. 
+the services validate the messages against AsyncAPI schema while consuming and producing them. 
 
 **Data Storage**
 
@@ -100,8 +99,9 @@ metadata storage for all kind of DIVA entities (users, resources, assets etc.) a
 MongoDB instance should be used to reach consistency across other external or internal components. 
 
 Relevant entities' metadata is replicated 
-to the Elasticsearch instance through the [Elasticsearch Connector]() to provide high performance full text search capabilities.
-This ES instance is used by the [Search Assistant](https://gitlab.cc-asp.fraunhofer.de/diva/drm/-/tree/master/services/search-assistant) Service.
+to the Elasticsearch instance through the [Elasticsearch Connector](https://github.com/FraunhoferISST/diva/tree/master/core/services/elasticsearch-connector)
+to provide high performance full text search capabilities.
+This ES instance is used by the [Search Assistant](https://github.com/FraunhoferISST/diva/tree/master/core/services/search-assistant) Service.
 MinIO acts as the efficient object storage, where we only persist files imported via [Web client](./web-client.md) UI from 
 the user's device.
 
@@ -120,10 +120,10 @@ data is stored in corresponding collections in MongoDB.
 
 | Title   | Description                            | Dependencies |
 |---------|----------------------------------------|--------------|
-| [Resource Management](https://gitlab.cc-asp.fraunhofer.de/diva/drm/-/tree/master/services/resource-management)  | Responsible for managing the metadata about [resources](#resources) | Kafka, MongoDB, Schema Registry |
-| [User Management](https://gitlab.cc-asp.fraunhofer.de/diva/drm/-/tree/master/services/user-management)  | Responsible for [users](#users) data management and authentication | Kafka, MongoDB, Schema Registry |
-| [Asset Management](https://gitlab.cc-asp.fraunhofer.de/diva/drm/-/tree/master/services/asset-management)  | Responsible for managing the metadata about [assets](#assets) | Kafka, MongoDB, Schema Registry |
-| [Review Management](https://gitlab.cc-asp.fraunhofer.de/diva/drm/-/tree/master/services/review-management)  | Responsible for [reviews](#users) management | Kafka, MongoDB, Schema Registry |
+| [Resource Management](https://github.com/FraunhoferISST/diva/tree/master/core/services/resource-management)  | Responsible for managing the metadata about [resources](../../about/README.md#resource) | Kafka, MongoDB, Schema Registry |
+| [User Management](https://github.com/FraunhoferISST/diva/tree/master/core/services/user-management)  | Responsible for [users](../../about/README.md#user) data management and authentication | Kafka, MongoDB, Schema Registry |
+| [Asset Management](https://github.com/FraunhoferISST/diva/tree/master/core/services/asset-management)  | Responsible for managing the metadata about [assets](../../about/README.md#asset) | Kafka, MongoDB, Schema Registry |
+| [Review Management](https://github.com/FraunhoferISST/diva/tree/master/core/services/review-management)  | Responsible for [reviews](../../about/README.md#review) management | Kafka, MongoDB, Schema Registry |
 
 **Assistant Services**
 
@@ -132,29 +132,29 @@ read access to the entities.
 
 | Title   | Description                            | Dependencies |
 |---------|----------------------------------------|--------------|
-| [Analytics Assistant](https://gitlab.cc-asp.fraunhofer.de/diva/drm/-/tree/master/services/analytics-assistant)  | provides statistical data about catalog entities | Elasticsearch |
-| [Profiling Assistant](https://gitlab.cc-asp.fraunhofer.de/diva/drm/-/tree/master/services/profiling-assistant)  | Responsible for [profiling workflows](#pw) execution triggering| MongoDB, Airflow |
-| [History Assistant](https://gitlab.cc-asp.fraunhofer.de/diva/drm/-/tree/master/services/history-assistant)  | Provides a human readable representation of the entities [history](#history)  | MongoDB, Schema Registry |
-| [Search Assistant](https://gitlab.cc-asp.fraunhofer.de/diva/drm/-/tree/master/services/search-assistant)  | Provides preselected entities search API | Elasticsearch |
+| [Analytics Assistant](https://github.com/FraunhoferISST/diva/tree/master/core/services/analytics-assistant)  | provides statistical data about catalog entities | Elasticsearch |
+| [Profiling Assistant](https://github.com/FraunhoferISST/diva/tree/master/core/services/profiling-assistant)  | Responsible for [profiling workflows](../../about/README.md#resource) execution triggering| MongoDB, Airflow |
+| [History Assistant](https://github.com/FraunhoferISST/diva/tree/master/core/services/history-assistant)  | Provides a human readable representation of the entities [history](../../about/README.md#resource)  | MongoDB, Schema Registry |
+| [Search Assistant](https://github.com/FraunhoferISST/diva/tree/master/core/services/search-assistant)  | Provides preselected entities search API | Elasticsearch |
 
 **Adapter Services**
 
 The Adapter Services are special services designed to connect and import data from external sources. They encapsulate 
-the connection logic, load the data, transform it into a DIVA compliant representation and store the newly created [Resources](#resource) in the system. 
+the connection logic, load the data, transform it into a DIVA compliant representation and store the newly created [Resources](../../about/README.md#resource) in the system. 
 In special cases an Adapter Service can be implemented to export a DIVA Resource to an external system.
 The creation of new resources is done by using the Resource Management Service, direct access to the data storage is only allowed in the read mode.
 
 | Title   | Description                            | Dependencies |
 |---------|----------------------------------------|--------------|
-| [DSC Adapter](https://gitlab.cc-asp.fraunhofer.de/diva/drm/-/tree/master/services/adapter-services/diva-lake-adapter)  | Adapter for the [Data Space Connector](https://github.com/International-Data-Spaces-Association/DataspaceConnector) | Kafka, MongoDb, Resource Management, DSC Instance |
-| [DIVA Lake Adapter](https://gitlab.cc-asp.fraunhofer.de/diva/drm/-/tree/master/services/adapter-services/dsc-adapter)  | esponsible for uploading files into our Diva Lake (MinIO) | MinIO, Resource Management |
-| [UrbanPulse Adapter](https://gitlab.cc-asp.fraunhofer.de/diva/drm/-/tree/master/services/adapter-services/urban-pulse-adapter)  | Adapter for the UrbanPulse instance| UrbanPulse, Resource Management|
+| [DSC Adapter](https://github.com/FraunhoferISST/diva/tree/master/core/services/adapter-services/diva-lake-adapter)  | Adapter for the [Data Space Connector](https://github.com/International-Data-Spaces-Association/DataspaceConnector) | Kafka, MongoDb, Resource Management, DSC Instance |
+| [DIVA Lake Adapter](https://github.com/FraunhoferISST/diva/tree/master/core/services/adapter-services/dsc-adapter)  | Responsible for uploading files into our Diva Lake (MinIO) | MinIO, Resource Management |
+| [UrbanPulse Adapter](https://github.com/FraunhoferISST/diva/tree/master/core/services/adapter-services/urban-pulse-adapter)  | Adapter for the UrbanPulse instance| UrbanPulse, Resource Management|
 
 
 **Workflow engine**
 
 Apache Airflow is a great open-source workflow tool tha we use to execute and orchestrate profiling tasks.
-[Profiling Assistant](https://gitlab.cc-asp.fraunhofer.de/diva/drm/-/tree/master/services/analytics-assistant) ist our 
+[Profiling Assistant](https://github.com/FraunhoferISST/diva/tree/master/core/services/analytics-assistant) is our 
 wrapper service for Airflow API that triggers the workflow execution.
 
 **FaaS**

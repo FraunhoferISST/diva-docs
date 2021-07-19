@@ -15,12 +15,12 @@ and relations between components. Finally, you will know how to deploy DIVA with
 
 <div class="flex">
   <div class="w-1/2 pr-2">
-    <CardLink link="/dev-docs/" title="Deploy DIVA">
+    <CardLink link="/dev-docs/deployment/" title="Deploy DIVA">
       Learn how you can get DIVA ready for deployment with Docker, Kubernetes or for development on your local machine.
     </CardLink>
   </div>
   <div class="w-1/2 pl-2">
-    <CardLink class="fill" link="/dev-docs/" title="Meet our architecture">
+    <CardLink class="fill" link="/dev-docs/architecture/" title="Meet our architecture">
       Discover the core principles under the hood of the DIVA architecture 
     </CardLink>
   </div>

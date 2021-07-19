@@ -54,17 +54,17 @@ pipeline and stored in GitHub container registry. To be able to pull or push the
 [Authenticating to the Container registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry#authenticating-to-the-container-registry).
 
 ```bash
-docker login https://docker.pkg.github.com -u USERNAME --password YOUR_TOKEN
+docker login ghcr.io/fraunhoferisst/diva -u USERNAME --password YOUR_TOKEN
 ```
 
 After successful authentication you will be able to pull or update the images:
 
 ```bash
 # pull an image
-docker pull ghcr.io/OWNER/web-client:19.0.0
+docker pull ghcr.io/fraunhoferisst/diva/web-client:19.0.0
 
 # push an image
-docker push ghcr.io/OWNER/web-client:19.0.0
+docker push ghcr.io/fraunhoferisst/diva/web-client:19.0.0
 ```
 
 To learn how to manage and contenerize service with docker please refer to our detailed guide for 

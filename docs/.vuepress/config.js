@@ -58,17 +58,17 @@ module.exports = {
                 '/dev-docs/architecture/README.md',
                 '/dev-docs/architecture/json-schemas.md',
                 '/dev-docs/architecture/rest-api.md',
-                '/dev-docs/architecture/services.md',
+                // '/dev-docs/architecture/services.md',
                 '/dev-docs/architecture/gateway.md',
                 '/dev-docs/architecture/web-client.md',
                 '/dev-docs/architecture/tooling.md',
               ]
             },
-            '/dev-docs/releases.md',
-            '/dev-docs/ci-cd.md',
+            // '/dev-docs/releases.md',
+            // '/dev-docs/ci-cd.md',
           ]
         },
-        {
+        /*{
           text: 'Contribution',
           collapsable: false,
           isGroup: true,
@@ -77,7 +77,7 @@ module.exports = {
             '/dev-docs/contribution/issues-and-prs.md',
             '/dev-docs/contribution/code-styles.md',
             ]
-        },
+        },*/
       ],
       '/user-docs/': [
         {
@@ -90,8 +90,8 @@ module.exports = {
             '/user-docs/home.md',
             '/user-docs/search.md',
             '/user-docs/user.md',
-            '/user-docs/dashboard.md',
-            {
+            // '/user-docs/dashboard.md',
+            /*{
               text: 'Import and creat',
               isGroup: true,
               link: '/user-docs/create/README.md',
@@ -99,7 +99,7 @@ module.exports = {
                 '/user-docs/create/create-resource.md',
                 '/user-docs/create/create-asset.md',
               ]
-            },
+            },*/
           ]
         },
       ],

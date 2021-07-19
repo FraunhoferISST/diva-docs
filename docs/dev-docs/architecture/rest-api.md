@@ -172,19 +172,10 @@ Instead, the individual entities must be queried from the corresponding service 
 keep the individual APIs as simple as possible and decoupled from each other, but introduces a certain amount of 
 additional effort for the clients.
 
-GraphQL is a meeting point for all our APIs and this is where we can realize the compositions of the individual 
-entities. Let's see how we could implement the example with the bookmarks and list users bookmarked resources:
-
 The concrete implementation can 
 vary, we do not mention how the bookmarks are stored, they can be persisted as part of the user object in an array or 
 individually in an external collection. But through this endpoint we emphasize that bookmarks are not independent 
-resources and are strongly related to the user. The example includes other API rules defined here and assumes that the 
-individual APIs are consistent and meet the requirements of the entire specification. Similarly, we can work the other 
-way around to find all users who have stored an entity:
-
-::: warning WIP
-Currently no concept for n:m relations!
-:::
+resources and are strongly related to the user.
 
 ### Flat Resources Structure
 Try to keep the structure of all resources as flat as possible. This will help us to keep the individual documents in 
