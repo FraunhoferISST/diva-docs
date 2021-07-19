@@ -41,7 +41,7 @@ DIVA components allocate many default ports like 80, 3000 or 27017. To avoid pot
 be configured in `docker/.env` file.
 :::
 
-All available configuration possibilities are listed in the [`docker/.env.default`](https://gitlab.cc-asp.fraunhofer.de/diva/drm/-/blob/master/docker/.env.default) file.
+All available configuration possibilities are listed in the [`docker/.env.default`](https://github.com/FraunhoferISST/diva/blob/master/docker/.env.default) file.
 This ENV template is used by default to boot the system with `up_core.sh` script. To override default settings, create 
 a `.env` file in the `docker/` directory and copy the contents of `.env.default` to it. There you can adjust the deployment 
 and e.g. change the port of the web application as follows:
@@ -52,29 +52,174 @@ WEB_CLIENT_PORT=90
 
 ## Container and images management
 
-Now we will briefly go through the lifecycle of containers and images, from configuration to deployment in the container registry. 
+Now we will briefly go through the lifecycle of containers and images, from configuration to deployment in the container registry.
+This chapter is interesting for those who want to actively participate in the development of the system or manage
+containers and images in a more granular way. 
+
+::: warning Environment variables
+Make sure to create `.env` file on your machine like described in [Environment variables](#environment-variables)
+:::
+
+We will take a brief look at how to build, push, and pull images in general.
 Of course, this chapter only concerns the software we have created and containerized, external images like Kafka or Elasticsearch are not of interest to us.
 In general, you will find multiple Docker Compose files that have the following responsibilities:
 
-+ [`docker-compose.yml`](https://gitlab.cc-asp.fraunhofer.de/diva/drm/-/blob/master/docker/docker-compose.yml) - the most 
-  interesting config file as it contains the core of the DIVA
++ [`docker-compose.yml`](https://github.com/FraunhoferISST/diva/blob/master/docker/docker-compose.yml) - the most 
+  interesting config file as it is a heart of the DIVA
+
++ [`docker-compose.faas.yml`](https://github.com/FraunhoferISST/diva/blob/master/docker/docker-compose.faas.yml) - FaaS services configuration useful only
+for local development to build and test images
 
 + [`docker-compose.override.yml`](https://gitlab.cc-asp.fraunhofer.de/diva/drm/-/blob/master/docker/docker-compose.override.yml) - useful for [local development](#local-development), if
   the image is not already in the container registry. The services `image` filed points in this file to local source directory
 
-+ [`docker-compose.airflow.yml`](https://gitlab.cc-asp.fraunhofer.de/diva/drm/-/blob/master/docker/docker-compose.airflow.yml) - Airflow configuration
++ [`docker-compose.airflow.yml`](https://github.com/FraunhoferISST/diva/blob/master/docker/docker-compose.airflow.yml) - Airflow configuration
 
-+ [`docker-compose.profiling.yml`](https://gitlab.cc-asp.fraunhofer.de/diva/drm/-/blob/master/docker/docker-compose.profiling.yml) - external profiling services
++ [`docker-compose.profiling.yml`](https://github.com/FraunhoferISST/diva/blob/master/docker/docker-compose.profiling.yml) - external profiling services
   used in our profiling workflows
 
-+ [`docker-compose.monitoring.yml`](https://gitlab.cc-asp.fraunhofer.de/diva/drm/-/blob/master/docker/docker-compose.monitoring.yml) - several helpful monitoring
++ [`docker-compose.monitoring.yml`](https://github.com/FraunhoferISST/diva/blob/master/docker/docker-compose.monitoring.yml) - several helpful monitoring
  and debugging tools like Kibana that are not deployed within the system core
 
-+ [`docker-compose.dsc.yml`](https://gitlab.cc-asp.fraunhofer.de/diva/drm/-/blob/master/docker/docker-compose.dsc.yml) - DSC Service, for demonstration purpose only
++ [`docker-compose.dsc.yml`](https://github.com/FraunhoferISST/diva/blob/master/docker/docker-compose.dsc.yml) - DSC Service, for demonstration purpose only
 
-::: warning
-WIP!
-:::
+The folder also contains other Docker Compose configurations that have `.build` in the suffix. These can override the 
+normal configurations to build an image locally explicitly from source. The difference with the `.build` configurations 
+is that the services are executed in the context of the corresponding folder.
+Generally, the configuration can be overwritten as follows:
+
+```sh
+docker-compose -f docker-compose.build.yml build resource-management
+```
+
+### Manage microservices
+
+All microservices and their dependencies are defined in `docker-compose.yml`. You will work with this file the most.
+
+**Pull image**
+
+Simply run the command:
+
+```sh
+docker-compose pull <service_name>
+# for example
+docker-compose pull user-management
+```
+
+**Build image**
+
+To explicitly build the image from source, specify the path to the build `.yml` :
+
+```sh
+docker-compose f docker-compose.yml -f docker-compose.build.yml build <service_name>
+# for example
+docker-compose f docker-compose.yml -f docker-compose.build.yml build user-management
+```
+
+**Push image**
+
+Push image to container registry:
+
+```sh
+docker-compose push <service_name>
+# for example
+docker-compose push user-management
+```
+
+### Manage FaaS
+
+All FaaS are defined in `docker-compose.faas.yml`.
+
+**Pull image**
+
+```sh
+docker-compose -f docker-compose.faas.yml pull <service_name>
+# for example
+docker-compose -f docker-compose.faas.yml pull text-keywords-extractor
+```
+
+**Build image**
+
+To explicitly build the image from source, specify the path to the build `.yml` :
+
+```sh
+docker-compose -f docker-compose.faas.yml -f docker-compose.faas.build.yml build <service_name>
+# for example
+docker-compose -f docker-compose.faas.yml -f docker-compose.faas.build.yml build text-keywords-extractor
+```
+
+**Push image**
+
+Push image to container registry:
+
+```sh
+docker-compose -f docker-compose.faas.yml push text-keywords-extractor
+# for example
+docker-compose -f docker-compose.faas.yml push text-keywords-extractor
+```
+
+### Manage Airflow
+
+We use a slightly customized image for Airflow. The definitions for Airflow
+are specified in`docker-compose.airflow.yml`.
+
+**Pull image**
+
+```sh
+docker pull ghcr.io/fraunhoferisst/diva/airflow:<version>
+```
+
+**Build image**
+
+To explicitly build the image from source, specify the path to the build `.yml` :
+
+```sh
+docker-compose -f docker-compose.airflow.build.yml build airflow
+```
+
+**Push image**
+
+Push image to container registry:
+
+```sh
+docker-compose -f docker-compose.airflow.yml push airflow
+```
+
+### Manage base images
+
+We have several images that serve as the basis for our FaaS. They are located in `./base-images`, so first
+change the working directory:
+
+```sh
+cd base-images
+```
+**Pull image**
+
+```sh
+docker-compose pull <service_name>
+# for example
+docker-compose pull base-python3
+```
+
+**Build image**
+
+To explicitly build the image from source, specify the path to the build `.yml` :
+
+```sh
+docker-compose build <service_name>
+# for example
+docker-compose build base-python3
+```
+
+**Push image**
+
+Push image to container registry:
+
+```sh
+docker-compose push <service_name>
+# for example
+docker-compose push base-python3
+```
 
 ## Deployment with nginx reverse proxy
 

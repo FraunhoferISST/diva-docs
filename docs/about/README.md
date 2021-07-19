@@ -12,6 +12,10 @@ day and we try our best to tackle data management challenges in companies.
 We also use this tool as a playground for our students, where they can work out topics for their bachelor or master 
 thesis. Even the PhD students profit from this tool as a platform for their doctoral thesis.
 
+<div class="flex-col sm:flex-row flex justify-center">
+    <img class="rounded-lg w-full sm:w-1/2" :src="$withBase('/assets/diva_client.png')" alt="DIVA login">
+</div>
+
 
 ## Main Features
 
