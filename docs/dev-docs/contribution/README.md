@@ -30,14 +30,14 @@ architecture.
 DIVA is expandable be design. Currently, we support uploading files via the browser and 
 integration with UrbanPulse and DSC. This is a point where DIVA can potentially grow very quickly and we plan to 
 integrate with more data sources such as databases or HTTP API's. If you want to integrate another data source like 
-MongoDB, Dropbox or something specific with DIVA, that's a case for a new Adapter Service. A guide for the development 
+MongoDB, Dropbox or something specific with DIVA, that's a case for a new [Adapter Service](../architecture/README.md#diva-core). A guide for the development 
 of the Adapter services will be available soon.
 
 ## Improving a core
 
-DIVA's Core is responsible for key management functionality and must be maintained consistently and with proper competence. 
+DIVA's [core](../architecture/README.md#diva-core) is responsible for key management functionality and must be maintained consistently and with proper competence. 
 Here everything focuses on data persistence, messaging, data model and management of internal entities through the strict API.
-Our guide for Node.js core services development will help you to get started.
+Our guide for Node.js [core services]() (coming soon) development will help you to get started.
 
 ## Extending profiling workflows
 
@@ -46,7 +46,7 @@ compact functions for such analyses. If you have an idea for our profiling workf
 
 ## Clients family
 
-Modern Vue.js based SPA is a part of DIVA and provides an interface for accessing all functionality of the system. 
+Modern Vue.js based SPA [client](../architecture/web-client.md) is a part of DIVA and provides an interface for accessing all functionality of the system. 
 We are continuously improving our web client, adding new features and improving the UX. Here is plenty of room for your feedback and help.
 
 Since we currently only have a web-based client, it would be nice to be able to offer the great and native usability of working 
