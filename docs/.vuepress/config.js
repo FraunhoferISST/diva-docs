@@ -68,16 +68,17 @@ module.exports = {
             // '/dev-docs/ci-cd.md',
           ]
         },
-        /*{
+        {
           text: 'Contribution',
           collapsable: false,
           isGroup: true,
           children: [
             '/dev-docs/contribution/README.md',
             '/dev-docs/contribution/issues-and-prs.md',
+            '/dev-docs/contribution/commits.md',
             '/dev-docs/contribution/code-styles.md',
             ]
-        },*/
+        },
       ],
       '/user-docs/': [
         {

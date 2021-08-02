@@ -38,7 +38,7 @@ Compose. Therefore, we propose the following workflow for local development:
    ```
 4. Now you can execute the service locally
    ```bash
-   cd services/resource-management
+   cd code/services/resource-management
    npm i
    npm run dev
    ```
