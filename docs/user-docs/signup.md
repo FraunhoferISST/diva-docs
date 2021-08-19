@@ -1,46 +1,50 @@
 # Sign up / Sign in
 
-Users without an account or users who are not logged in will land on the login page. If you have an account, 
-you can log in with your credentials, otherwise create a new account.
+Identity management is provided by [Keycloak](https://www.keycloak.org/).
+Whether you can register and log in depends on the Keycloak configuration.
+To get more details regarding this topic, please contact your administrator.
 
-::: warning Attention!
-Currently, there is no mechanism to prevent an unwanted signup. Everyone who has access to the DIVA web client can sign up.
+## Sing Up
+
+::: warning
+Depending on your Keycloak configuration, this option may not be available.
 :::
 
-## Sign up
+Perform the following steps to access Keycloak and sign up:
 
-Perform the following steps to create a new account:
-
-1. Navigate to the DIVA web application
-2. On the login page click the button "create new account" in the right card 
-2. Enter name, email and password
-3. Click "create new account" button
+1. Navigate to the DIVA web application (you can ask your administrator to provide you with the URL)
+2. On the login page click the button "Create new account". You will be redirected to our trusted Keycloak page.
+3. Enter your email address and password
+4. Click "Register" button
 
 <div class="flex-col sm:flex-row flex justify-center">
     <img class="rounded-lg w-full sm:w-1/2" :src="$withBase('/assets/screenshots/login.png')" alt="DIVA login">
-    <img class="rounded-lg w-full sm:w-1/2" :src="$withBase('/assets/screenshots/signup.png')" width="50%"  alt="DIVA Register">
+    <img class="rounded-lg w-full sm:w-1/2" :src="$withBase('/assets/screenshots/keycloak/keycloak_register.png')" width="50%" alt="DIVA Register">
 </div>
-
-::: warning Attention!
-Currently, there is no **password** double check. Make sure to have your **password** typed in correctly.
-:::
 
 After successful registration you will be logged in automatically.
 
-## Sign in
+## Sign In
 
-Perform the following steps to log in onto the DIVA application with email and password:
+Perform the following steps to log in onto the DIVA application with your email and password:
 
 1. Navigate to the DIVA web application
-2. Enter your email and password
-3. Click "Login" button 
+2. On the login page click the button "Login". You will be redirected to our trusted Keycloak page.
+3. Enter your email and password
+4. Click "Login" button
 
-<div class="flex justify-center">
-    <img class="rounded-lg" :src="$withBase('/assets/screenshots/login.png')" width="700" alt="DIVA login">
+<div class="flex-col sm:flex-row flex justify-center">
+    <img class="rounded-lg w-full sm:w-1/2" :src="$withBase('/assets/screenshots/login.png')" alt="DIVA login">
+    <img class="rounded-lg w-full sm:w-1/2" :src="$withBase('/assets/screenshots/keycloak/keycloak_signin.png')" width="50%" alt="DIVA Login">
 </div>
 
-After successful login you will be automatically redirected to the [home](./home.md) page. 
+After successful login you will be automatically redirected to the [Home Page](./home.md).
+
+::: tip Change your Username
+Initially, your username will be set to your email.
+If you want a better experience, please change your username by visiting the [User Details Page](./user.md).
+:::
 
 ::: tip Upload a profile image
-Visit a [user details](./user.md) page to provide your account with further information or upload a profile image
+Visit the [User Details Page](./user.md) to provide your account with further information or upload a profile picture.
 :::
