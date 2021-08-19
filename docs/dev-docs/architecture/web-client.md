@@ -62,4 +62,4 @@ No need to change this variable, if you use the Keycloak instance shipped with D
 You can read more about how to use environment variables in the [Docker guide](../deployment/docker.html#environment-variables).
 Please note that. For the client to successfully and securely connect to Keycloak in the production environment and authenticate 
 in Kong, Kong and Keycloak must be configured correctly as well. At this point we refer the reader to the corresponding 
-[Kong]() and [Keycloak]() guides.
+[Kong Gateway](./gateway.md) and [Keycloak]() guides.
