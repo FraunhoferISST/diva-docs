@@ -51,9 +51,9 @@ Keycloak generated token depends on how [Keycloak is configured](./keycloak.md) 
 Keycloak instance is located on `https://my.kc.domain.com`, you have to adjust the following everywhere authentication is required:
 ```yml
 plugins:
-      - name: jwt-keycloak
-        config:
-          allowed_iss: [ "https://my.kc.domain.com/auth/realms/<realm-name>" ]
+  - name: jwt-keycloak
+    config:
+      allowed_iss: [ "https://my.kc.domain.com/auth/realms/<realm-name>" ]
 ```
 And again, `realm-name` can very depending on how your Keycloak is configured to be used in DIVA. In the default configuration 
 shipped with DIVA the realm name is `diva-kc-realm`. In general the `iss` URL origin part should correspond to with 
