@@ -27,8 +27,8 @@ The client communicates with the backend through Kong API Gateway and requires t
 You can read more about authentication flow in the [API Gateway](./gateway.md) section.
 
 Once loaded, the client performs the identity check through Keycloak and initializes the user data in the browser, if user exists
-and is already logged in, or navigates to login page. There anyone can create an account in the app and get access to the functionalities of the system. 
-So the developers have to register first as well.
+and is already logged in, or navigates to login page. There the authorization to the system is managed by [Keycloak](./keycloak.md).
+To get access to the functionalities of the system the developers have to register first as well.
 
 For the web client, in order to be able to execute identity verification and access API Gateway, corresponding information
 should be configured.
@@ -50,7 +50,7 @@ through the environment variables. The client uses the `VUE_APP_API_GATEWAY_URL`
 The variable can be set either in the local development environment directly when running with NPM or in Docker container. You can
 learn more about how to deploy web-client and the Gateway with reverse proxy in our [Docker guide](../deployment/docker.html#deployment-with-nginx-reverse-proxy).
 
-+ `VUE_APP_KEYCLOAK_URL`  <Badge type="tip" text="v2.2.0" vertical="middle" /> - the client must also know how to reach the Keycloak instance for user authentication. 
++ `VUE_APP_KEYCLOAK_URL`  <Badge type="tip" text="v2.2.0" vertical="middle" /> - the client must also know how to reach the Keycloak instance for user authorization. 
 Here the same applies, in production the variable must be set correctly so that the client can communicate with Keycloak. 
 Probably you will have your own managed Keycloak instance running. If not, we give an example on how to deploy Keycloak behind reverse
 proxy in our [Docker guide](../deployment/docker.html#deployment-with-nginx-reverse-proxy). 
@@ -60,6 +60,6 @@ use for user authentication. We ship DIVA with already preconfigured Keycloak in
 No need to change this variable, if you use the Keycloak instance shipped with DIVA as is and do not have own managed Keycloak.
 
 You can read more about how to use environment variables in the [Docker guide](../deployment/docker.html#environment-variables).
-Please note that. For the client to successfully and securely connect to Keycloak in the production environment and authenticate 
+Please note that for the client to successfully and securely connect to Keycloak in the production environment and authenticate 
 in Kong, Kong and Keycloak must be configured correctly as well. At this point we refer the reader to the corresponding 
 [Kong Gateway](./gateway.md) and [Keycloak]() guides.

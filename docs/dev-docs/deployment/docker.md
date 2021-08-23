@@ -57,6 +57,11 @@ should change all passwords and usernames and e.g. change the port of the web ap
 WEB_CLIENT_PORT=90
 ```
 
+In the development environment, the configuration in `.env.default` and other templates are quite sufficient and must work immediately.
+However, in order to make DIVA production-ready in Docker, we need to do some tweaks. Just follow the configuration guides for
+[Keycloak](../architecture/keycloak.md#configuration), [API Gateway](../architecture/gateway.md#configuration) and [Web-Client](../architecture/web-client.md#configuration), in that order.
+
+
 ## Container and images management
 
 Now we will briefly go through the lifecycle of containers and images, from configuration to deployment in the container registry.
@@ -246,7 +251,7 @@ In the following we will go through an example configuration, which must give a 
 To make things look more realistic, we will not be working with `localhost`. We will simply imagine the domain name `diva.com` and map it to `localhost`
 in `/etc/hosts` on our machine:
 ```shell
-127.0.0.1 localhost diva
+127.0.0.1 localhost diva.com
 ```
 
 1. Place your SSL certificate and key in `./certs`

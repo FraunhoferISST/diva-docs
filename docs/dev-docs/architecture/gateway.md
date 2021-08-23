@@ -59,4 +59,7 @@ And again, `realm-name` can very depending on how your Keycloak is configured to
 shipped with DIVA the realm name is `diva-kc-realm`. In general the `iss` URL origin part should correspond to with 
 `KEYCLOAK_FRONTEND_URL` ENV specified URL origin.
 The resulting URL is used from [`kong-plugin-jwt-keycloak`](https://github.com/gbbirkisson/kong-plugin-jwt-keycloak)
-to fetch the Keycloak public key and authenticate the user.
+to fetch the Keycloak public key and authenticate the user. It is important to note, that if you change the JWT token creation
+in Keycloak (e.g. signature algorithm), the provided token authentication may fail and you have to fix it on your in your
+`my-production-config.yml` or create an issue and request the changes.
+
