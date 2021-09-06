@@ -36,17 +36,17 @@ module.exports = {
     ],
     sidebar: {
       '/dev-docs/': [
+        '/dev-docs/README.md',
+        '/dev-docs/prerequisites.md',
         {
           text: 'Development',
           collapsable: false,
           isGroup: true,
           children: [
-            '/dev-docs/README.md',
             {
               text: 'Deployment',
               isGroup: true,
               children: [
-                '/dev-docs/deployment/README.md',
                 '/dev-docs/deployment/local.md',
                 '/dev-docs/deployment/docker.md'
               ]
@@ -59,6 +59,7 @@ module.exports = {
                 '/dev-docs/architecture/json-schemas.md',
                 '/dev-docs/architecture/rest-api.md',
                 // '/dev-docs/architecture/services.md',
+                '/dev-docs/architecture/keycloak.md',
                 '/dev-docs/architecture/gateway.md',
                 '/dev-docs/architecture/web-client.md',
                 '/dev-docs/architecture/tooling.md',

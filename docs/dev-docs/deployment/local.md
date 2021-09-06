@@ -31,8 +31,9 @@ Therefore, we propose the following workflow for local development:
    ./up_core.sh
    ```
 
-   >It is not required, to boot the complete system. If you are already familiar with the DIVA architecture, you can start only
+   >It is not required to boot the complete system. If you are already familiar with the DIVA architecture, you can start only
    > these components that are required by corresponding dependent component
+
 3. Stop the component you want to work on. For example, if you want to develop on Resource Management, stop the corresponding container
 
    ```bash
