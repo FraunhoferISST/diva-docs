@@ -49,9 +49,8 @@ git clone https://github.com/FraunhoferISST/diva.git
 
 ## Access to container registry
 
-All images are continuously built with in the CI 
-pipeline and stored in GitHub container registry. To be able to pull or push the images, you have to 
-[Authenticating to the Container registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry#authenticating-to-the-container-registry).
+All images are continuously built with in the CI pipeline and stored in GitHub container registry.
+To be able to pull or push the images, you have to [Authenticating to the Container registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry#authenticating-to-the-container-registry).
 
 ```bash
 docker login ghcr.io/fraunhoferisst/diva -u USERNAME --password YOUR_TOKEN
