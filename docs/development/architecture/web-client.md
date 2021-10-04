@@ -58,8 +58,16 @@ proxy in our [Docker guide](../deployment/docker.html#deployment-with-nginx-reve
 use for user authentication. We ship DIVA with already preconfigured Keycloak instance that you can adjust. Otherwise, the default value ca be left as is.
 + `VUE_APP_KEYCLOAK_CLIENT_ID` <Badge type="tip" text="v2.2.0" vertical="middle" /> - the `id` of the Keycloak client that regulates the permission for our web-client. 
 No need to change this variable, if you use the Keycloak instance shipped with DIVA as is and do not have own managed Keycloak.
++ `VUE_APP_REGISTER_AVAILABLE` <Badge type="tip" text="v3" vertical="middle" /> - by default the Web Client login page provides
+  a link to the register page on Keycloak. If you want to disable the registration in Keycloak, this link can be deactivated and hidden.
+  Just set `VUE_APP_REGISTER_AVAILABLE` to `false`, empty string or let the variable empty. For example:
+  ```
+  VUE_APP_REGISTER_AVAILABLE=false
+  # or
+  VUE_APP_REGISTER_AVAILABLE
+  ```
 
 You can read more about how to use environment variables in the [Docker guide](../deployment/docker.html#environment-variables).
 Please note that for the client to successfully and securely connect to Keycloak in the production environment and authenticate 
 in Kong, Kong and Keycloak must be configured correctly as well. At this point we refer the reader to the corresponding 
-[Kong Gateway](./gateway.md) and [Keycloak]() guides.
+[Kong Gateway](./gateway.md) and [Keycloak](./keycloak.md) guides.

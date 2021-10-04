@@ -102,6 +102,10 @@ module.exports = {
             },*/
           ]
         },
+        {
+          text: "Changelog",
+          link: "https://github.com/FraunhoferISST/diva/blob/main/CHANGELOG.md"
+        }
       ],
       '/user-docs/': [
         {

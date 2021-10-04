@@ -31,16 +31,12 @@ Here you can regulate access to the service and enable or disable authentication
 To understand the configuration, we recommend reading the documentation on Kong.
 
 The `kong.yml` contains configuration that is in no way suitable for production environment and is only useful for 
-local development. We strongly encourage you to create and use other rather appropriate declarative configuration. As a baseline we
-provide you with an example configuration in [`kong.production.yml`](https://github.com/FraunhoferISST/diva/blob/master/core/kong-gateway/kong.production.yml).
-
-::: danger Exposed credentials
-All sensitive information in default `kong.yml` and `kong.production.yml` is exposed on GitHub. Make sure to not copy and paste any secrets or passwords
-from the default publicity visible configurations!
-:::
+local development. As a baseline we
+provide an example production configuration in [`kong.production.yml`](https://github.com/FraunhoferISST/diva/blob/master/core/kong-gateway/kong.production.yml),
+which must always be kept up to date with the development configuration.
 
 When deploying with Docker, you can easily switch between configurations with the `KONG_DECLARATIVE_CONFIG` environment variable.
-Please read more in our [Docker guide](../deployment/docker.html#environment-variables) about environment variables. For example
+Please read more in our [Docker guide](../deployment/docker.html#environment-variables) about environment variables. For example,
 you can place your configuration in `core/kong-gateway/my-production-config.yml` and set the ENV in your `.env` file:
 ```dotenv
 KONG_DECLARATIVE_CONFIG=my-production-config.yml
@@ -60,6 +56,6 @@ shipped with DIVA the realm name is `diva-kc-realm`. In general the `iss` URL or
 `KEYCLOAK_FRONTEND_URL` ENV specified URL origin.
 The resulting URL is used from [`kong-plugin-jwt-keycloak`](https://github.com/gbbirkisson/kong-plugin-jwt-keycloak)
 to fetch the Keycloak public key and authenticate the user. It is important to note, that if you change the JWT token creation
-in Keycloak (e.g. signature algorithm), the provided token authentication may fail and you have to fix it on your in your
-`my-production-config.yml` or create an issue and request the changes.
+in Keycloak (e.g. signature algorithm), the provided token authentication may fail and you have to adjust 
+the declarative configuration correspondingly.
 
