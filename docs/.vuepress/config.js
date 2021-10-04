@@ -30,14 +30,18 @@ module.exports = {
         link: '/user-docs/'
       },
       {
+        text: 'Deployment',
+        link: '/deployment/',
+      },
+      {
         text: 'Development',
-        link: '/dev-docs/',
+        link: '/development/',
       },
     ],
     sidebar: {
-      '/dev-docs/': [
-        '/dev-docs/README.md',
-        '/dev-docs/prerequisites.md',
+      '/development/': [
+        '/development/README.md',
+        '/development/prerequisites.md',
         {
           text: 'Development',
           collapsable: false,
@@ -47,22 +51,22 @@ module.exports = {
               text: 'Deployment',
               isGroup: true,
               children: [
-                '/dev-docs/deployment/local.md',
-                '/dev-docs/deployment/docker.md'
+                '/development/deployment/local.md',
+                '/development/deployment/docker.md'
               ]
             },
             {
               text: 'Architecture',
               isGroup: true,
               children: [
-                '/dev-docs/architecture/README.md',
-                '/dev-docs/architecture/json-schemas.md',
-                '/dev-docs/architecture/rest-api.md',
+                '/development/architecture/README.md',
+                '/development/architecture/json-schemas.md',
+                '/development/architecture/rest-api.md',
                 // '/dev-docs/architecture/services.md',
-                '/dev-docs/architecture/keycloak.md',
-                '/dev-docs/architecture/gateway.md',
-                '/dev-docs/architecture/web-client.md',
-                '/dev-docs/architecture/tooling.md',
+                '/development/architecture/keycloak.md',
+                '/development/architecture/gateway.md',
+                '/development/architecture/web-client.md',
+                '/development/architecture/tooling.md',
               ]
             },
             // '/dev-docs/releases.md',
@@ -74,12 +78,34 @@ module.exports = {
           collapsable: false,
           isGroup: true,
           children: [
-            '/dev-docs/contribution/README.md',
-            '/dev-docs/contribution/issues-and-prs.md',
-            '/dev-docs/contribution/commits.md',
-            '/dev-docs/contribution/code-styles.md',
+            '/development/contribution/README.md',
+            '/development/contribution/issues-and-prs.md',
+            '/development/contribution/commits.md',
+            '/development/contribution/code-styles.md',
             ]
         },
+      ],
+      '/deployment/': [
+        '/deployment/README.md',
+        '/deployment/prerequisites.md',
+        {
+          text: 'Deployment',
+          isGroup: true,
+          children: [
+            '/deployment/docker.md',
+            '/deployment/configuration.md',
+            /*{
+              text: 'Upgrade Guide',
+              children: [
+                '/deployment/docker.md',
+              ]
+            },*/
+          ]
+        },
+        {
+          text: "Changelog",
+          link: "https://github.com/FraunhoferISST/diva/blob/main/CHANGELOG.md"
+        }
       ],
       '/user-docs/': [
         {
