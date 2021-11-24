@@ -110,7 +110,7 @@ module.exports = {
       ],
       '/user-docs/': [
         {
-          text: 'User guide',
+          text: 'User Guide',
           collapsable: false,
           isGroup: true,
           children: [
@@ -120,15 +120,15 @@ module.exports = {
             '/user-docs/search.md',
             '/user-docs/user.md',
             '/user-docs/dashboard.md',
-            /*{
-              text: 'Import and creat',
+            {
+              text: 'Import and CreateThis page is used to populate the data catalog with entities. Entities are currently resources and assets.',
               isGroup: true,
               link: '/user-docs/create/README.md',
               children: [
                 '/user-docs/create/create-resource.md',
                 '/user-docs/create/create-asset.md',
               ]
-            },*/
+            },
           ]
         },
       ],
