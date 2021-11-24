@@ -119,7 +119,7 @@ module.exports = {
             '/user-docs/home.md',
             '/user-docs/search.md',
             '/user-docs/user.md',
-            // '/user-docs/dashboard.md',
+            '/user-docs/dashboard.md',
             /*{
               text: 'Import and creat',
               isGroup: true,
