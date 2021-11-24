@@ -121,7 +121,7 @@ module.exports = {
             '/user-docs/user.md',
             '/user-docs/dashboard.md',
             {
-              text: 'Import and CreateThis page is used to populate the data catalog with entities. Entities are currently resources and assets.',
+              text: 'Import and Create',
               isGroup: true,
               link: '/user-docs/create/README.md',
               children: [
