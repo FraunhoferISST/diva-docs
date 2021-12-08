@@ -1,22 +1,20 @@
 # Docker deployment
 
-DIVA is built with a focus on scalability, modularisation and expandability using a microservice architecture. Our team 
-relies on the latest technologies for container-based development and deployment of the system using Docker.
-All system components are containerized and have current images that are
-continuously built in the CI pipeline. In this guide we will learn how to get DIVA running with `docker-compose`.
-
+DIVA is built with a focus on scalability, modularization and expandability using a microservice architecture.
+Our team relies on the latest technologies for container-based development and deployment of the system using Docker.
+All system components are containerized and have current images that are continuously built in the CI pipeline.
+In this guide we will learn how to get DIVA running with `docker-compose`.
 
 ::: tip
 Make sure to read the [prerequisites](./README.md) to know what you need to get started with Docker and Docker Compose.
-Also note that deployment with docker is not suitable for Production. Nonetheless, it is convenient for local development 
-environment to quickly spin up most of the components like Kafka, Gateway and other services.
+Also note that deployment with docker is not suitable for Production.
+Nonetheless, it is convenient for local development  environment to quickly spin up most of the components like Kafka, Gateway and other services.
 :::
 
 All things related to docker are located in the [`docker/`](https://github.com/FraunhoferISST/diva/blob/master/docker)
 directory. You can find this folder in the source code as well as in the release distribution.
-Here we have prepared a script which you can use to directly boot 
-all components, with default environment setup. If you need a quick start,
-just execute the following commands:
+Here we have prepared a script which you can use to directly boot all components, with default environment setup.
+If you need a quick start, just execute the following commands:
 
 ```bash
 # navigate to docker/ directory
@@ -25,25 +23,25 @@ cd docker
 ./up_core.sh
 ```
 
-The script starts all core services, profiling workflow engine, DSC and the web client application. It may take some 
-time until all components are up and running. By default, the client should be available on `localhost:70`.
+The script starts all core services, profiling workflow engine, DSC and the web client application.
+It may take some time until all components are up and running.
+By default, the client should be available on `localhost:70`.
 
 ::: danger Container credentials
-Bei default containers start with dummy values for credentials (e.g. `admin admin` for MongoDB) what is completely fine for 
-local development environment. If you plan to make DIVA available publicity through the deployment with Docker, make sure 
-to change all sensitive data. Refer to the [Environment variables](#environment-variables) section.
+Bei default containers start with dummy values for credentials (e.g. `admin admin` for MongoDB) what is completely fine for local development environment.
+If you plan to make DIVA available publicity through the deployment with Docker, make sure to change all sensitive data.
+Refer to the [Environment variables](#environment-variables) section.
 :::
 
 ## Environment variables
 
-First with the environment variables you have the possibility to propagate settings to the containers on run time. 
-The ENV's are used to configure exposed ports, Kafka topics, database connections, credentials etc. This makes the deployment 
-of containers more flexible and provides you a way to configure the environment without potential collisions with other software
-on your machines.
+First with the environment variables you have the possibility to propagate settings to the containers on run time.
+The ENV's are used to configure exposed ports, Kafka topics, database connections, credentials etc.
+This makes the deployment  of containers more flexible and provides you a way to configure the environment without potential collisions with other software on your machines.
 
 ::: warning Ports allocation
-DIVA components allocate many default ports like 80, 3000 or 27017. To avoid potential conflicts on deployment, most of the allocated ports can
-be configured in `docker/.env` file.
+DIVA components allocate many default ports like 80, 3000 or 27017.
+To avoid potential conflicts on deployment, most of the allocated ports can be configured in `docker/.env` file.
 :::
 
 All available configuration possibilities are listed in the [`docker/.env.default`](https://github.com/FraunhoferISST/diva/blob/master/docker/.env.default) file.
