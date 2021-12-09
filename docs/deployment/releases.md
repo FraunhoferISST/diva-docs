@@ -22,11 +22,11 @@ The update of the major version indicates a breaking change and the migration is
 |---|---|
 |[<Badge type="tip" text="v3.3.0" vertical="middle" />](#v3-3-0)| 🆘 Mandatory |
 |[<Badge type="tip" text="v3.2.0" vertical="middle" />](#v3-2-0)| ✅️ Not required |
-|[`3.1.0`](#v3-1-0)| ⚠️ Recommended |
-|[`3.0.3`](#v3-0-3)| ✅️ Not required |
-|[`3.0.2`](#v3-0-2)| ✅️ Not required |
-|[`3.0.1`](#v3-0-1)| ✅️ Not required |
-|[<Badge type="warning" text="v3.0.0" vertical="middle" />](#v3-0-0)| ❕   Not available |
+|[<Badge type="tip" text="v3.1.0" vertical="middle" />](#v3-1-0)| ⚠️ Recommended |
+|[<Badge type="tip" text="v3.0.3" vertical="middle" />](#v3-0-3)| ✅️ Not required |
+|[<Badge type="tip" text="v3.0.2" vertical="middle" />](#v3-0-2)| ✅️ Not required |
+|[<Badge type="tip" text="v3.0.1" vertical="middle" />](#v3-0-1)| ✅️ Not required |
+|[<Badge type="tip" text="v3.0.0" vertical="middle" />](#v3-0-0)| ❕   Not available |
 
 ## Upgrade to the latest version
 
@@ -66,10 +66,12 @@ After a successful execution, the service should not be executed again, as this 
 
 ### `v3.3.0`
 
-#### Migration status
-
 A **mandatory** migration is available for DIVA **3.3.0**.
 We provide a migration service to upgrade DIVA **3.2.0** to **3.3.0**.
+
+Affected Components:
+
++ JSON Schema: `licenses` now is an object with more fields. Therefore we need to migrate the `licenses` field in our `documentstore` MongoDB and Elasticsearch.
 
 ### `v3.2.0`
 
