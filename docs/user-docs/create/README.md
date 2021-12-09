@@ -11,5 +11,5 @@ In the future you might encounter other entities like `services` or `users` them
 + To create an `asset`, click on the [Create new asset](/user-docs/create/create-asset.md) card.
 
 <div class="flex justify-center">
-    <img class="rounded-lg" :src="$withBase('/assets/screenshots/create.png')" alt="DIVA Create Entities">
+    <img class="rounded-lg" :src="$withBase('/assets/screenshots/create/create.png')" alt="DIVA Create Entities">
 </div>
