@@ -2,7 +2,7 @@ const { description } = require('../../package')
 const isDevMode = process.env.NODE_ENV === "development";
 
 module.exports = {
-  title: 'DIVA guide',
+  title: 'DIVA Guide',
   description: description,
   base: isDevMode ? "/" : "/diva-docs/",
   head: [
@@ -127,6 +127,16 @@ module.exports = {
               children: [
                 '/user-docs/create/create-resource.md',
                 '/user-docs/create/create-asset.md',
+              ]
+            },
+            {
+              text: 'Metadata Details Page',
+              isGroup: true,
+              link: '/user-docs/details/README.md',
+              children: [
+                '/user-docs/details/general.md',
+                '/user-docs/details/asset-data-network.md',
+                '/user-docs/details/profiling-metadata.md',
               ]
             },
           ]
