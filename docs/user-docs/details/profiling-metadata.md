@@ -1,6 +1,6 @@
 # Profiling Metadata
 
-Currently we support automatic analysis of 3 different file types.
+Currently we support automatic analysis of 5 different file types.
 
 + `application/pdf`
 + `text/plain`

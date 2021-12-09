@@ -134,7 +134,7 @@ module.exports = {
               isGroup: true,
               link: '/user-docs/details/README.md',
               children: [
-                '/user-docs/details/general.md',
+                '/user-docs/details/general-metadata.md',
                 '/user-docs/details/asset-data-network.md',
                 '/user-docs/details/profiling-metadata.md',
               ]
