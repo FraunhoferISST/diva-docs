@@ -1,7 +1,7 @@
 # Import and Create
 
 This page is used to populate the data catalog with entities.
-Entities are currently `resources` and `assets`.
+Main entities are currently `resources` and `assets`.
 
 ::: tip
 In the future you might encounter other entities like `services` or `users` themselves.
