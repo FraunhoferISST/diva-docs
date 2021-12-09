@@ -36,6 +36,19 @@ You will be redirected to our trusted identity management page provided by Keycl
     <img class="rounded-lg" :src="$withBase('/assets/screenshots/keycloak/keycloak_edit.png')" alt="Keycloak edit data">
 </div>
 
+## ⚠️ Delete User
+
+If you want to delete your user account, click on `Delete account` while editing your user data.
+
+::: warning
+This will only delete your user data in our **DIVA** system.
+You are still able to log into the identity management system provided by **Keycloak**.
+If you sign in again, **DIVA** will create a new internal account.
+Everything done with your old, deleted account is not related to this new one.
+
+🔨 We try to improve this behavior in future releases.
+:::
+
 ## See other users accounts
 
 You can also view the details of other users.
