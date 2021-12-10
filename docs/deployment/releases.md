@@ -75,13 +75,9 @@ Affected Components:
 
 ### `v3.2.0`
 
-#### Migration status
-
 No migration from previous version required
 
 ### `v3.1.0`
-
-#### Migration status
 
 The **recommended** migration is available for DIVA **3.1.0**.
 You can use the migration service to upgrade from DIVA **>=3.0.0**.
@@ -96,24 +92,16 @@ Affected Components:
 
 ### `v3.0.3`
 
-#### Migration status
-
 No migration from previous version required
 
 ### `v3.0.2`
-
-#### Migration status
 
 No migration from previous version required
 
 ### `v3.0.1`
 
-#### Migration status
-
 No migration from previous version required
 
 ### `v3.0.0`
-
-#### Migration status
 
 No migration service available. Manual migration required
