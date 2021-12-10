@@ -1,47 +1,47 @@
 # Overview
 
-The following figure will give you a quick overview on the architecture of DIVA. In the following chapter we will take a close
-look at main components and explain their responsibilities. Following the navigation structure in the left sidebar you will consistently 
-learn the architecture and be able to understand the implications and design decisions.
+The following figure will give you a quick overview on the architecture of DIVA.
+In the following chapter we will take a close look at main components and explain their responsibilities.
+Following the navigation structure in the left sidebar you will consistently learn the architecture and be able to understand the implications and design decisions.
 
 <img :src="$withBase('/assets/diva_architecture.png')" alt="DIVA Architecture">
 
-Diva architecture follows the Micro Services pattern and aims at high degree of scalability. The main goal is to provide 
-the most simplistic components and strong modularity for scalable extension of the system with new functionalities.
+Diva architecture follows the Micro Services pattern and aims at high degree of scalability.
+The main goal is to provide the most simplistic components and strong modularity for scalable extension of the system with new functionalities.
 
-We have five types of services, which are distinguished from each other by well-defined competences. At one hand, 
-we have management services. Management Services are derived from our data model and perform the operations on the 
-corresponding entities. On the other hand, there are Assistant Services, which are responsible for additional useful functions. 
-To be able to connect DIVA with external sources like UrbanPulse or DSC, we develop the third service type - Adapter Services. 
+We have five types of services, which are distinguished from each other by well-defined competences.
+At one hand, we have management services. Management Services are derived from our data model and perform the operations on the corresponding entities.
+On the other hand, there are Assistant Services, which are responsible for additional useful functions.
+To be able to connect DIVA with external sources like UrbanPulse or DSC, we develop the third service type - Adapter Services.
 Connector Services are used to internally replicate metadata from primary MongoDB data store to other data stores.
 
-All services provide an API which is strictly defined using OpenAPI specification. The web client uses API Gateway to 
-access the backend, API Gateway acts as an abstraction layer for the underlying services.
-Kafka messages allow services to communicate indirectly and asynchronously with each other. 
+All services provide an API which is strictly defined using OpenAPI specification.
+The web client uses API Gateway to access the backend, API Gateway acts as an abstraction layer for the underlying services.
+Kafka messages allow services to communicate indirectly and asynchronously with each other.
 
 In the following the components will be explained with more details.
 
-## Data model
+## Data Model
 
-Our data model aims at simplicity and flat hierarchy. We have designed a model with loose entity coupling, driven 
-by [JSON schemas](./json-schemas.md). JSON schemas are most important building block of our whole system. Thanks to the 
-schema-driven development process, we 
-can achieve high integrity and validity of the data processed in DIVA. Furthermore, this approach allows us to develop 
-Management Services API's with fully automated data validation process.
+Our data model aims at simplicity and flat hierarchy.
+We have designed a model with loose entity coupling, driven by [JSON schemas](./json-schemas.md).
+JSON schemas are most important building block of our whole system.
+Thanks to the schema-driven development process, we can achieve high integrity and validity of the data processed in DIVA.
+Furthermore, this approach allows us to develop Management Services API's with fully automated data validation process.
 
 <DataModel class="mt-0"></DataModel>
 
-We have two levels of hierarchy in our model, with the Entity on top. Entity is a logical high level 
-abstraction that represents common properties of the underlying entities and does **not** exists physically. The entities
-[User](../../about/README.md#user), [Resource](../../about/README.md#resource), [Asset](../../about/README.md#asset) etc. inherit properties like `id`, `entityType` and `created` from Entity.
+We have two levels of hierarchy in our model, with the Entity on top.
+Entity is a logical high level abstraction that represents common properties of the underlying entities and does **not** exists physically.
+The entities [User](../../about/README.md#user), [Resource](../../about/README.md#resource), [Asset](../../about/README.md#asset) etc. inherit properties like `id`, `entityType` and `created` from Entity.
 You will find schemas for all entities in [`core/schemata/`](https://github.com/FraunhoferISST/diva/tree/master/core/schemata) directory.
 
-Although the entities are not coupled with each other, they can have relations. All entities are created 
-by an actor (User or Service). An Asset can group multiple Resources, Asset and Resources can have multiple Reviews and History entries.
-The relation is expressed through linking via the `id` attribute. So if one entity is in relation to another, 
-it must store the `id` of the corresponding entity. For example, if a User with the id `user:uuid:041587a4-f9fb-4c6a-8ff0-6ff93c374c3f` 
-want to create a Review for a Resource with the id
-`resource:uuid:c98bdd99-c68b-47d0-85f5-2b362cf74e14`, the representations of the Review will look like follows:
+Although the entities are not coupled with each other, they can have relations.
+All entities are created by an actor (User or Service).
+An Asset can group multiple Resources, Asset and Resources can have multiple Reviews and History entries.
+The relation is expressed through linking via the `id` attribute.
+So if one entity is in relation to another, it must store the `id` of the corresponding entity.
+For example, if a User with the id `user:uuid:041587a4-f9fb-4c6a-8ff0-6ff93c374c3f` want to create a Review for a Resource with the id `resource:uuid:c98bdd99-c68b-47d0-85f5-2b362cf74e14`, the representations of the Review will look like follows:
 
 ```js
 {
@@ -52,13 +52,27 @@ want to create a Review for a Resource with the id
 }
 ```
 
-In this way we can achieve a flat hierarchy, loose coupling and flexible relations between entities.This in turn allows us 
-to develop services with transparent API according to the single responsibility principle. You will learn more about 
-our [REST API](./rest-api.md) design rules in the corresponding section.
+In this way we can achieve a flat hierarchy, loose coupling and flexible relations between entities.
+This in turn allows us to develop services with transparent API according to the single responsibility principle.
+You will learn more about our [REST API](./rest-api.md) design rules in the corresponding section.
 
 ::: warning Relations
-Note that even if the entities have relations, they remain fully independent and can be managed only by the corresponding 
-management service. The existence of one entity is not bound to another one!
+Note that even if the entities have relations, they remain fully independent and can be managed only by the corresponding management service.
+The existence of one entity is not bound to another one!
+:::
+
+### DCAT Compatibility
+
+::: warning DCAT 3
+In this case, **compatible** means that a parser (that currently does not exist) can transform our internal metadata model into DCAT 3.
+It may be that DCAT allows a higher cardinality than the metadata model in DIVA.
+Nevertheless, DIVA would be compatible at this point.
+The reverse case may also occur. However, then we would not have compatibility.
+:::
+
+::: danger TBD
+Currently we do not have a complete overview of which fields are DCAT compatible.
+This is still to be done.
 :::
 
 ## DIVA Core
