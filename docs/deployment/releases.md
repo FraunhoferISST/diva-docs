@@ -18,15 +18,16 @@ The update of the major version indicates a breaking change and the migration is
 
 [Releases](https://github.com/FraunhoferISST/diva/releases) | [Changelog](https://github.com/FraunhoferISST/diva/blob/main/CHANGELOG.md) | [Migration tool](https://github.com/FraunhoferISST/diva/tree/main/migration)
 
-|Release| Migration|
-|---|---|
-|[<Badge type="tip" text="v3.3.0" vertical="middle" />](#v3-3-0)| 🆘 Mandatory |
-|[<Badge type="tip" text="v3.2.0" vertical="middle" />](#v3-2-0)| ✅️ Not required |
-|[<Badge type="tip" text="v3.1.0" vertical="middle" />](#v3-1-0)| ⚠️ Recommended |
-|[<Badge type="tip" text="v3.0.3" vertical="middle" />](#v3-0-3)| ✅️ Not required |
-|[<Badge type="tip" text="v3.0.2" vertical="middle" />](#v3-0-2)| ✅️ Not required |
-|[<Badge type="tip" text="v3.0.1" vertical="middle" />](#v3-0-1)| ✅️ Not required |
-|[<Badge type="tip" text="v3.0.0" vertical="middle" />](#v3-0-0)| ❕   Not available |
+| Release                                                         | Migration         |
+|-----------------------------------------------------------------|-------------------|
+| [<Badge type="tip" text="v3.3.1" vertical="middle" />](#v3-3-1) | ✅️ Not required   |
+| [<Badge type="tip" text="v3.3.0" vertical="middle" />](#v3-3-0) | 🆘 Mandatory      |
+| [<Badge type="tip" text="v3.2.0" vertical="middle" />](#v3-2-0) | ✅️ Not required   |
+| [<Badge type="tip" text="v3.1.0" vertical="middle" />](#v3-1-0) | ⚠️ Recommended    |
+| [<Badge type="tip" text="v3.0.3" vertical="middle" />](#v3-0-3) | ✅️ Not required   |
+| [<Badge type="tip" text="v3.0.2" vertical="middle" />](#v3-0-2) | ✅️ Not required   |
+| [<Badge type="tip" text="v3.0.1" vertical="middle" />](#v3-0-1) | ✅️ Not required   |
+| [<Badge type="tip" text="v3.0.0" vertical="middle" />](#v3-0-0) | ❕   Not available |
 
 ## Upgrade to the latest version
 
@@ -63,6 +64,10 @@ After a successful execution, the service should not be executed again, as this 
 :::
 
 ## Releases
+
+### `v3.3.1`
+
+No migration from previous version required
 
 ### `v3.3.0`
 
