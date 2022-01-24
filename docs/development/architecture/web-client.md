@@ -66,6 +66,12 @@ No need to change this variable, if you use the Keycloak instance shipped with D
   # or
   VUE_APP_REGISTER_AVAILABLE
   ```
++ `VUE_APP_DISABLE_PATCH` <Badge type="tip" text="v3.3.1" vertical="middle" /> - in the environments with the specific security
+  policies it is possible to disable PATCH requests. In this case all PATCH API requests will be mapped to POST. To disable PATCH requests
+  the variable should be set to `true`, e.g.:
+  ```
+  VUE_APP_DISABLE_PATCH=true
+  ```
 
 You can read more about how to use environment variables in the [Docker guide](../deployment/docker.html#environment-variables).
 Please note that for the client to successfully and securely connect to Keycloak in the production environment and authenticate 
