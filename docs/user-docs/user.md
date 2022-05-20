@@ -7,39 +7,29 @@ title: User Details Page
 
 To navigate to the page with your account settings, click on the user icon in the navigation at the bottom of the  [Home Page](./home.md) and then on your name in the menu that appears.
 
-<!-- <div class="flex justify-center">
-    <img class="rounded-lg" :src="$withBase('/assets/screenshots/user_menu.png')" width="500" alt="DIVA login">
-</div> -->
+![User Menu](/img/screenshots/user_menu.png)
 
 ## Edit User Data
 
 The above step will take you to the overview of your personal data.
 You can log out or edit your information. To switch to the edit mode, click on the "Edit profile" button.
 
-<!-- <div class="flex justify-center mb-16">
-    <img class="rounded-lg" :src="$withBase('/assets/screenshots/user.png')" alt="DIVA login">
-</div> -->
+![User](/img/screenshots/user.png)
 
 In the edit mode you have the possibility to add more details to your account and upload a profile picture.
 
-<!-- <div class="flex justify-center mb-16">
-    <img class="rounded-lg" :src="$withBase('/assets/screenshots/user_edit.png')" alt="DIVA login">
-</div> -->
+![User Edit](/img/screenshots/user_edit.png)
 
 Click on "Save changes" to apply the modifications. The changes should be immediately applied and visible in the whole application.
 
-<!-- <div class="flex justify-center mb-16">
-    <img class="rounded-lg" :src="$withBase('/assets/screenshots/user_edited.png')" alt="DIVA login">
-</div> -->
+![User Edited](/img/screenshots/user_edited.png)
 
 ## Edit User Credentials
 
 If you want to change your email or password, you can click on the Keycloak link.
 You will be redirected to our trusted identity management page provided by Keycloak.
 
-<!-- <div class="flex justify-center mb-16">
-    <img class="rounded-lg" :src="$withBase('/assets/screenshots/keycloak/keycloak_edit.png')" alt="Keycloak edit data">
-</div> -->
+![Keycloak edit data](/img/screenshots/keycloak/keycloak_edit.png)
 
 ## ⚠️ Delete User
 

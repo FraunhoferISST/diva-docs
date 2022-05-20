@@ -23,9 +23,7 @@ The automatic analyses are listed and explained below:
 + A simple statistical evaluation on the distribution of charcters and number of different tokens (words, sentences, and characters).
 + We perform a scan for personal data and give a score between 0 and 100, where 100 means that the resource is very likely to be GDPR relevant.
 
-<!-- <div class="flex justify-center">
-    <img class="rounded-lg" :src="$withBase('/assets/screenshots/details/profiling_text.png')" alt="DIVA Text Profiling">
-</div> -->
+![DIVA Text Profiling](/img/screenshots/details/profiling_text.png)
 
 ## Table Files
 
@@ -38,13 +36,9 @@ The automatic analyses are listed and explained below:
 + We perform a statistical analysis that looks at each column and extracts key metrics.
 + We extract a sample set of the table to give an insight into the data.
 
-<!-- <div class="flex justify-center">
-    <img class="rounded-lg" :src="$withBase('/assets/screenshots/details/profiling_tabledata.png')" alt="DIVA Table Data Profiling">
-</div>
+![DIVA Table Data Profiling](/img/screenshots/details/profiling_tabledata.png)
 
-<div class="flex justify-center">
-    <img class="rounded-lg" :src="$withBase('/assets/screenshots/details/tabledata_sample.png')" alt="DIVA Table Data Sample">
-</div> -->
+![DIVA Table Data Sample](/img/screenshots/details/tabledata_sample.png)
 
 ## Image Files
 
@@ -58,6 +52,4 @@ The automatic analyses are listed and explained below:
 + We perform OCR text recognition on the image to make text on images search relevant in our catalog as well.
 + We extract EXIF metadata, e.g. about the camera with which the photo was taken.
 
-<!-- <div class="flex justify-center">
-    <img class="rounded-lg" :src="$withBase('/assets/screenshots/details/profiling_images.png')" alt="DIVA Image Profiling">
-</div> -->
+![DIVA Image Profiling](/img/screenshots/details/profiling_images.png)

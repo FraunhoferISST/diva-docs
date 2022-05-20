@@ -16,6 +16,4 @@ Below you will find the overview of the application.
 6. Link to [dashboard](./dashboard.md) page
 7. Link to [user](./user.md) page
 
-<!-- <div class="flex justify-center">
-    <img class="rounded-lg" :src="$withBase('/assets/screenshots/home.png')" alt="DIVA login">
-</div> -->
+![DIVA Home](/img/screenshots/home.png)

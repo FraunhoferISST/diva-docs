@@ -22,10 +22,8 @@ Perform the following steps to access Keycloak and sign up:
 3. Enter your email address and password
 4. Click "Register" button
 
-<!-- <div class="flex-col sm:flex-row flex justify-center">
-    <img class="rounded-lg w-full sm:w-1/2" :src="$withBase('/assets/screenshots/login.png')" alt="DIVA login">
-    <img class="rounded-lg w-full sm:w-1/2" :src="$withBase('/assets/screenshots/keycloak/keycloak_register.png')" width="50%" alt="DIVA Register">
-</div> -->
+![DIVA login](/img/screenshots/login.png)
+![DIVA login](/img/screenshots/keycloak/keycloak_register.png)
 
 After successful registration you will be logged in automatically.
 
@@ -38,10 +36,7 @@ Perform the following steps to log in onto the DIVA application with your email 
 3. Enter your email and password
 4. Click "Login" button
 
-<!-- <div class="flex-col sm:flex-row flex justify-center">
-    <img class="rounded-lg w-full sm:w-1/2" :src="$withBase('/assets/screenshots/login.png')" alt="DIVA login">
-    <img class="rounded-lg w-full sm:w-1/2" :src="$withBase('/assets/screenshots/keycloak/keycloak_signin.png')" width="50%" alt="DIVA Login">
-</div> -->
+![DIVA login](/img/screenshots/keycloak/keycloak_signin.png)
 
 After successful login you will be automatically redirected to the [Home Page](./home.md).
 

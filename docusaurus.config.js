@@ -10,9 +10,10 @@ const config = {
   tagline: 'Data Inventory and Valuation Approach',
   url: 'https://github.com/FraunhoferISST/diva',
   baseUrl: '/',
+  staticDirectories: ['public', 'static'],
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/diva_logo.ico',
+  favicon: 'img/logos/diva_logo.ico',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -60,7 +61,7 @@ const config = {
         title: 'DIVA Guide',
         logo: {
           alt: 'DIVA Logo',
-          src: 'img/diva_logo_1000_1000.png',
+          src: 'img/logos/diva_logo_1000_1000.png',
         },
         items: [
           {
