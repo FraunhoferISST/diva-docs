@@ -45,7 +45,7 @@ You will be redirected to our trusted identity management page provided by Keycl
 
 If you want to delete your user account, click on `Delete account` while editing your user data.
 
-::: warning
+:::caution
 This will only delete your user data in our **DIVA** system.
 You are still able to log into the identity management system provided by **Keycloak**.
 If you sign in again, **DIVA** will create a new internal account.

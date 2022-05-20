@@ -61,21 +61,21 @@ In this way we can achieve a flat hierarchy, loose coupling and flexible relatio
 This in turn allows us to develop services with transparent API according to the single responsibility principle.
 You will learn more about our [REST API](./rest-api.md) design rules in the corresponding section.
 
-::: warning Relations
+:::caution Relations
 Note that even if the entities have relations, they remain fully independent and can be managed only by the corresponding management service.
 The existence of one entity is not bound to another one!
 :::
 
 ### DCAT Compatibility
 
-::: warning DCAT 3
+:::caution DCAT 3
 In this case, **compatible** means that a parser (that currently does not exist) can transform our internal metadata model into DCAT 3.
 It may be that DCAT allows a higher cardinality than the metadata model in DIVA.
 Nevertheless, DIVA would be compatible at this point.
 The reverse case may also occur. However, then we would not have compatibility.
 :::
 
-::: danger TBD
+:::danger TBD
 Currently we do not have a complete overview of which fields are DCAT compatible.
 This is still to be done.
 :::
@@ -124,7 +124,7 @@ This ES instance is used by the [Search Assistant](https://github.com/Fraunhofer
 MinIO acts as the efficient object storage, where we only persist files imported via [Web client](./web-client.md) UI from 
 the user's device.
 
-::: warning Data Replication 
+:::caution Data Replication 
 Data replication across different external or internal components should be achieved through events messaging. Please note
 that this can lead to eventual consistency due to the asynchronous nature of events broadcasting. MongoDB always acts as
 the single source of truth!

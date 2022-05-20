@@ -98,7 +98,7 @@ general scheme `[field]=[value]`. In the corresponding OpenAPI specification it 
 For resources, assets, user and other entity types in the future we have to consider more complex search functionality.
 The Search Assistant service is responsible for advanced search functionalities.
 
-::: details Summary
+:::info Summary
 Response:
 
 ```json

@@ -17,7 +17,7 @@ To do this, click on an entity and an **-** icon will appear, which you must cli
     <img class="rounded-lg" :src="$withBase('/assets/screenshots/details/asset_data_network.png')" alt="DIVA Data Network">
 </div> -->
 
-::: tip Future Work
+:::tip Future Work
 We are always trying to develop features further.
 In the future we will work on the possibility to add not only one layer, but to create a complete data network with labeled edges.
 This should allow you to navigate through your data network much easier.

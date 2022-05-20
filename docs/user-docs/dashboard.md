@@ -13,7 +13,7 @@ Additionally, there are first diagrams about the distribution of resource types.
     <img class="rounded-lg" :src="$withBase('/assets/screenshots/dashboard.png')" alt="DIVA Dashboard">
 </div> -->
 
-::: tip
+:::tip
 To extend the dashboard, a developer must be consulted.
 Metrics must be based on the metadata stored in DIVA.
 :::

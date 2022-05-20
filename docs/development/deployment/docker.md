@@ -42,7 +42,7 @@ The ENV's are used to configure exposed ports, Kafka topics, database connection
 of containers more flexible and provides you a way to configure the environment without potential collisions with other software
 on your machines.
 
-::: warning Ports allocation
+:::caution Ports allocation
 DIVA components allocate many default ports like 80, 3000 or 27017. To avoid potential conflicts on deployment, most of the allocated ports can
 be configured in `docker/.env` file.
 :::
@@ -62,7 +62,7 @@ Now we will briefly go through the lifecycle of containers and images, from conf
 This chapter is interesting for those who want to actively participate in the development of the system or manage
 containers and images in a more granular way. 
 
-::: warning Environment variables
+:::caution Environment variables
 Make sure to create `.env` file on your machine like described in [Environment variables](#environment-variables)
 :::
 

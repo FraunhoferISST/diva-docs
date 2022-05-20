@@ -42,7 +42,7 @@ In production, however, the built app is shipped in the container from a Nginx s
 on `localhost` is not possible anymore and you have at least configure correct domains where client can rich Keycloak and API Gateway 
 instances.
 
-::: tip ENV's on runtime
+:::tip ENV's on runtime
 Yes, you do not have to rebuild the web-client Docker image every time any of the ENV's changes. The environment variables are injected
 in the app source code on each container start. You can adjust all accepted ENV's at any time without the need to build own image, just restart the container!
 :::

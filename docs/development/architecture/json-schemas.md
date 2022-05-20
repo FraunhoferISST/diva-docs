@@ -36,7 +36,7 @@ The entity abstracts common attributes that are "inherited" by all other entitie
 
 <JsonSchemasModel />
 
-::: warning Bottom-to-top schemas
+:::caution Bottom-to-top schemas
 Practically, we define the schemas using the bottom-to-top approach. This means that the sub-resources do not extend the 
 Resource schema, rather they are included in the Resource.
 :::
@@ -104,7 +104,7 @@ schemata
 
 Next create a `resourceFileExcel.json` file and write down all required definitions here. You can use the existing schemas for other types as a guideline.
 
-::: warning
+:::caution
 Please define the schemas in detail and as strictly as possible! Always provide attributes with a title and description. 
 Wherever it makes sense, define concrete type, format, value range etc. and give a couple of examples.
 :::

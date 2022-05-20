@@ -5,7 +5,7 @@ title: Code style guidance
 
 # Code style guidance
 
-::: warning WIP
+:::caution WIP
 We are working on providing you with a comprehensive guide to source code writing. Stay tuned!
 :::
 

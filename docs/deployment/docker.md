@@ -10,7 +10,7 @@ Our team relies on the latest technologies for container-based development and d
 All system components are containerized and have current images that are continuously built in the CI pipeline.
 In this guide we will learn how to get DIVA running with `docker-compose`.
 
-::: tip
+:::tip
 Make sure to read the [prerequisites](./README.md) to know what you need to get started with Docker and Docker Compose.
 Also note that deployment with docker is not suitable for Production.
 Nonetheless, it is convenient for local development  environment to quickly spin up most of the components like Kafka, Gateway and other services.
@@ -32,7 +32,7 @@ The script starts all core services, profiling workflow engine, DSC and the web 
 It may take some time until all components are up and running.
 By default, the client should be available on `localhost:70`.
 
-::: danger Container credentials
+:::danger Container credentials
 Bei default containers start with dummy values for credentials (e.g. `admin admin` for MongoDB) what is completely fine for local development environment.
 If you plan to make DIVA available publicity through the deployment with Docker, make sure to change all sensitive data.
 Refer to the [Environment variables](#environment-variables) section.
@@ -44,7 +44,7 @@ First with the environment variables you have the possibility to propagate setti
 The ENV's are used to configure exposed ports, Kafka topics, database connections, credentials etc.
 This makes the deployment  of containers more flexible and provides you a way to configure the environment without potential collisions with other software on your machines.
 
-::: warning Ports allocation
+:::caution Ports allocation
 DIVA components allocate many default ports like 80, 3000 or 27017.
 To avoid potential conflicts on deployment, most of the allocated ports can be configured in `docker/.env` file.
 :::

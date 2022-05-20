@@ -8,7 +8,7 @@ title: Local development
 In this chapter we will look at what is needed to develop existing services or create new ones locally on your own development machine.
 This guide is for the developers who want to actively contribute to the implementation of the system and assumes that the respective components must be run locally without Docker. Read this if you want to improve one of the existing components or add a new one.
 
-::: tip
+:::tip
 Make sure to read the [prerequisites](/dev-docs/deployment/) to know what do you need to be able to set up DIVA on your machine
 :::
 
@@ -54,12 +54,12 @@ Therefore, we propose the following workflow for local development:
    npm run dev
    ```
 
-::: warning
+:::caution
 Due to docker network configuration not all services can talk to each other service.
 You might also need to start other services locally without docker!
 :::
 
-::: warning Elasticsearch Warning
+:::caution Elasticsearch Warning
 Elasticsearch uses a mmapfs directory by default to store its indices. The default operating system limits on mmap counts is likely to be too low, which may result in out of memory exceptions. Please configure your machine like described [here](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html)
 :::
 

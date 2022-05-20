@@ -28,7 +28,7 @@ The following metadata can be edited:
 |**licenses**|Multiple licenses can be stored for one entity. The web application already has a set of default licenses in autocomplete. However, you can also manually enter any other licenses.|
 |**location**|We offer a map on which points or regions can be drawn visually. The semantic meaning of a location may differ depending on the entity and may need to be explained in the description.|
 
-::: tip Rating
+:::tip Rating
 The **rating** field is the only one you can not edit.
 It will be automatically set according to the reviews made by the users.
 We will change this in the future, as it seems rather confusing.
@@ -62,7 +62,7 @@ All changes to the metadata are saved in DIVA.
 It is stored which user has made changes to which fields and when.
 If an automated profiling was performed, the initiating user is also recorded as the one who made changes.
 
-::: tip
+:::tip
 The history has a very technical character.
 This is due to the fact that we can store a very large amount of metadata in the catalog.
 Presenting every single metadata field in the history in a human-readable way would currently lead to an enormous additional effort.

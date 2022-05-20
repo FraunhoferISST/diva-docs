@@ -60,11 +60,11 @@ Execute the migration service with the following:
 ./migrate.sh
 ```
 
-::: warning
+:::caution
 Make a snapshot of your DIVA environment. It should be ok to save the volumes.
 :::
 
-::: warning
+:::caution
 After a successful execution, the service should not be executed again, as this may cause undesired side effects.
 :::
 

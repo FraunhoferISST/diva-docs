@@ -34,7 +34,7 @@ production environment to improve the security setting.
 DIVA can also be used with own managed Keycloak instance. In this case you just have to configure [Web client](#web-client) and
 [API Gateway](#kong-gateway) to work with your Keycloak.
 
-::: warning Default realm configuration
+:::caution Default realm configuration
 The provided configuration is very minimal and has only a set of features required for DIVA to function properly. You have 
 to adjust the security setting corresponding to your policies and enable further features like emailing through advanced
 Keycloak configuration.
@@ -60,7 +60,7 @@ KEYCLOAK_DB_USER=keycloak
 KEYCLOAK_DB_PASSWORD=my_secure_password
 ```
 
-::: danger Change credentials
+:::danger Change credentials
 Make sure to use secure Keycloak and Postgres usernames and passwords passed through the ENV's!
 :::
 
@@ -92,7 +92,7 @@ The Kong API Gateway uses JWT tokens issued by Keycloak to authenticate users fo
 API. By default, we use tokens with RS256 signature algorithm with default expiration policies. The Web Client checks the token validity every
 **60** seconds.
 
-::: warning
+:::caution
 If you change token settings in Keycloak, probably the adjustment in the API Gateway will be required. For more details refer
 to [Kong configuration](#kong-gateway).
 :::
@@ -107,7 +107,7 @@ The users from Keycloak are transferred to DIVA at login or register. Each time 
 the user data is updated in DIVA or a new user is created, if it does not yet exist in DIVA. This means that email and password can
 be updated in Keycloak, but only email and password.
 
-::: warning Users attributes
+:::caution Users attributes
 Please note that we only import the **email** of the keycloak user in DIVA.
 The changes of other users attributes in DIVA do not affect Keycloak and vice versa.
 :::
@@ -138,7 +138,7 @@ The `kong.yml` contains configuration that is in no way suitable for production 
 local development. We strongly encourage you to create and use other rather appropriate declarative configuration. As a baseline we
 provide you with an example configuration in [`kong.production.yml`](https://github.com/FraunhoferISST/diva/blob/master/core/kong-gateway/kong.production.yml).
 
-::: danger Exposed credentials
+:::danger Exposed credentials
 All sensitive information in default `kong.yml` and `kong.production.yml` is exposed on GitHub. Make sure to not copy and paste any secrets or passwords
 from the default publicity visible configurations!
 :::
@@ -189,7 +189,7 @@ The app can be configured by several environment variables and is shipped from a
 on `localhost` is not possible anymore and you have at least to configure correct URL's where client can rich Keycloak and API Gateway
 instances.
 
-::: tip ENV's on runtime
+:::tip ENV's on runtime
 Yes, you do not have to rebuild the web-client Docker image every time any of the ENV's changes. The environment variables are injected
 in the app source code on each container start. You can adjust all accepted ENV's at any time without the need to build own image, just restart the container!
 :::

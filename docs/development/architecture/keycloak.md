@@ -29,7 +29,7 @@ The Kong API Gateway uses from Keycloak issued JWT tokens to authenticate users 
 API. By default, we use tokens with RS256 signature algorithm with default expiration policies. The Web-Client checks the token validity every
 **60** seconds.
 
-::: warning 
+:::caution 
 If you change token settings in Keycloak, probably the adjustment in the API Gateway will be required. For more details refer
 to [Kong configuration](./gateway.md).
 :::
@@ -44,7 +44,7 @@ The users from Keycloak are transferred to DIVA at login or register. Each time 
 the user data is updated in DIVA or a new user is created, if it does not yet exist in DIVA. This means that email and password can 
 be updated in Keycloak, but only email and password. 
 
-::: warning Users attributes
+:::caution Users attributes
 Please note that in DIVA we only import the **email** of the keycloak user.
 The changes of the other user attributes in DIVA do not affect Keycloak and vice versa.
 :::

@@ -40,7 +40,7 @@ existing repos:
 + [diva](https://github.com/FraunhoferISST/diva) - DIVA System Core containing all necessary components
 + [diva-docs](https://github.com/FraunhoferISST/diva-docs) - Repository for this documentation 
 
-::: warning Git LFS
+:::caution Git LFS
 Please note that we use [git-lfs](https://git-lfs.github.com/) to manage large files like ML models or archives. You have
 to install and activate git-lfs for this repo to be able to download linked files through repo clone.
 This is necessary only if you plan development on some FaaS service.  

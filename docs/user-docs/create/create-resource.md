@@ -22,7 +22,7 @@ Currently, DIVA offers the following types of resources:
 A generic resource should be created whenever DIVA does not offer another more specific type or you don't know the technical type of the resource.
 To create a generic resource, you only need to assign a title.
 
-::: warning
+:::caution
 Titles may be allocated more than once.
 After creating the resource, it is advisable to enrich it with further metadata.
 :::
@@ -36,7 +36,7 @@ After creating the resource, it is advisable to enrich it with further metadata.
 This importer can be used to inventory files in DIVA.
 You can simply select them via a selection menu or by dragging and dropping them into DIVA.
 
-::: tip
+:::tip
 Any file type can be inventoried in DIVA.
 However, only certain types of files are automatically analyzed to extract further metadata.
 :::

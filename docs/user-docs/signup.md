@@ -11,7 +11,7 @@ To get more details regarding this topic, please contact your administrator.
 
 ## Sing Up
 
-::: warning
+:::caution
 Depending on your Keycloak configuration, this option may not be available.
 :::
 
@@ -45,11 +45,11 @@ Perform the following steps to log in onto the DIVA application with your email 
 
 After successful login you will be automatically redirected to the [Home Page](./home.md).
 
-::: tip Change your Username
+:::tip Change your Username
 Initially, your username will be set to your email.
 If you want a better experience, please change your username by visiting the [User Details Page](./user.md).
 :::
 
-::: tip Upload a profile image
+:::tip Upload a profile image
 Visit the [User Details Page](./user.md) to provide your account with further information or upload a profile picture.
 :::

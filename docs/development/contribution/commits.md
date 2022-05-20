@@ -25,7 +25,7 @@ The list ist not comprehensive and can be extended on demand.
 
 Append `!` for breaking changes to a type.
 
-::: tip Scopes are useful
+:::tip Scopes are useful
 The scope in the commit message help a lot to understand which parts of the system a commit affects. Always try to specify 
 the scope in your messages. When working on services, you can use the abbreviation of the service name as the scope. 
 If the change can be assigned to an issue, you can derive the scopes from the labels of the corresponding issues.
