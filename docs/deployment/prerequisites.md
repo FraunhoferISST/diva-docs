@@ -1,3 +1,8 @@
+---
+id: prerequisites
+title: Prerequisites
+---
+
 # Prerequisites
 
 DIVA can be deployed anywhere you can run containers, be it your laptop or cloud infrastructure.

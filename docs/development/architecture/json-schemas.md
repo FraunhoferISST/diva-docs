@@ -1,3 +1,8 @@
+---
+id: json-schemas
+title: Schemata
+---
+
 # Schemata  
 
 To ensure high level of integrity and validity during write operations to the data storage and exchange of Kafka messages, 

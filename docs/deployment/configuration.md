@@ -1,3 +1,8 @@
+---
+id: configuration
+title: Configuration
+---
+
 # Configuration
 
 When building DIVA we rely on established opens source solutions for creating a scalable and transparent architecture.
@@ -75,9 +80,9 @@ we set the setting like follows:
 + Valid Redirect URIs: `https://diva.com*`
 + Web origins: `https://diva.com`
 
-<div class="flex justify-center">
+<!-- <div class="flex justify-center">
     <img class="rounded-lg" :src="$withBase('/assets/keycloak_client.png')" alt="Client configuration">
-</div>
+</div> -->
 
 For the local development environment all values can be used as provided in the default configuration.
 
@@ -169,9 +174,9 @@ DIVA is a complex system with many services and different interfaces that drive 
 Operating the system requires a solid understanding of the underlying architecture and the technologies used.
 To enable everyone to enjoy the benefits of data management with DIVA, we have implemented a web-based client application.
 
-<div class="flex justify-center">
+<!-- <div class="flex justify-center">
     <img :src="$withBase('/assets/diva_client.png')" height="500" alt="DIVA Architecture">
-</div>
+</div> -->
 
 The client communicates with the backend through Kong API Gateway and requires the user to be authenticated with a valid JWT.
 

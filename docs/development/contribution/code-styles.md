@@ -1,3 +1,8 @@
+---
+id: code-styles
+title: Code style guidance
+---
+
 # Code style guidance
 
 ::: warning WIP

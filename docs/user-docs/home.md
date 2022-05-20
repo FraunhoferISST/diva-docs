@@ -1,3 +1,8 @@
+---
+id: home
+title: Home-Page
+---
+
 # Home Page
 
 The home page of the application is the [search](./search.md) page. Here you can directly start exploring your catalog. 
@@ -11,6 +16,6 @@ Below you will find the overview of the application.
 6. Link to [dashboard](./dashboard.md) page
 7. Link to [user](./user.md) page
 
-<div class="flex justify-center">
+<!-- <div class="flex justify-center">
     <img class="rounded-lg" :src="$withBase('/assets/screenshots/home.png')" alt="DIVA login">
-</div>
+</div> -->

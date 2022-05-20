@@ -1,15 +1,21 @@
+---
+id: create-resource
+title: Create Resource
+---
+
 # Create Resource
 
 Through the user interface, you can choose what type of resource you want to inventory in DIVA.
 Currently, DIVA offers the following types of resources:
 
-+ [Generic Resource](#generic-resource)
-+ [File Resource](#file-resource)
-+ [DKSR Urban Pulse Resource Sensor](dksr-urban-pulse-sensor)
+- [Create Resource](#create-resource)
+  - [Generic Resource](#generic-resource)
+  - [File Resource](#file-resource)
+  - [DKSR Urban Pulse Sensor](#dksr-urban-pulse-sensor)
 
-<div class="flex justify-center">
+<!-- <div class="flex justify-center">
     <img class="rounded-lg" :src="$withBase('/assets/screenshots/create/create_resources.png')" alt="DIVA Create Resources">
-</div>
+</div> -->
 
 ## Generic Resource
 
@@ -21,9 +27,9 @@ Titles may be allocated more than once.
 After creating the resource, it is advisable to enrich it with further metadata.
 :::
 
-<div class="flex justify-center">
+<!-- <div class="flex justify-center">
     <img class="rounded-lg" :src="$withBase('/assets/screenshots/create/create_resources_generic.png')" alt="DIVA Create Resources Generic">
-</div>
+</div> -->
 
 ## File Resource
 
@@ -35,9 +41,9 @@ Any file type can be inventoried in DIVA.
 However, only certain types of files are automatically analyzed to extract further metadata.
 :::
 
-<div class="flex justify-center">
+<!-- <div class="flex justify-center">
     <img class="rounded-lg" :src="$withBase('/assets/screenshots/create/create_resources_file.png')" alt="DIVA Create Resources File">
-</div>
+</div> -->
 
 ## DKSR Urban Pulse Sensor
 
@@ -45,6 +51,6 @@ This is a special importer to inventory sensors from an **Urban Pulse** into **D
 You need to provide the necessary data such as URL, username and password that **DIVA** can use to connect to the Urban Pulse.
 If you do not want to import all sensors but only specific ones, just add their `uuid` in the list of **specific sensors**.
 
-<div class="flex justify-center">
+<!-- <div class="flex justify-center">
     <img class="rounded-lg" :src="$withBase('/assets/screenshots/create/create_resources_up_sensor.png')" alt="DIVA Create Resources Urban Pulse Sensor">
-</div>
+</div> -->

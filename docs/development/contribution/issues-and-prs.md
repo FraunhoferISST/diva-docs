@@ -1,3 +1,8 @@
+---
+id: issues-and-prs
+title: Issues and pull request
+---
+
 # Issues and pull request
 
 We are really excited that you are interested in contributing to DIVA.

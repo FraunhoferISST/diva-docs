@@ -1,12 +1,17 @@
+---
+id: web-client
+title: Web client
+---
+
 # Web client
 
 DIVA is a complex system with many services and different interfaces that drive the core functionality of the system.
 Operating the system requires a solid understanding of the underlying architecture and the technologies used.
 To enable everyone to enjoy the benefits of data management with DIVA, we have implemented a web-based client application.
 
-<div class="flex justify-center">
+<!-- <div class="flex justify-center">
     <img :src="$withBase('/assets/diva_client.png')" height="500" alt="DIVA Architecture">
-</div>
+</div> -->
 
 Web application is a Vue 2 single page app and is currently the only client that allows managing DIVA Catalog through an 
 intuitive and modern UI. For non-developers 

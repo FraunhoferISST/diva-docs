@@ -1,3 +1,8 @@
+---
+id: local
+title: Local development
+---
+
 # Local development
 
 In this chapter we will look at what is needed to develop existing services or create new ones locally on your own development machine.

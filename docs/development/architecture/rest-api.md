@@ -1,3 +1,8 @@
+---
+id: rest-api
+title: REST API
+---
+
 # REST API
 
 The core of our system consists of several services that provide their functionality through REST API.

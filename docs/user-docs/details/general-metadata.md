@@ -1,3 +1,8 @@
+---
+id: general-metadata
+title: General Metadata
+---
+
 # General Metadata
 
 ## General Page
@@ -29,9 +34,9 @@ It will be automatically set according to the reviews made by the users.
 We will change this in the future, as it seems rather confusing.
 :::
 
-<div class="flex justify-center">
+<!-- <div class="flex justify-center">
     <img class="rounded-lg" :src="$withBase('/assets/screenshots/details/general.png')" alt="DIVA General Metadata">
-</div>
+</div> -->
 
 ## Cost Page
 
@@ -47,9 +52,9 @@ For example, you can document if you have monthly costs for a resource.
 |**maintenance costs**|Cost of keeping this entity up to date|
 |**external costs**|Cost of buying this entity|
 
-<div class="flex justify-center">
+<!-- <div class="flex justify-center">
     <img class="rounded-lg" :src="$withBase('/assets/screenshots/details/general_costs.png')" alt="DIVA General Costs Metadata">
-</div>
+</div> -->
 
 ## History Page
 
@@ -63,18 +68,18 @@ This is due to the fact that we can store a very large amount of metadata in the
 Presenting every single metadata field in the history in a human-readable way would currently lead to an enormous additional effort.
 :::
 
-<div class="flex justify-center">
+<!-- <div class="flex justify-center">
     <img class="rounded-lg" :src="$withBase('/assets/screenshots/details/history.png')" alt="DIVA History Metadata">
-</div>
+</div> -->
 
 If larger parts of the metadata are changed, the details are hidden for the time being.
 Each entry has a button with 3 dots.
 The details can be displayed via this button.
 There you can also expand and examine the technical data further.
 
-<div class="flex justify-center">
+<!-- <div class="flex justify-center">
     <img class="rounded-lg" :src="$withBase('/assets/screenshots/details/history_details.png')" alt="DIVA History Details Metadata">
-</div>
+</div> -->
 
 ## Reviews Page
 
@@ -84,6 +89,6 @@ Users can also edit or completely delete their rating after creating it.
 For this you need to click on the pen or bin icon.
 The overall rating is the average of all ratings of the resource or asset.
 
-<div class="flex justify-center">
+<!-- <div class="flex justify-center">
     <img class="rounded-lg" :src="$withBase('/assets/screenshots/details/reviews.png')" alt="DIVA Reviews Metadata">
-</div>
+</div> -->

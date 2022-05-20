@@ -1,3 +1,8 @@
+---
+id: releases
+title: Releases and Migrations
+---
+
 # Releases and Migrations
 
 We are continuously working on new features, catching bugs and improving our architecture.

@@ -1,3 +1,8 @@
+---
+id: keycloak
+title: Keycloak
+---
+
 # Keycloak
 
 [Keycloak](https://www.keycloak.org/) is a popular Open Source identity and access management software. In DIVA v2.2 we 

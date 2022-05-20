@@ -1,3 +1,8 @@
+---
+id: docker
+title: Docker deployment
+---
+
 # Docker deployment
 
 DIVA is built with a focus on scalability, modularization and expandability using a microservice architecture.
@@ -136,9 +141,9 @@ in `/etc/hosts` on our machine:
 On your local machine with the default nginx config the Web client is available on `https://diva.com/`. Now just visit the URL,
 log in to the application through Keycloak, and make sure... that the authentication does not work! You will probably see something like:
 
-<div class="flex justify-center">
+<!-- <div class="flex justify-center">
     <img class="rounded-lg" :src="$withBase('/assets/proxy_client_error.png')" alt="authentication error">
-</div>
+</div> -->
 
 And this is fine. Since Kong and Keycloak are running in the container in Docker and we are working with `diva.com` fake domain, 
 which maps to `localhost`, Kong cannot communicate with Keycloak for authentication. In the real production environment this wouldn't be

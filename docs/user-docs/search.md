@@ -1,3 +1,8 @@
+---
+id: search
+title: Search Page
+---
+
 # Search Page
 
 On the search page you can search for all [Resources](../about/README.md#resource) and [Assets](../about/README.md#asset) in DIVA using free text search.
@@ -5,9 +10,9 @@ Just enter your query in the search field, the search will be executed as you ty
 DIVA will already give a first set of results without you having to insert a search term.
 This should support you in "flowing" through the metadata.
 
-<div class="flex justify-center">
+<!-- <div class="flex justify-center">
     <img class="rounded-lg" :src="$withBase('/assets/screenshots/search.png')" alt="DIVA login">
-</div>
+</div> -->
 
 The search results are presented in cards with an overview of important meta information.
 When clicking on a card, the [details](./resource-details) page of a resource or asset opens in a new tab.
@@ -20,9 +25,9 @@ Following information is previewed if available:
 4. Metadata create and modified date
 5. Keywords
 
-<div class="flex justify-center">
+<!-- <div class="flex justify-center">
     <img class="rounded-lg border-2 border-gray-100 border-solid" :src="$withBase('/assets/screenshots/search_result.png')" alt="DIVA Search Result">
-</div>
+</div> -->
 
 ::: warning
 The current search page is very minimalistic.

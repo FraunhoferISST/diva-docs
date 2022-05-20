@@ -1,3 +1,8 @@
+---
+id: gateway
+title: Gateway
+---
+
 # Gateway
 
 The [Kong](https://konghq.com/kong/) API Gateway acts as a secure access point to the backend services. It is an abstraction layer for the [REST API's](./rest-api.md)
