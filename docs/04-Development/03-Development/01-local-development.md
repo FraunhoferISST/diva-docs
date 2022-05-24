@@ -1,9 +1,9 @@
 ---
-id: local
-title: Local development
+id: local-development
+title: Local Development
 ---
 
-# Local development
+# Local Development
 
 In this chapter we will look at what is needed to develop existing services or create new ones locally on your own development machine.
 This guide is for the developers who want to actively contribute to the implementation of the system and assumes that the respective components must be run locally without Docker. Read this if you want to improve one of the existing components or add a new one.

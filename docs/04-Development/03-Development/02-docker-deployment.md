@@ -1,9 +1,9 @@
 ---
-id: docker
-title: Docker deployment
+id: docker-deployment
+title: Docker Deployment
 ---
 
-# Docker deployment
+# Docker Deployment
 
 DIVA is built with a focus on scalability, modularisation and expandability using a microservice architecture. Our team 
 relies on the latest technologies for container-based development and deployment of the system using Docker.

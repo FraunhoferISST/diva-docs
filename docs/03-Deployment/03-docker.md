@@ -1,9 +1,9 @@
 ---
 id: docker
-title: Docker deployment
+title: Docker Deployment
 ---
 
-# Docker deployment
+# Docker Deployment
 
 DIVA is built with a focus on scalability, modularization and expandability using a microservice architecture.
 Our team relies on the latest technologies for container-based development and deployment of the system using Docker.
@@ -60,7 +60,7 @@ WEB_CLIENT_PORT=90
 
 In the development environment, the configuration in `.env.default` and other templates are quite sufficient and must work immediately.
 However, in order to make DIVA "production-ready" in Docker, we need to do some tweaks. Just follow the configuration guides for
-[Keycloak](../architecture/keycloak.md#configuration), [API Gateway](../architecture/gateway.md#configuration) and [Web-Client](../architecture/web-client.md#configuration), in that order.
+[Keycloak](/docs/Development/Architecture/keycloak#configuration), [API Gateway](/docs/Development/Architecture/gateway#configuration) and [Web-Client](/docs/Development/Architecture/web-client#configuration), in that order.
 
 ## Deployment with nginx reverse proxy
 
@@ -70,11 +70,11 @@ DIVA instance in an experimental environment. For this purpose, we provide an ex
 to easily expose DIVA with Docker Compose.
 
 This simple nginx reverse proxy configuration serves as an example of how Diva could be exposed to the world. The proxy
-configuration in `nginx.example.conf` is minimalistic and **not** suitable for production! 
+configuration in `nginx.example.conf` is minimalistic and **not** suitable for production!
 
-In general, the [Web client](../architecture/web-client.md) application and the [API Gateway](../architecture/gateway.md)
-should be accessible through the network behind the proxy. 
-In addition, the client needs a running [Keycloak](../architecture/keycloak.md) instance, which does not necessarily have to be delivered by the same 
+In general, the [Web client](/docs/Development/Architecture/web-client) application and the [API Gateway](../architecture/gateway.md)
+should be accessible through the network behind the proxy.
+In addition, the client needs a running [Keycloak](/docs/Development/Architecture/keycloak) instance, which does not necessarily have to be delivered by the same 
 reverse proxy server. So the rule is that only 3 DIVA components must be accessible over the internet - Web Client, 
 Kong Gateway and Keycloak. Furthermore, for the Web-Client app the access to API Gateway and Keycloak should be configured 
 through the [environment variables](#environment-variables) on runtime.

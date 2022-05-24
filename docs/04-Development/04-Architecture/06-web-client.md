@@ -1,9 +1,9 @@
 ---
 id: web-client
-title: Web client
+title: Web Client
 ---
 
-# Web client
+# Web Client
 
 DIVA is a complex system with many services and different interfaces that drive the core functionality of the system.
 Operating the system requires a solid understanding of the underlying architecture and the technologies used.

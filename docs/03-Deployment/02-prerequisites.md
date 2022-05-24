@@ -33,7 +33,7 @@ All DIVA repositories are freely accessible on GitHub and can be cloned without 
 + [diva-docs](https://github.com/FraunhoferISST/diva-docs) - Repository for this documentation
 
 You can always find the latest Docker distribution under [releases](https://github.com/FraunhoferISST/diva/releases).
-Follow our [docker guide](./docker.md) to  deploy DIVA.
+Follow our [docker guide](docker) to  deploy DIVA.
 
 ## Access to container registry
 
