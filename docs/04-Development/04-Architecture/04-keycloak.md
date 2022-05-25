@@ -13,14 +13,14 @@ integrated Keycloak to 1) reuse enterprise ready identity and user account manag
 
 DIVA is shipped with already [preconfigured](https://github.com/FraunhoferISST/diva/blob/main/core/keycloak/default-realm.json)
 Keycloak 15 instance that can be started up directly with the other components. You will
-find more details in the [Docker guide](../deployment/docker.md). The provided configuration has a realm with all necessary 
+find more details in the [Docker guide](../../deployment/docker). The provided configuration has a realm with all necessary 
 settings to accept Web-Client connections and authorize users.
 
 ## Realm
 
 The pre-configured realm is automatically loaded into DIVA Keycloak at startup and has a client for DIVA Web app.
 The default names for the realm and client are `diva-kc-realm` and `diva-kc-client`. This names are not mandatory and 
-can be changed. You have only to reflect the name changes in the [Web client configuration](./web-client.md#configuration).
+can be changed. You have only to reflect the name changes in the [Web client configuration](web-client#configuration).
 For the local development environment all values can be used as provided in default configuration.
 
 ## Authentication
@@ -31,7 +31,7 @@ API. By default, we use tokens with RS256 signature algorithm with default expir
 
 :::caution 
 If you change token settings in Keycloak, probably the adjustment in the API Gateway will be required. For more details refer
-to [Kong configuration](./gateway.md).
+to [Kong configuration](gateway).
 :::
 
 ## Users management

@@ -5,8 +5,8 @@ title: Gateway
 
 # Gateway
 
-The [Kong](https://konghq.com/kong/) API Gateway acts as a secure access point to the backend services. It is an abstraction layer for the [REST API's](./rest-api.md)
-of the individual services used by our [Web client](./web-client.md). Gateway provides an authentication mechanism and accepts 
+The [Kong](https://konghq.com/kong/) API Gateway acts as a secure access point to the backend services. It is an abstraction layer for the [REST API's](rest-api)
+of the individual services used by our [Web client](web-client). Gateway provides an authentication mechanism and accepts 
 requests only from the clients with a valid [JWT](https://jwt.io/). So the gateway is the only security layer in the 
 entire system and should be the only component accessible on the Internet. The backend of the system should always run 
 behind the gateway, since the services themselves do not implement any authentication.
@@ -48,7 +48,7 @@ KONG_DECLARATIVE_CONFIG=my-production-config.yml
 ```
 
 The next important point is that Kong needs to know the Keycloak token issuer for authentication. The field `iss` in 
-Keycloak generated token depends on how [Keycloak is configured](./keycloak.md) and on which URL it lives. Fo example, if the
+Keycloak generated token depends on how [Keycloak is configured](keycloak.) and on which URL it lives. Fo example, if the
 Keycloak instance is located on `https://my.kc.domain.com`, you have to adjust the following everywhere authentication is required:
 ```yml
 plugins:

@@ -5,7 +5,7 @@ title: User Details Page
 
 # User Details Page
 
-To navigate to the page with your account settings, click on the user icon in the navigation at the bottom of the  [Home Page](./home.md) and then on your name in the menu that appears.
+To navigate to the page with your account settings, click on the user icon in the navigation at the bottom of the  [Home Page](home) and then on your name in the menu that appears.
 
 ![User Menu](/img/screenshots/user_menu.png)
 

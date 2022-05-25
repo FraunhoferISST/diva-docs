@@ -73,4 +73,4 @@ docker push ghcr.io/fraunhoferisst/diva/web-client:19.0.0
 ```
 
 To learn how to manage and containerize service with docker please refer to our detailed guide for 
-[Container and images management](./docker.md#container-and-images-management)
+[Container and images management](/docs/Development/Development/docker-deployment#container-and-images-management)

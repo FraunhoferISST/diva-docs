@@ -9,15 +9,15 @@ In this chapter we will look at what is needed to develop existing services or c
 This guide is for the developers who want to actively contribute to the implementation of the system and assumes that the respective components must be run locally without Docker. Read this if you want to improve one of the existing components or add a new one.
 
 :::tip
-Make sure to read the [prerequisites](/dev-docs/deployment/) to know what do you need to be able to set up DIVA on your machine
+Make sure to read the [prerequisites](../prerequisites) to know what do you need to be able to set up DIVA on your machine
 :::
 
 DIVA consist of many components, each with it own requirements.
 All components are provided with  corresponding readmes where you can find detailed descriptions of the requirements and execution instructions.
 
 In general, a common routine will look like this: check out the necessary repository, change to the right folder, install dependencies and start the component.
-While there are system components that can run completely independently, most of our [core services](../architecture/services.md#core-services) rely on Kafka or databases.
-For example [Web client](../architecture/web-client.md) relies on [API Gateway](../architecture/gateway.md), and the [API Gateway](../architecture/gateway.md) needs
+While there are system components that can run completely independently, most of our core services rely on Kafka or databases.
+For example [Web client](../architecture/web-client) relies on [API Gateway](../architecture/gateway), and the [API Gateway](../architecture/gateway) needs
 other services to be running.
 In order to be able to work properly with the client, other services have to operate as well.
 To avoid this problem, the necessary components such as Kafka, databases or other service can be run directly with Docker Compose.
@@ -29,7 +29,7 @@ Therefore, we propose the following workflow for local development:
    127.0.0.1 localhost broker
    ```
 
-2. Spin up the system with Docker. Read our guide for [Docker deployment](./docker.md) for further information
+2. Spin up the system with Docker. Read our guide for [Docker deployment](docker-deployment) for further information
 
    ```bash
    cd docker

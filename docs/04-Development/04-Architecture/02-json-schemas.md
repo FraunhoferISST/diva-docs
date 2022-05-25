@@ -29,7 +29,7 @@ The directory is structured like follows:
 + `history` - History schema
 + `user` - User schema
 
-Json schema determine our [data model](../architecture/README.md#data-model). Since the attributes of different resource 
+Json schema determine our [data model](../architecture/introduction#data-model). Since the attributes of different resource 
 types can vary significantly, we define other sub-resources such as PDF, CSV, PNG, etc. for the resources and assets. 
 The type of sub-resource is generally determined by the format or type of data source. E.g. MongoDB, Hadoop or an API could be a sub-resource.
 The entity abstracts common attributes that are "inherited" by all other entities.

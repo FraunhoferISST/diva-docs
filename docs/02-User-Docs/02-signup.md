@@ -38,13 +38,13 @@ Perform the following steps to log in onto the DIVA application with your email 
 
 ![DIVA login](/img/screenshots/keycloak/keycloak_signin.png)
 
-After successful login you will be automatically redirected to the [Home Page](./home.md).
+After successful login you will be automatically redirected to the [Home Page](/docs/User-Docs/home).
 
 :::tip Change your Username
 Initially, your username will be set to your email.
-If you want a better experience, please change your username by visiting the [User Details Page](./user.md).
+If you want a better experience, please change your username by visiting the [User Details Page](user).
 :::
 
 :::tip Upload a profile image
-Visit the [User Details Page](./user.md) to provide your account with further information or upload a profile picture.
+Visit the [User Details Page](user) to provide your account with further information or upload a profile picture.
 :::

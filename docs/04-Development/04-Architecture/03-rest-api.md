@@ -7,7 +7,7 @@ title: REST API
 
 The core of our system consists of several services that provide their functionality through REST API.
 These are only the API's that are used internally by DIVA and should not be available to third party providers. 
-Since the services do not implement authentication logic, the service must always run behind the [Gateway](./gateway.md).
+Since the services do not implement authentication logic, the service must always run behind the [Gateway](gateway).
 
 ## Best practises
 
@@ -120,7 +120,7 @@ Query:
 There are different views regarding the representation of the hierarchy between resources. To be short, we prefer a 
 flat structure without sub resources to keep the API as simple and clear as possible. In general, entities that can 
 be seen as independent resources should have their own endpoint. Instead of the nesting we express the relations between Resources
-like stated in the [data model](./README.md#data-model) section. So entities that are in a relation to another entity must store the `id` of this entity
+like stated in the [data model](introduction#data-model) section. So entities that are in a relation to another entity must store the `id` of this entity
 as `belogsTo` attribute. Corresponding to the [filtering](#filtering) rules we could request entities that belong to some other entity
 with `belogsTo` query parameter.
 

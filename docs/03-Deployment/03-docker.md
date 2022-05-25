@@ -11,7 +11,7 @@ All system components are containerized and have current images that are continu
 In this guide we will learn how to get DIVA running with `docker-compose`.
 
 :::tip
-Make sure to read the [prerequisites](./README.md) to know what you need to get started with Docker and Docker Compose.
+Make sure to read the [prerequisites](prerequisites) to know what you need to get started with Docker and Docker Compose.
 Also note that deployment with docker is not suitable for Production.
 Nonetheless, it is convenient for local development  environment to quickly spin up most of the components like Kafka, Gateway and other services.
 :::
@@ -72,7 +72,7 @@ to easily expose DIVA with Docker Compose.
 This simple nginx reverse proxy configuration serves as an example of how Diva could be exposed to the world. The proxy
 configuration in `nginx.example.conf` is minimalistic and **not** suitable for production!
 
-In general, the [Web client](/docs/Development/Architecture/web-client) application and the [API Gateway](../architecture/gateway.md)
+In general, the [Web client](/docs/Development/Architecture/web-client) application and the [API Gateway](/docs/Development/Architecture/gateway)
 should be accessible through the network behind the proxy.
 In addition, the client needs a running [Keycloak](/docs/Development/Architecture/keycloak) instance, which does not necessarily have to be delivered by the same 
 reverse proxy server. So the rule is that only 3 DIVA components must be accessible over the internet - Web Client, 
@@ -131,7 +131,7 @@ in `/etc/hosts` on our machine:
    >      config:
    >        allowed_iss: [ "https://diva.com/auth/realms/my-realm" ]
    > ```
-   > For more details refer to [Kong API Gateway configuration](../architecture/gateway.md)
+   > For more details refer to [Kong API Gateway configuration](/docs/Development/Architecture/gateway)
 7. Make sure DIVA Core is already running
    > You can spin up anything needed with `./up_core.sh` in `docker/`
 8. Run nginx proxy server in `proxy/` with:
@@ -147,6 +147,6 @@ log in to the application through Keycloak, and make sure... that the authentica
 
 And this is fine. Since Kong and Keycloak are running in the container in Docker and we are working with `diva.com` fake domain, 
 which maps to `localhost`, Kong cannot communicate with Keycloak for authentication. In the real production environment this wouldn't be
-an issue, as Keycloak would be running on a real URL. Make sure to take a look at [API Gateway](./configuration.md#kong-gateway),
-[Keycloak](./configuration.md#keycloak) and [Web-client](./configuration.md#web-client) configurations to better prepare
+an issue, as Keycloak would be running on a real URL. Make sure to take a look at [API Gateway](/docs/Deployment/Configuration#kong-gateway),
+[Keycloak](/docs/Deployment/Configuration#keycloak) and [Web-client](/docs/Deployment/Configuration#web-client) configurations to better prepare
 DIVA for production.

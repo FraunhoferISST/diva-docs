@@ -35,10 +35,10 @@ follow the rules below to incorporate your changes into DIVA.
 + When issuing PR's, make your changes in a new git branch based on `dev`
 + The `master` branch is a snapshot of the latest stable release. All development should be done in dedicated branches. 
   Do not submit PR's against the `master` branch.
-+ Don't be afraid to commit frequently. Just make sure to follow our [commit convention](./commits.md) 
++ Don't be afraid to commit frequently. Just make sure to follow our [commit convention](commits) 
 + Update the corresponding README.md with details of changes, this includes new environment variables, exposed ports, useful file locations and other information.
 + Always update OpenAPI specification of the corresponding service, if any changes to the REST API were applied
-+ Lint the code and follow our source code [style guide](./code-styles.md), if applicable
++ Lint the code and follow our source code [style guide](code-styles), if applicable
 + Increase the version numbers in language specific file (e.g. package.json) and corresponding `docker-compose.yml` file to the new version that this
   Pull Request would represent. The versioning scheme we use is [SemVer](http://semver.org/).
 + Propose your changes to be included in this documentation. Contribute in the [documentation repository](https://github.com/FraunhoferISST/diva-docs) according to the same principle 

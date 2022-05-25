@@ -29,7 +29,7 @@ In the following the components will be explained with more details.
 ## Data Model
 
 Our data model aims at simplicity and flat hierarchy.
-We have designed a model with loose entity coupling, driven by [JSON schemas](./json-schemas.md).
+We have designed a model with loose entity coupling, driven by [JSON schemas](json-schemas).
 JSON schemas are most important building block of our whole system.
 Thanks to the schema-driven development process, we can achieve high integrity and validity of the data processed in DIVA.
 Furthermore, this approach allows us to develop Management Services API's with fully automated data validation process.
@@ -38,7 +38,7 @@ Furthermore, this approach allows us to develop Management Services API's with f
 
 We have two levels of hierarchy in our model, with the Entity on top.
 Entity is a logical high level abstraction that represents common properties of the underlying entities and does **not** exists physically.
-The entities [User](../../about/README.md#user), [Resource](../../about/README.md#resource), [Asset](../../about/README.md#asset) etc. inherit properties like `id`, `entityType` and `created` from Entity.
+The entities [User](../../../about#user), [Resource](../../../about#resource), [Asset](../../../about#asset) etc. inherit properties like `id`, `entityType` and `created` from Entity.
 You will find schemas for all entities in [`core/schemata/`](https://github.com/FraunhoferISST/diva/tree/master/core/schemata) directory.
 
 Although the entities are not coupled with each other, they can have relations.
@@ -59,7 +59,7 @@ For example, if a User with the id `user:uuid:041587a4-f9fb-4c6a-8ff0-6ff93c374c
 
 In this way we can achieve a flat hierarchy, loose coupling and flexible relations between entities.
 This in turn allows us to develop services with transparent API according to the single responsibility principle.
-You will learn more about our [REST API](./rest-api.md) design rules in the corresponding section.
+You will learn more about our [REST API](rest-api) design rules in the corresponding section.
 
 :::caution Relations
 Note that even if the entities have relations, they remain fully independent and can be managed only by the corresponding management service.
@@ -88,20 +88,20 @@ as MongoDB or Kafka, which are fixed parts of the DIVA ecosystem.
 
 **Web client**
 
-[Web application](./web-client.md) is currently the only client that allows managing DIVA Catalog through a nice UI.
+[Web application](web-client) is currently the only client that allows managing DIVA Catalog through a nice UI.
 For non-developers this is the only way to interact with the system's backend. Make sure to take a look at the 
-[users guide](../../user-docs)!
+[users guide](../../user-docs/introduction)!
 
 **API Gateway**
 
-The [Kong API Gateway](./gateway.md) acts as a secure access point to the backend services. It is an abstraction layer 
-for the REST API's of the individual services used by our [Web client](./web-client.md). Only authenticated users with 
+The [Kong API Gateway](gateway) acts as a secure access point to the backend services. It is an abstraction layer 
+for the REST API's of the individual services used by our [Web client](web-client). Only authenticated users with 
 a valid JWT have access to the backend through the API Gateway.
 
 **Schema registry**
 
 [Schema Registry](https://github.com/FraunhoferISST/diva/tree/master/core/services/schema-registry) 
-holds and exposes all schemas through the API endpoint, including [JSON Schemas](./json-schemas.md) and
+holds and exposes all schemas through the API endpoint, including [JSON Schemas](json-schemas) and
 AsyncAPI Schemas. All interested services contact the Schema Registry and load the required schemas once at start time. 
 
 **Messaging**
@@ -121,7 +121,7 @@ Relevant entities' metadata is replicated
 to the Elasticsearch instance through the [Elasticsearch Connector](https://github.com/FraunhoferISST/diva/tree/master/core/services/elasticsearch-connector)
 to provide high performance full text search capabilities.
 This ES instance is used by the [Search Assistant](https://github.com/FraunhoferISST/diva/tree/master/core/services/search-assistant) Service.
-MinIO acts as the efficient object storage, where we only persist files imported via [Web client](./web-client.md) UI from 
+MinIO acts as the efficient object storage, where we only persist files imported via [Web client](web-client) UI from 
 the user's device.
 
 :::caution Data Replication 
@@ -139,10 +139,10 @@ data is stored in corresponding collections in MongoDB.
 
 | Title   | Description                            | Dependencies |
 |---------|----------------------------------------|--------------|
-| [Resource Management](https://github.com/FraunhoferISST/diva/tree/master/core/services/resource-management)  | Responsible for managing the metadata about [resources](../../about/README.md#resource) | Kafka, MongoDB, Schema Registry |
-| [User Management](https://github.com/FraunhoferISST/diva/tree/master/core/services/user-management)  | Responsible for [users](../../about/README.md#user) data management and authentication | Kafka, MongoDB, Schema Registry |
-| [Asset Management](https://github.com/FraunhoferISST/diva/tree/master/core/services/asset-management)  | Responsible for managing the metadata about [assets](../../about/README.md#asset) | Kafka, MongoDB, Schema Registry |
-| [Review Management](https://github.com/FraunhoferISST/diva/tree/master/core/services/review-management)  | Responsible for [reviews](../../about/README.md#review) management | Kafka, MongoDB, Schema Registry |
+| [Resource Management](https://github.com/FraunhoferISST/diva/tree/master/core/services/resource-management)  | Responsible for managing the metadata about [resources](../../../about#resource) | Kafka, MongoDB, Schema Registry |
+| [User Management](https://github.com/FraunhoferISST/diva/tree/master/core/services/user-management)  | Responsible for [users](../../../about#user) data management and authentication | Kafka, MongoDB, Schema Registry |
+| [Asset Management](https://github.com/FraunhoferISST/diva/tree/master/core/services/asset-management)  | Responsible for managing the metadata about [assets](../../../about#asset) | Kafka, MongoDB, Schema Registry |
+| [Review Management](https://github.com/FraunhoferISST/diva/tree/master/core/services/review-management)  | Responsible for [reviews](../../../about#review) management | Kafka, MongoDB, Schema Registry |
 
 **Assistant Services**
 
@@ -152,14 +152,14 @@ read access to the entities.
 | Title   | Description                            | Dependencies |
 |---------|----------------------------------------|--------------|
 | [Analytics Assistant](https://github.com/FraunhoferISST/diva/tree/master/core/services/analytics-assistant)  | provides statistical data about catalog entities | Elasticsearch |
-| [Profiling Assistant](https://github.com/FraunhoferISST/diva/tree/master/core/services/profiling-assistant)  | Responsible for [profiling workflows](../../about/README.md#resource) execution triggering| MongoDB, Airflow |
-| [History Assistant](https://github.com/FraunhoferISST/diva/tree/master/core/services/history-assistant)  | Provides a human readable representation of the entities [history](../../about/README.md#resource)  | MongoDB, Schema Registry |
+| [Profiling Assistant](https://github.com/FraunhoferISST/diva/tree/master/core/services/profiling-assistant)  | Responsible for [profiling workflows](../../../about#resource) execution triggering| MongoDB, Airflow |
+| [History Assistant](https://github.com/FraunhoferISST/diva/tree/master/core/services/history-assistant)  | Provides a human readable representation of the entities [history](../../../about#resource)  | MongoDB, Schema Registry |
 | [Search Assistant](https://github.com/FraunhoferISST/diva/tree/master/core/services/search-assistant)  | Provides preselected entities search API | Elasticsearch |
 
 **Adapter Services**
 
 The Adapter Services are special services designed to connect and import data from external sources. They encapsulate 
-the connection logic, load the data, transform it into a DIVA compliant representation and store the newly created [Resources](../../about/README.md#resource) in the system. 
+the connection logic, load the data, transform it into a DIVA compliant representation and store the newly created [Resources](../../../about#resource) in the system. 
 In special cases an Adapter Service can be implemented to export a DIVA Resource to an external system.
 The creation of new resources is done by using the Resource Management Service, direct access to the data storage is only allowed in the read mode.
 

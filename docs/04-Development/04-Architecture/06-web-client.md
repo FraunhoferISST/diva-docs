@@ -29,10 +29,10 @@ In the near future we plan to update the client to Vue 3. With this update will 
 
 In this chapter we will discuss how to prepare the client application for execution. 
 The client communicates with the backend through Kong API Gateway and requires the user to be authenticated with a valid JWT.
-You can read more about authentication flow in the [API Gateway](./gateway.md) section.
+You can read more about authentication flow in the [API Gateway](gateway) section.
 
 Once loaded, the client performs the identity check through Keycloak and initializes the user data in the browser, if user exists
-and is already logged in, or navigates to login page. There the authorization to the system is managed by [Keycloak](./keycloak.md).
+and is already logged in, or navigates to login page. There the authorization to the system is managed by [Keycloak](keycloak).
 To get access to the functionalities of the system the developers have to register first as well.
 
 For the web client, in order to be able to execute identity verification and access API Gateway, corresponding information
@@ -81,4 +81,4 @@ No need to change this variable, if you use the Keycloak instance shipped with D
 You can read more about how to use environment variables in the [Docker guide](../deployment/docker.html#environment-variables).
 Please note that for the client to successfully and securely connect to Keycloak in the production environment and authenticate 
 in Kong, Kong and Keycloak must be configured correctly as well. At this point we refer the reader to the corresponding 
-[Kong Gateway](./gateway.md) and [Keycloak](./keycloak.md) guides.
+[Kong Gateway](gateway) and [Keycloak](keycloak) guides.

@@ -27,7 +27,7 @@ In this guide we assume that you are already familiar with the basic concepts of
 
 DIVA is shipped with already [preconfigured](https://github.com/FraunhoferISST/diva/blob/main/core/keycloak/default-realm.json)
 Keycloak 15 instance that can be started up directly with the other components. You will
-find more details in the [Docker guide](../deployment/docker.md). The provided configuration has a realm with all necessary
+find more details in the [Docker guide](docker). The provided configuration has a realm with all necessary
 settings to accept Web-Client connections and authorize users. Nevertheless, this configuration must be optimized for
 production environment to improve the security setting.
 
@@ -42,7 +42,7 @@ Keycloak configuration.
 
 ### Environment
 
-First, Keycloak must be configured in Docker through the [environment variables](../deployment/docker.md#environment-variables).
+First, Keycloak must be configured in Docker through the [environment variables](docker#environment-variables).
 To do this, we need to explicitly tell Keycloak in your `docker/.env` on which URL the instance is running.
 For example, if you plan to deploy Keycloak on `https://diva.com/auth/`, we set the variable as follows:
 

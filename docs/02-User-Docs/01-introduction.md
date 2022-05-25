@@ -8,7 +8,7 @@ title: Introduction
 In this guide we will learn how to manage data in DIVA using the web application. We will go through all the steps in detail, from creating an account to managing resources and assets.
 
 :::tip
-Also make sure to read about [core concepts, ideas and features](../about/README.md) in DIVA to get better understanding
+Also make sure to read about [core concepts, ideas and features](../../about) in DIVA to get better understanding
 of the context of the following guide!
 :::
 
