@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdiva_docs=self.webpackChunkdiva_docs||[]).push([[7620],{8765:function(s){s.exports=JSON.parse('{"label":"docusaurus","permalink":"/diva-docs/blog/tags/docusaurus","allTagsPath":"/diva-docs/blog/tags","count":4}')}}]);

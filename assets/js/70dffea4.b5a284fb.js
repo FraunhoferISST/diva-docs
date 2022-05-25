@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdiva_docs=self.webpackChunkdiva_docs||[]).push([[3187],{9341:function(a){a.exports=JSON.parse('{"label":"hello","permalink":"/diva-docs/blog/tags/hello","allTagsPath":"/diva-docs/blog/tags","count":2}')}}]);

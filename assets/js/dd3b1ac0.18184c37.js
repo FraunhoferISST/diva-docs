@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdiva_docs=self.webpackChunkdiva_docs||[]).push([[7669],{4125:function(o){o.exports=JSON.parse('{"permalink":"/diva-docs/blog/tags/hello","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

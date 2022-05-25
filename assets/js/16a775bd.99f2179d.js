@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdiva_docs=self.webpackChunkdiva_docs||[]).push([[2541],{6765:function(s){s.exports=JSON.parse('{"permalink":"/diva-docs/blog/tags/docusaurus","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
