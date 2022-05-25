@@ -144,7 +144,7 @@ from the default publicity visible configurations!
 :::
 
 When deploying with Docker, you can easily switch between configurations with the `KONG_DECLARATIVE_CONFIG` environment variable.
-Please read more in our [Docker guide](../deployment/docker.html#environment-variables) about environment variables. For example,
+Please read more in our [Docker guide](../deployment/docker#environment-variables) about environment variables. For example,
 you can place your configuration in `core/kong-gateway/my-production-config.yml` and set the ENV in your `.env` file:
 ```dotenv
 KONG_DECLARATIVE_CONFIG=my-production-config.yml

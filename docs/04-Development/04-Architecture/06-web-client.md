@@ -78,7 +78,7 @@ No need to change this variable, if you use the Keycloak instance shipped with D
   VUE_APP_DISABLE_PATCH=true
   ```
 
-You can read more about how to use environment variables in the [Docker guide](../deployment/docker.html#environment-variables).
+You can read more about how to use environment variables in the [Docker guide](../../deployment/docker#environment-variables).
 Please note that for the client to successfully and securely connect to Keycloak in the production environment and authenticate 
 in Kong, Kong and Keycloak must be configured correctly as well. At this point we refer the reader to the corresponding 
 [Kong Gateway](gateway) and [Keycloak](keycloak) guides.
