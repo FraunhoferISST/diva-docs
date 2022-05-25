@@ -13,7 +13,7 @@ This should support you in "flowing" through the metadata.
 ![DIVA Search](/img/screenshots/search.png)
 
 The search results are presented in cards with an overview of important meta information.
-When clicking on a card, the [details](/docs/UserDocs/Details/general-metadata) page of a resource or asset opens in a new tab.
+When clicking on a card, the [details](./details/general-metadata) page of a resource or asset opens in a new tab.
 
 Following information is previewed if available:
 

@@ -41,14 +41,14 @@ provide an example production configuration in [`kong.production.yml`](https://g
 which must always be kept up to date with the development configuration.
 
 When deploying with Docker, you can easily switch between configurations with the `KONG_DECLARATIVE_CONFIG` environment variable.
-Please read more in our [Docker guide](../deployment/docker.html#environment-variables) about environment variables. For example,
+Please read more in our [Docker guide](../../deployment/docker#environment-variables) about environment variables. For example,
 you can place your configuration in `core/kong-gateway/my-production-config.yml` and set the ENV in your `.env` file:
 ```dotenv
 KONG_DECLARATIVE_CONFIG=my-production-config.yml
 ```
 
 The next important point is that Kong needs to know the Keycloak token issuer for authentication. The field `iss` in 
-Keycloak generated token depends on how [Keycloak is configured](keycloak.) and on which URL it lives. Fo example, if the
+Keycloak generated token depends on how [Keycloak is configured](keycloak) and on which URL it lives. Fo example, if the
 Keycloak instance is located on `https://my.kc.domain.com`, you have to adjust the following everywhere authentication is required:
 ```yml
 plugins:

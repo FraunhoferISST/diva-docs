@@ -49,4 +49,4 @@ Everything done with your old, deleted account is not related to this new one.
 You can also view the details of other users.
 To do this, you need to click on the name of the corresponding user.
 You will see other users in several places in the application.
-For example, you can find the data owner or the creator of a resource on the [resource details](/docs/UserDocs/Details/general-metadata) page.
+For example, you can find the data owner or the creator of a resource on the [resource details](./details/general-metadata) page.

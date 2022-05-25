@@ -15,7 +15,7 @@ To enable everyone to enjoy the benefits of data management with DIVA, we have i
 
 Web application is a Vue 2 single page app and is currently the only client that allows managing DIVA Catalog through an 
 intuitive and modern UI. For non-developers 
-this is the only way to interact with the system's backend. Make sure to take a look at the [users guide](../../user-docs)!
+this is the only way to interact with the system's backend. Make sure to take a look at the [users guide](../../user-docs/introduction)!
 
 [Vuetify](https://vuetifyjs.com/en/) is used as the frontend framework. Therefore, the look & feel is basically determined by the material design pattern. 
 Nevertheless, we implement slight adjustments to the components to create an individual and recognizable form with a smoother and breezier feeling.
@@ -53,12 +53,12 @@ In the following we will list and explain environment variables that can be set 
 and the client will know, how to communicat to it. For more flexibility, the URL to the gateway can be configured 
 through the environment variables. The client uses the `VUE_APP_API_GATEWAY_URL` environment variable as the base URL.
 The variable can be set either in the local development environment directly when running with NPM or in Docker container. You can
-learn more about how to deploy web-client and the Gateway with reverse proxy in our [Docker guide](../deployment/docker.html#deployment-with-nginx-reverse-proxy).
+learn more about how to deploy web-client and the Gateway with reverse proxy in our [Docker guide](../../deployment/docker#deployment-with-nginx-reverse-proxy).
 
 + `VUE_APP_KEYCLOAK_URL`  <Badge type="tip" text="v2.2.0" vertical="middle" /> - the client must also know how to reach the Keycloak instance for user authorization. 
 Here the same applies, in production the variable must be set correctly so that the client can communicate with Keycloak. 
 Probably you will have your own managed Keycloak instance running. If not, we give an example on how to deploy Keycloak behind reverse
-proxy in our [Docker guide](../deployment/docker.html#deployment-with-nginx-reverse-proxy). 
+proxy in our [Docker guide](../../deployment/docker#deployment-with-nginx-reverse-proxy). 
 + `VUE_APP_KEYCLOAK_REALM` <Badge type="tip" text="v2.2.0" vertical="middle" /> - if you have your own managed Keycloak instance, you can specify the realm that the client should
 use for user authentication. We ship DIVA with already preconfigured Keycloak instance that you can adjust. Otherwise, the default value ca be left as is.
 + `VUE_APP_KEYCLOAK_CLIENT_ID` <Badge type="tip" text="v2.2.0" vertical="middle" /> - the `id` of the Keycloak client that regulates the permission for our web-client. 

@@ -42,7 +42,7 @@ Keycloak configuration.
 
 ### Environment
 
-First, Keycloak must be configured in Docker through the [environment variables](docker#environment-variables).
+First, Keycloak must be configured in Docker through the [environment variables](/docs/Deployment/docker#environment-variables#environment-variables).
 To do this, we need to explicitly tell Keycloak in your `docker/.env` on which URL the instance is running.
 For example, if you plan to deploy Keycloak on `https://diva.com/auth/`, we set the variable as follows:
 
@@ -198,12 +198,12 @@ In the following we will list and explain environment variables that can be conf
 injected on runtime:
 
 + `VUE_APP_API_GATEWAY_URL`- the client must know how to reach the gateway and uses the `VUE_APP_API_GATEWAY_URL` environment variable as the base URL. You can
-  learn more about how to deploy web-client and the Gateway with reverse proxy in our [Docker guide](../deployment/docker.html#deployment-with-nginx-reverse-proxy).
+  learn more about how to deploy web-client and the Gateway with reverse proxy in our [Docker guide](../deployment/docker#deployment-with-nginx-reverse-proxy).
 
 + `VUE_APP_KEYCLOAK_URL` - the client must also know how to reach the Keycloak instance for user authorization.
   Here applies the same, in production the variable must be set correctly so that the client can communicate with Keycloak.
   Probably you will have your own managed Keycloak instance running. If not, we give an example on how to deploy Keycloak behind reverse
-  proxy in our [Docker guide](../deployment/docker.html#deployment-with-nginx-reverse-proxy).
+  proxy in our [Docker guide](../deployment/docker#deployment-with-nginx-reverse-proxy).
 + `VUE_APP_KEYCLOAK_REALM` - if you have your own managed Keycloak instance, you can specify the realm that the client should
   use for user authentication. We ship DIVA with already preconfigured Keycloak instance that you can adjust. Otherwise, the default value ca be left as is.
 + `VUE_APP_KEYCLOAK_CLIENT_ID` - the `id` of the Keycloak client that regulates the permission for our web-client.
@@ -223,7 +223,7 @@ injected on runtime:
   VUE_APP_DISABLE_PATCH=true
   ```
 
-You can read more about how to use environment variables in the [Docker guide](../deployment/docker.html#environment-variables).
+You can read more about how to use environment variables in the [Docker guide](../deployment/docker#environment-variables).
 Please note that for the client to successfully and securely connect to Keycloak in the production environment and authenticate
 in Kong, Kong and Keycloak must be configured correctly as well. At this point we refer the reader to the corresponding
 [Kong Gateway](#kong-gateway) and [Keycloak](#keycloak) guides.
