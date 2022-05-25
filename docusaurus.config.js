@@ -9,7 +9,7 @@ const config = {
   title: 'DIVA Guide',
   tagline: 'DIVA - Data Inventory and Valuation Approach',
   url: 'https://fraunhoferisst.github.io/',
-  baseUrl: '/',
+  baseUrl: '/diva-docs/',
   staticDirectories: ['public', 'static'],
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
