@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'DIVA Guide',
-  tagline: 'Data Inventory and Valuation Approach',
+  tagline: 'DIVA - Data Inventory and Valuation Approach',
   url: 'https://github.com/FraunhoferISST/diva',
   baseUrl: '/',
   staticDirectories: ['public', 'static'],
@@ -37,16 +37,14 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
+        // blog: {
+        //   showReadingTime: true,
+        //   // Please change this to your repo.
+        //   // Remove this to remove the "edit this page" links.
+        //   editUrl:
+        //     'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+        // },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -64,6 +62,12 @@ const config = {
           src: 'img/logos/diva_logo_1000_1000.png',
         },
         items: [
+          {
+            to: 'about',
+            label: 'About',
+            position: 'left',
+            activeBaseRegex: `/about`,
+          },
           {
             type: 'doc',
             docId: 'introduction',

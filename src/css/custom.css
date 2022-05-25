@@ -14,26 +14,98 @@
   --ifm-color-primary-lighter: #359962;
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-font-weight-bold: 500;
+  --ifm-custom-navbar-background-color: rgba(255, 255, 255, 0.33);
+  --ifm-heading-font-family: 'Rubik', "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  /*--ifm-font-family-base: 'IBM Plex Sans', 'Noto Sans', sans-serif,  Helvetica, Arial, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif, system-ui, "Segoe UI",  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";*/
+
+  /*--ifm-font-family-base: 'Rubik', "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";*/
+  /*--ifm-heading-font-family: 'IBM Plex Sans', 'Noto Sans', sans-serif,  Helvetica, Arial, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif, system-ui, "Segoe UI",  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";*/
+  /*--ifm-code-background: 95%;*/
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #3aa675;
-  --ifm-color-primary-dark: #349569;
-  --ifm-color-primary-darker: #318d63;
-  --ifm-color-primary-darkest: #297452;
-  --ifm-color-primary-light: #40b781;
-  --ifm-color-primary-lighter: #44be86;
-  --ifm-color-primary-lightest: #5dc696;
+[data-theme='dark']  {
+  --ifm-custom-navbar-background-color: rgba(38, 38, 38, 0.329);
+  --ifm-color-primary: #33925d;
 }
-/* [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-} */
+
+.hero.hero--primary {
+  background-color: #159957;
+  background-image: linear-gradient(120deg, #009374, #22b573); 
+}
+
+.hero.hero--primary .hero__container {
+  height: 30vh;
+}
+
+.hero.hero--primary .hero__image {
+  mask-image: linear-gradient(to top, transparent 40%, black),linear-gradient(to top left, transparent 40%, black);
+  /* This section calls the slideInFromLeft animation we defined above */
+  animation: 0.5s ease-out 0s 1 slideInFromTop;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-500%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.hero.hero--primary .diva__logo {
+  -webkit-filter: drop-shadow(2px 2px 0 white)
+                drop-shadow(-2px 2px 0 white)
+                drop-shadow(2px -2px 0 white)
+                drop-shadow(-2px -2px 0 white);
+
+  filter: drop-shadow(2px 2px 0 white)
+          drop-shadow(-2px 2px 0 white)
+          drop-shadow(2px -2px 0 white)
+          drop-shadow(-2px -2px 0 white);
+  
+  margin-right: 1em;
+}
+
+.hero.hero--primary .button {
+  margin: 5px;
+}
+
+.hero.hero--primary .button.button--secondary.button--outline {
+  color: #f5f6f7;
+}
+
+.hero.hero--primary .hero__title {
+  color: #f5f6f7;
+}
+
+.hero.hero--primary .hero__subtitle {
+  color: #f5f6f7;
+  font-size: 2.4rem;
+  text-align: left;
+  max-width: 40vw;
+  margin: 30px 0;
+  display:flex;
+  align-items:center;
+}
+
+.hero.hero--primary .button.button--outline:hover,
+.hero.hero--primary .button.button--outline:active,
+.hero.hero--primary .button.button--outline.button--active {
+  background-color: rgba(70, 203, 174, 0.5);
+}
+
+.github-button {
+  margin: 4px 0 0 20px;
+  position: relative;
+  top: 5px;
+}

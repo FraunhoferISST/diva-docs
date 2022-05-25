@@ -1,5 +1,5 @@
 ---
-id: about
+id: about-diva
 title: About
 ---
 
