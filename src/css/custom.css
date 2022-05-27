@@ -39,6 +39,8 @@
 }
 
 .hero.hero--primary .hero__image {
+  width: 30vw;
+  float: right;
   mask-image: linear-gradient(to top, transparent 40%, black),linear-gradient(to top left, transparent 40%, black);
   /* This section calls the slideInFromLeft animation we defined above */
   animation: 0.5s ease-out 0s 1 slideInFromTop;
@@ -74,6 +76,8 @@
           drop-shadow(-2px -2px 0 white);
   
   margin-right: 1em;
+  float: left; 
+  width: 5vw;
 }
 
 .hero.hero--primary .button {
@@ -108,4 +112,64 @@
   margin: 4px 0 0 20px;
   position: relative;
   top: 5px;
+}
+
+@media screen and (max-width: 1500px) {
+  .hero.hero--primary .hero__image {
+    width: 45vw;
+  }
+
+  .hero.hero--primary .diva__logo {
+    width: 8vw;
+  }
+
+  .hero.hero--primary .hero__container {
+    height: 35vh;
+    justify-content: center !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .hero.hero--primary .hero__container {
+    height: 30vh;
+    justify-content: center !important;
+  }
+
+  .hero.hero--primary .hero__subtitle {
+    font-size: 2rem;
+    max-width: 80vw;
+  }
+
+  .hero.hero--primary .hero__image {
+    display: none;
+  }
+
+  .hero.hero--primary .diva__logo {
+    width: 15vw;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .hero.hero--primary .hero__subtitle {
+    font-size: 2rem;
+    max-width: inherit;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero.hero--primary .hero__subtitle {
+    font-size: 1.4rem;
+  }
+
+  .buttons_src-pages-index-module {
+    display: flex;
+    align-items: center;
+    justify-content: center !important;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .hero.hero--primary .hero__container {
+    height: auto;
+  }
 }

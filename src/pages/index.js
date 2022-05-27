@@ -13,10 +13,10 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container hero__container">
-        <img className="hero__image" src={ DivaClientImg } style={{ float: 'right', width: '30vw' }} alt="Example of DIVA in action"/>
+        <img className="hero__image" src={ DivaClientImg } alt="Example of DIVA in action"/>
         <div className="container">
           <div className="hero__subtitle">
-            <img className="diva__logo" src={ DivaLogo } style={{ float: 'left', width: '5vw' }} alt="Example of DIVA in action"/>
+            <img className="diva__logo" src={ DivaLogo } alt="Example of DIVA in action"/>
             {siteConfig.tagline}
           </div>
         </div>
