@@ -141,7 +141,7 @@ data is stored in corresponding collections in MongoDB.
 |---------|----------------------------------------|--------------|
 | [Resource Management](https://github.com/FraunhoferISST/diva/tree/master/core/services/resource-management)  | Responsible for managing the metadata about [resources](../../../../about#resource) | Kafka, MongoDB, Schema Registry |
 | [User Management](https://github.com/FraunhoferISST/diva/tree/master/core/services/user-management)  | Responsible for [users](../../../../about#user) data management and authentication | Kafka, MongoDB, Schema Registry |
-| [Asset Management](https://github.com/FraunhoferISST/diva/tree/master/core/services/asset-management)  | Responsible for managing the metadata about [assets](../../../about#asset) | Kafka, MongoDB, Schema Registry |
+| [Asset Management](https://github.com/FraunhoferISST/diva/tree/master/core/services/asset-management)  | Responsible for managing the metadata about [assets](../../../../about#asset) | Kafka, MongoDB, Schema Registry |
 | [Review Management](https://github.com/FraunhoferISST/diva/tree/master/core/services/review-management)  | Responsible for [reviews](../../../../about#review) management | Kafka, MongoDB, Schema Registry |
 
 **Assistant Services**

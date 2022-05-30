@@ -5,7 +5,7 @@ title: Search Page
 
 # Search Page
 
-On the search page you can search for all [Resources](../../about/#resource) and [Assets](../../about/#asset) in DIVA using free text search.
+On the search page you can search for all [Resources](../../../about/#resource) and [Assets](../../../about/#asset) in DIVA using free text search.
 Just enter your query in the search field, the search will be executed as you type.
 DIVA will already give a first set of results without you having to insert a search term.
 This should support you in "flowing" through the metadata.
