@@ -41,7 +41,7 @@
 .hero.hero--primary .hero__image {
   width: 30vw;
   float: right;
-  mask-image: linear-gradient(to top, transparent 40%, black),linear-gradient(to top left, transparent 40%, black);
+  /*mask-image: linear-gradient(to top, transparent 40%, black),linear-gradient(to top left, transparent 40%, black);*/
   /* This section calls the slideInFromLeft animation we defined above */
   animation: 0.5s ease-out 0s 1 slideInFromTop;
 }

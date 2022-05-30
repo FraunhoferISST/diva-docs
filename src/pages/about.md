@@ -17,23 +17,17 @@ This tool will grow day by day and we try our best to tackle data management cha
 We also use this tool as a playground for our students, where they can work out topics for their bachelor or master thesis.
 Even the PhD students profit from this tool as a platform for their doctoral thesis.
 
-<!-- <div class="flex-col sm:flex-row flex justify-center">
-    <img class="rounded-lg w-full sm:w-1/2" :src="$withBase('/assets/diva_client.png')" alt="DIVA login">
-</div> -->
-
 ## Main Features
 
 + 🏛️ microservice architecture: allows to choose the best technology for solving a problem and a more easy scaling
 
 + 💻 client application: an easy to use web application for managing all kinds of data management related topics
 
-+ 🖥️ portal application: simple search for interesting files on different devices (WIP)
-
-+ 🐳 docker ready: all microservices and core components are docker ready so you can start them right out of the box.
++ 🐳 container ready: all microservices and core components are docker ready so you can start them right out of the box
 
 ## Core Concepts and terminology
 
-DIVA is built with flexibility and extensibility in mind. We are aware of the dynamics, dimensions and complexity of data management in an organisation.
+DIVA is built with flexibility and extensibility in mind. We are aware of the dynamics, dimensions and complexity of data management in an organization.
 Our goal is to build an ultimate framework for all your data that simply solves all management problems, fully automated.
 
 To realize this vision, we define a concept of resources. A resource in DIVA is an abstraction for a relevant information source.
