@@ -38,7 +38,7 @@ Furthermore, this approach allows us to develop Management Services API's with f
 
 We have two levels of hierarchy in our model, with the Entity on top.
 Entity is a logical high level abstraction that represents common properties of the underlying entities and does **not** exists physically.
-The entities [User](../../../about#user), [Resource](../../../about#resource), [Asset](../../../about#asset) etc. inherit properties like `id`, `entityType` and `created` from Entity.
+The entities [User](../../../../about#user), [Resource](../../../../about#resource), [Asset](../../../../about#asset) etc. inherit properties like `id`, `entityType` and `created` from Entity.
 You will find schemas for all entities in [`core/schemata/`](https://github.com/FraunhoferISST/diva/tree/master/core/schemata) directory.
 
 Although the entities are not coupled with each other, they can have relations.
@@ -139,10 +139,10 @@ data is stored in corresponding collections in MongoDB.
 
 | Title   | Description                            | Dependencies |
 |---------|----------------------------------------|--------------|
-| [Resource Management](https://github.com/FraunhoferISST/diva/tree/master/core/services/resource-management)  | Responsible for managing the metadata about [resources](../../../about#resource) | Kafka, MongoDB, Schema Registry |
-| [User Management](https://github.com/FraunhoferISST/diva/tree/master/core/services/user-management)  | Responsible for [users](../../../about#user) data management and authentication | Kafka, MongoDB, Schema Registry |
+| [Resource Management](https://github.com/FraunhoferISST/diva/tree/master/core/services/resource-management)  | Responsible for managing the metadata about [resources](../../../../about#resource) | Kafka, MongoDB, Schema Registry |
+| [User Management](https://github.com/FraunhoferISST/diva/tree/master/core/services/user-management)  | Responsible for [users](../../../../about#user) data management and authentication | Kafka, MongoDB, Schema Registry |
 | [Asset Management](https://github.com/FraunhoferISST/diva/tree/master/core/services/asset-management)  | Responsible for managing the metadata about [assets](../../../about#asset) | Kafka, MongoDB, Schema Registry |
-| [Review Management](https://github.com/FraunhoferISST/diva/tree/master/core/services/review-management)  | Responsible for [reviews](../../../about#review) management | Kafka, MongoDB, Schema Registry |
+| [Review Management](https://github.com/FraunhoferISST/diva/tree/master/core/services/review-management)  | Responsible for [reviews](../../../../about#review) management | Kafka, MongoDB, Schema Registry |
 
 **Assistant Services**
 
@@ -152,14 +152,14 @@ read access to the entities.
 | Title   | Description                            | Dependencies |
 |---------|----------------------------------------|--------------|
 | [Analytics Assistant](https://github.com/FraunhoferISST/diva/tree/master/core/services/analytics-assistant)  | provides statistical data about catalog entities | Elasticsearch |
-| [Profiling Assistant](https://github.com/FraunhoferISST/diva/tree/master/core/services/profiling-assistant)  | Responsible for [profiling workflows](../../../about#resource) execution triggering| MongoDB, Airflow |
-| [History Assistant](https://github.com/FraunhoferISST/diva/tree/master/core/services/history-assistant)  | Provides a human readable representation of the entities [history](../../../about#resource)  | MongoDB, Schema Registry |
+| [Profiling Assistant](https://github.com/FraunhoferISST/diva/tree/master/core/services/profiling-assistant)  | Responsible for [profiling workflows](../../../../about#resource) execution triggering| MongoDB, Airflow |
+| [History Assistant](https://github.com/FraunhoferISST/diva/tree/master/core/services/history-assistant)  | Provides a human readable representation of the entities [history](../../../../about#resource)  | MongoDB, Schema Registry |
 | [Search Assistant](https://github.com/FraunhoferISST/diva/tree/master/core/services/search-assistant)  | Provides preselected entities search API | Elasticsearch |
 
 **Adapter Services**
 
 The Adapter Services are special services designed to connect and import data from external sources. They encapsulate 
-the connection logic, load the data, transform it into a DIVA compliant representation and store the newly created [Resources](../../../about#resource) in the system. 
+the connection logic, load the data, transform it into a DIVA compliant representation and store the newly created [Resources](../../../../about#resource) in the system. 
 In special cases an Adapter Service can be implemented to export a DIVA Resource to an external system.
 The creation of new resources is done by using the Resource Management Service, direct access to the data storage is only allowed in the read mode.
 
