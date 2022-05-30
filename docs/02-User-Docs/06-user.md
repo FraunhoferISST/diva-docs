@@ -3,26 +3,23 @@ id: user
 title: User Details Page
 ---
 
-# User Details Page
+To navigate to the page with your account settings, click on the user icon in the navigation at the bottom of the current page you are visiting.
+A new menu will slide up.
 
-To navigate to the page with your account settings, click on the user icon in the navigation at the bottom of the  [Home Page](home) and then on your name in the menu that appears.
+![User Menu](/diva_4.0.0/screenshots/user_menu.png)
 
-![User Menu](/img/screenshots/user_menu.png)
+It will show to you which entities you recently liked or viewed.
+If you want to logout, click the button "Logout".
+Click on your name above your mail address to go to your user details page.
+
+![User](/diva_4.0.0/screenshots/user_details.png)
 
 ## Edit User Data
 
-The above step will take you to the overview of your personal data.
-You can log out or edit your information. To switch to the edit mode, click on the "Edit profile" button.
-
-![User](/img/screenshots/user.png)
-
-In the edit mode you have the possibility to add more details to your account and upload a profile picture.
-
-![User Edit](/img/screenshots/user_edit.png)
-
-Click on "Save changes" to apply the modifications. The changes should be immediately applied and visible in the whole application.
-
-![User Edited](/img/screenshots/user_edited.png)
+On the details page, you can edit your information.
+Just click on the field you want to edit.
+You can then adjust the data.
+Click on the green checkmark to confirm the change.
 
 ## Edit User Credentials
 

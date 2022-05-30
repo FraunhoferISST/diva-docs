@@ -19,15 +19,12 @@ Google Chrome and always update you browser to the recent version.
 
 Browser:
 
-* Chrome/Chromium >= 80
-* Firefox >= 70
+* Chrome/Chromium >= 100
+* Firefox >= 100
 * Safari >= 14
 
 Device:
 
-* Laptop/Pc
+* Laptop/PC
 * Tablet
-
-:::warning
-Currently, the web app is not optimized for small devices like smartphones or small tablets. For best experience we recommend laptops, PCs or larger tablets. In future updates the app will be optimized for small devices as well!
-:::
+* Smartphone (may not be comfortable)
