@@ -132,7 +132,7 @@ const config = {
       //       ],
       //     },
       //   ],
-        copyright: `Made by Fraunhofer ISST with ❤️`,
+        copyright: `Made by <a target="_blank" rel="noopener noreferrer" href="https://www.isst.fraunhofer.de/en.html">Fraunhofer ISST</a> with ❤️`,
       },
       prism: {
         theme: lightCodeTheme,
