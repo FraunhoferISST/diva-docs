@@ -109,3 +109,176 @@
   position: relative;
   top: 5px;
 }
+
+.navbar .navbar__logo {
+  max-height: 100%;
+}
+
+.navbar .icon[href*=github],
+.navbar .icon[href*=twitter],
+.navbar .icon[href*=slack] {
+  font-size: 0;
+  padding: 4px;
+  margin: 0 4px;
+}
+
+.navbar .icon[href*=github]::before,
+.navbar .icon[href*=twitter]::before,
+.navbar .icon[href*=slack]::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-size: cover;
+}
+
+.navbar .icon[href*=github]::before {
+  background-image: url('/static/img/logos/github-brand.svg');
+}
+
+.navbar a[data-type="versions"] {
+  white-space: nowrap;
+  text-decoration: underline;
+  position: relative;
+  font-size: 0.8em;
+}
+
+.navbar .react-toggle {
+  margin: 0 0 0 8px;
+}
+
+.button {
+  border-radius: 100px;
+  margin: 0 10px;
+}
+
+.github-button {
+  margin: 4px 0 0 20px;
+  position: relative;
+  top: 5px;
+}
+
+a[href*=edit] {
+  border: 1px solid #ccc;
+  border-radius: 100px;
+  padding: 8px 16px;
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  text-align: center;
+}
+
+.margin-vert--xl {
+  margin-bottom: 3rem !important;
+  margin-top: 3rem !important;
+}
+
+.pagination-nav .pagination-nav__item a {
+  border-radius: 100px 20px 20px 100px;
+  padding-left: 40px;
+}
+
+.pagination-nav .pagination-nav__item--next a {
+  border-radius: 20px 100px 100px 20px;
+  padding-right: 40px;
+}
+
+html[data-theme="dark"] .navbar .navbar__brand,
+html[data-theme="dark"] .main-wrapper a[class*='sidebarLogo'] {
+  background-image: url('/static/img/logos/diva_logo_1000_1000.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: contain;
+}
+
+html[data-theme="dark"] .navbar .navbar__brand img,
+html[data-theme="dark"] .main-wrapper a[class*='sidebarLogo'] img {
+  visibility: hidden;
+}
+
+html[data-theme="dark"] .main-wrapper a[class*='sidebarLogo'] {
+  margin-right: 70px;
+}
+
+html[data-theme="dark"] .hero.hero--primary {
+  background-color: #0d572f;
+  background-image: linear-gradient(120deg, #0c335a, #0c5430);
+}
+
+html[data-theme="dark"] .navbar .navbar__link[href*=github]:before {
+  background-image: url('/static/img/logos/github-brand-dark.svg');
+}
+
+@media screen and (max-width: 1024px) {
+  .hero.hero--primary .hero__subtitle {
+    font-size: 2rem;
+  }
+
+  .hero.hero--primary .container img {
+    height: 260px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .hero.hero--primary .hero__subtitle {
+    font-size: 2rem;
+    text-align: center;
+    max-width: inherit;
+  }
+
+  .buttons_src-pages- {
+    max-width: inherit !important;
+  }
+
+  .hero.hero--primary .container img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .hero.hero--primary .hero__subtitle {
+    font-size: 1.4rem;
+  }
+
+  .buttons_src-pages- {
+    margin: 0 -30px;
+  }
+}
+
+@media screen and (min-width: 995px) and (max-width: 1130px) {
+  .navbar .icon[href*=twitter],
+  .navbar .icon[href*=slack] {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 995px) and (max-width: 1030px) {
+  .navbar a[data-type="versions"] {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .hero.hero--primary .button.button--outline {
+    font-size: 0.8rem;
+  }
+}
+
+html code {
+  color: #1c1e21;
+  background-color: #ebedf0;
+}
+
+html[data-theme="dark"] code {
+  color: #f5f6f7;
+  background-color: #444950;
+}
+
+html a code {
+  color: inherit
+}
+
+.navbar svg[class*=iconExternalLink],
+aside svg[class*=iconExternalLink] {
+  display: none;
+}

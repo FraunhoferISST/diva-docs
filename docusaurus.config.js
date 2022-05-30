@@ -61,7 +61,12 @@ const config = {
           alt: 'DIVA Logo',
           src: 'img/logos/diva_logo_1000_1000.png',
         },
+        hideOnScroll: true,
         items: [
+          {
+            type: 'docsVersionDropdown',
+            position: 'left',
+          },
           {
             to: 'about',
             label: 'About',
@@ -79,6 +84,8 @@ const config = {
             href: 'https://github.com/FraunhoferISST/diva',
             label: 'GitHub',
             position: 'right',
+            title: 'View on GitHub',
+            className: 'icon',
           },
         ],
       },
@@ -130,6 +137,11 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+      },
+      announcementBar: {
+        id: 'supportus',
+        content: '⭐️ If you like DIVA, give it a star on ' +
+          '<a target="_blank" rel="noopener noreferrer" href="https://github.com/FraunhoferISST/diva">GitHub</a> ⭐️',
       },
     }),
 };
