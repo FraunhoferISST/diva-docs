@@ -8,8 +8,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'DIVA Guide',
   tagline: 'DIVA - Data Inventory and Valuation Approach',
-  url: 'https://github.com/FraunhoferISST/diva',
-  baseUrl: '/',
+  url: 'https://fraunhoferisst.github.io/',
+  baseUrl: '/diva-docs/',
   staticDirectories: ['public', 'static'],
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',

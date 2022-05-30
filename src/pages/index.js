@@ -5,16 +5,18 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import DivaClientImg from '@site/static/diva_client.png';
+import DivaLogo from '@site/static/img/logos/diva_logo_1000_1000.png';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container hero__container">
-        <img className="hero__image" src="/diva_client.png" style={{ float: 'right', width: '30vw' }} alt="Example of DIVA in action"/>
+        <img className="hero__image" src={ DivaClientImg } alt="Example of DIVA in action"/>
         <div className="container">
           <div className="hero__subtitle">
-            <img className="diva__logo" src="/img/logos/diva_logo_1000_1000.png" style={{ float: 'left', width: '5vw' }} alt="Example of DIVA in action"/>
+            <img className="diva__logo" src={ DivaLogo } alt="Example of DIVA in action"/>
             {siteConfig.tagline}
           </div>
         </div>
