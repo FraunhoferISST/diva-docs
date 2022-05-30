@@ -9,7 +9,7 @@ The following figure will give you a quick overview on the architecture of DIVA.
 In the following chapter we will take a close look at main components and explain their responsibilities.
 Following the navigation structure in the left sidebar you will consistently learn the architecture and be able to understand the implications and design decisions.
 
-<!-- <img :src="$withBase('/assets/diva_architecture.png')" alt="DIVA Architecture"> -->
+![DIVA Architecture](/diva_architecture.png)
 
 Diva architecture follows the Micro Services pattern and aims at high degree of scalability.
 The main goal is to provide the most simplistic components and strong modularity for scalable extension of the system with new functionalities.
