@@ -3,8 +3,6 @@ id: profiling-metadata
 title: Profiling Metadata
 ---
 
-# Profiling Metadata
-
 Currently we support automatic analysis of **5** different file types.
 The metadata is only populated by our automatic profiling and cannot be edited.
 This is because we want to preserve the objective analysis by a computer system here.

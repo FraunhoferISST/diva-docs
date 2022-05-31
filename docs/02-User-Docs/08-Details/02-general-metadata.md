@@ -3,11 +3,9 @@ id: general-metadata
 title: General Metadata
 ---
 
-# General Metadata
-
 ## General Page
 
-This page is the same for all types of resources.
+This page is mostly the same for all types of resources.
 To edit a field, just click on it and the edit mode will be activated.
 Make your change and click the checkmark icon to save them.
 The following metadata can be edited:
@@ -15,6 +13,7 @@ The following metadata can be edited:
 |Property|Description|
 |---|---|
 |**title**|This property contains a name given to the entity|
+|**summary**|A shorter version of the description|
 |**description**|This property contains a free-text account of the entity|
 |**keywords**|This property contains keywords or tags describing the entity|
 |**version info**|This property contains a version number or other version identification of the entity|
@@ -34,7 +33,9 @@ It will be automatically set according to the reviews made by the users.
 We will change this in the future, as it seems rather confusing.
 :::
 
-![DIVA General Metadata](/img/screenshots/details/general.png)
+![DIVA General Metadata](/diva_4.0.0/screenshots/entity_details.png)
+
+![DIVA General Metadata](/diva_4.0.0/screenshots/entity_details_2.png)
 
 ## Cost Page
 
@@ -50,7 +51,7 @@ For example, you can document if you have monthly costs for a resource.
 |**maintenance costs**|Cost of keeping this entity up to date|
 |**external costs**|Cost of buying this entity|
 
-![DIVA General Costs Metadata](/img/screenshots/details/general_costs.png)
+![DIVA General Costs Metadata](/diva_4.0.0/screenshots/entity_costs.png)
 
 ## History Page
 
@@ -64,21 +65,21 @@ This is due to the fact that we can store a very large amount of metadata in the
 Presenting every single metadata field in the history in a human-readable way would currently lead to an enormous additional effort.
 :::
 
-![DIVA History Metadata](/img/screenshots/details/history.png)
+![DIVA History Metadata](/diva_4.0.0/screenshots/entity_history.png)
 
 If larger parts of the metadata are changed, the details are hidden for the time being.
 Each entry has a button with 3 dots.
 The details can be displayed via this button.
 There you can also expand and examine the technical data further.
 
-![DIVA History Details Metadata](/img/screenshots/details/history_details.png)
+![DIVA History Details Metadata](/diva_4.0.0/screenshots/entity_history_2.png)
 
 ## Reviews Page
 
-Users can rate a resource or asset.
+Users can rate an entity.
 For this you can give a 1-5 star rating and add a suitable rating text.
 Users can also edit or completely delete their rating after creating it.
 For this you need to click on the pen or bin icon.
 The overall rating is the average of all ratings of the resource or asset.
 
-![DIVA Reviews Metadata](/img/screenshots/details/reviews.png)
+![DIVA Reviews Metadata](/diva_4.0.0/screenshots/entity_reviews.png)
