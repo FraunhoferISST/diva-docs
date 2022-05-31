@@ -1,18 +1,15 @@
 ---
 id: commits
-title: Committing changes
+title: Committing Changes
 ---
-
-# Committing changes
 
 We encourage all contributors to stick to the commit convention following the specification on [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 With this restriction, we want to create a consistent and trackable history of changes across all system components.
-Furthermore, rule-compliant commits are important for the automatic generation of the CHANGELOG.md according to the specification 
-from [keepachangelog.com](https://keepachangelog.com/en/1.0.0/).
+Furthermore, rule-compliant commits are important for the automatic generation of the CHANGELOG.md according to the specification from [keepachangelog.com](https://keepachangelog.com/en/1.0.0/).
 
 In general, write the commits in imperative present tens. The commit message should be structured as follows:
 
-```
+```text
 <type>[optional scope]: <description>
 
 [optional body]
