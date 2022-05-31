@@ -14,7 +14,7 @@ After a review by a member of the core team, the changes will be integrated into
 ## Prepare for contribution
 
 DIVA is a complex system with many components and services, all of them have their own requirements.
-To provide an overview, we have summarized all the most important information about installation and development on your own machine in our guide for [prerequisites](../prerequisites) and [local development](../development/local-development).
+To provide an overview, we have summarized all the most important information about installation and development on your own machine in our guide for [prerequisites](../prerequisites) and [local development](../local-development).
 
 Make sure you have access to our [container registry](../../deployment/prerequisites#access-to-container-registry) on GitHub and read more information on how to use Docker to manage the system components you need.
 
