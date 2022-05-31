@@ -3,48 +3,47 @@ id: web-client
 title: Web Client
 ---
 
-# Web Client
-
 DIVA is a complex system with many services and different interfaces that drive the core functionality of the system.
 Operating the system requires a solid understanding of the underlying architecture and the technologies used.
 To enable everyone to enjoy the benefits of data management with DIVA, we have implemented a web-based client application.
 
-<!-- <div class="flex justify-center">
-    <img :src="$withBase('/assets/diva_client.png')" height="500" alt="DIVA Architecture">
-</div> -->
+The web application is a Vue 2 single page app and is currently the only client that allows managing DIVA Catalog through an intuitive and modern UI. For non-developers this is the only way to interact with the backend.
+Make sure to take a look at the [users guide](../../user-docs/introduction)!
 
-Web application is a Vue 2 single page app and is currently the only client that allows managing DIVA Catalog through an 
-intuitive and modern UI. For non-developers 
-this is the only way to interact with the system's backend. Make sure to take a look at the [users guide](../../user-docs/introduction)!
-
-[Vuetify](https://vuetifyjs.com/en/) is used as the frontend framework. Therefore, the look & feel is basically determined by the material design pattern. 
+[Vuetify](https://vuetifyjs.com/en/) is used as the frontend framework.
+Therefore, the look & feel is basically determined by the material design pattern.
 Nevertheless, we implement slight adjustments to the components to create an individual and recognizable form with a smoother and breezier feeling.
 
-The web client project was originally created with vue-cli. More information on how to run the client for local development 
-can be found in the corresponding README.md. 
+The web client project was originally created with vue-cli.
+More information on how to run the client for local development can be found in the corresponding README.md.
 
-In the near future we plan to update the client to Vue 3. With this update will come new features, improved structure and design of the pages.
+:::info
+In the near future we plan to update the client to Vue 3.
+With this update will come new features, improved structure and design of the pages.
+The update will depend on when `vuetify` is Vue 3 ready.
+:::
 
 ## Configuration
 
-In this chapter we will discuss how to prepare the client application for execution. 
+In this chapter we will discuss how to prepare the client application for execution.
 The client communicates with the backend through Kong API Gateway and requires the user to be authenticated with a valid JWT.
 You can read more about authentication flow in the [API Gateway](gateway) section.
 
 Once loaded, the client performs the identity check through Keycloak and initializes the user data in the browser, if user exists
-and is already logged in, or navigates to login page. There the authorization to the system is managed by [Keycloak](keycloak).
+and is already logged in, or navigates to login page.
+There the authorization to the system is managed by [Keycloak](keycloak).
 To get access to the functionalities of the system the developers have to register first as well.
 
 For the web client, in order to be able to execute identity verification and access API Gateway, corresponding information
 should be configured.
 The app can be configured by several environment variables. During development on your own machine, the default values should be completely sufficient.
 In production, however, the built app is shipped in the container from a Nginx server over the internet to the browser. The communication
-on `localhost` is not possible anymore and you have at least configure correct domains where client can rich Keycloak and API Gateway 
-instances.
+on `localhost` is not possible anymore and you have at least configure correct domains where client can rich Keycloak and API Gateway instances.
 
 :::tip ENV's on runtime
-Yes, you do not have to rebuild the web-client Docker image every time any of the ENV's changes. The environment variables are injected
-in the app source code on each container start. You can adjust all accepted ENV's at any time without the need to build own image, just restart the container!
+Yes, you do not have to rebuild the web-client Docker image every time any of the ENV's changes.
+The environment variables are injected in the app source code on each container start.
+You can adjust all accepted ENV's at any time without the need to build own image, just restart the container!
 :::
 
 In the following we will list and explain environment variables that can be set on runtime:
@@ -79,6 +78,5 @@ No need to change this variable, if you use the Keycloak instance shipped with D
   ```
 
 You can read more about how to use environment variables in the [Docker guide](../../deployment/docker#environment-variables).
-Please note that for the client to successfully and securely connect to Keycloak in the production environment and authenticate 
-in Kong, Kong and Keycloak must be configured correctly as well. At this point we refer the reader to the corresponding 
-[Kong Gateway](gateway) and [Keycloak](keycloak) guides.
+Please note that for the client to successfully and securely connect to Keycloak in the production environment and authenticate in Kong, Kong and Keycloak must be configured correctly as well.
+At this point we refer the reader to the corresponding [Kong Gateway](gateway) and [Keycloak](keycloak) guides.
