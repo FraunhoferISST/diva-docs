@@ -21,7 +21,7 @@ The automatic analyses are listed and explained below:
 + A simple statistical evaluation on the distribution of charcters and number of different tokens (words, sentences, and characters).
 + We perform a scan for personal data and give a score between 0 and 100, where 100 means that the resource is very likely to be GDPR relevant.
 
-![DIVA Text Profiling](/img/screenshots/details/profiling_text.png)
+![DIVA Text Profiling](/diva_4.0.0/screenshots/entity_text_profiling.png)
 
 ## Table Files
 
@@ -34,9 +34,9 @@ The automatic analyses are listed and explained below:
 + We perform a statistical analysis that looks at each column and extracts key metrics.
 + We extract a sample set of the table to give an insight into the data.
 
-![DIVA Table Data Profiling](/img/screenshots/details/profiling_tabledata.png)
+![DIVA Table Data Profiling](/diva_4.0.0/screenshots/tabledata_profiling.png)
 
-![DIVA Table Data Sample](/img/screenshots/details/tabledata_sample.png)
+![DIVA Table Data Sample](/diva_4.0.0/screenshots/tabledata_profiling_2.png)
 
 ## Image Files
 
@@ -50,4 +50,4 @@ The automatic analyses are listed and explained below:
 + We perform OCR text recognition on the image to make text on images search relevant in our catalog as well.
 + We extract EXIF metadata, e.g. about the camera with which the photo was taken.
 
-![DIVA Image Profiling](/img/screenshots/details/profiling_images.png)
+![DIVA Image Profiling](/diva_4.0.0/screenshots/image_profiling.png)
