@@ -1,6 +1,6 @@
 ---
-id: docker-deployment
-title: Docker Deployment
+id: docker-development
+title: Docker Development
 ---
 
 DIVA is built with a focus on scalability, modularization and expandability using a microservice architecture.
@@ -78,56 +78,54 @@ for local development to build and test images
 + [`docker-compose.monitoring.yml`](https://github.com/FraunhoferISST/diva/blob/master/docker/docker-compose.monitoring.yml) - several helpful monitoring
  and debugging tools like Kibana that are not deployed within the system core
 
-+ [`docker-compose.dsc.yml`](https://github.com/FraunhoferISST/diva/blob/master/docker/docker-compose.dsc.yml) - DSC Service, for demonstration purpose only
-
-The folder also contains other Docker Compose configurations that have `.build` in the suffix. These can override the 
-normal configurations to build an image locally explicitly from source. The difference with the `.build` configurations 
-is that the services are executed in the context of the corresponding folder.
+The folder also contains other Docker Compose configurations that have `.build` in the suffix.
+These can override the normal configurations to build an image locally explicitly from source.
+The difference with the `.build` configurations is that the services are executed in the context of the corresponding folder.
 Generally, the configuration can be overwritten as follows:
 
 ```sh
 docker-compose -f docker-compose.build.yml build resource-management
 ```
 
-### Manage microservices
+### Manage Microservices
 
 All microservices and their dependencies are defined in `docker-compose.yml`. You will work with this file the most.
 
-**Pull image**
+#### Pull Image
 
 Simply run the command:
 
 ```sh
 docker-compose pull <service_name>
 # for example
-docker-compose pull user-management
+docker-compose pull entity-management
 ```
 
-**Build image**
+#### Build Image
 
 To explicitly build the image from source, specify the path to the override `.yml` :
 
 ```sh
 docker-compose f docker-compose.yml -f docker-compose.override.yml build <service_name>
 # for example
-docker-compose f docker-compose.yml -f docker-compose.override.yml build user-management
+docker-compose f docker-compose.yml -f docker-compose.override.yml build entity-management
 ```
 
-**Push image**
+#### Push Image
 
 Push image to container registry:
 
 ```sh
 docker-compose push <service_name>
 # for example
-docker-compose push user-management
+docker-compose push entity-management
 ```
 
-### Manage FaaS
+### Manage Functions as a Service (FaaS)
 
 All FaaS are defined in `docker-compose.faas.yml`.
 
-**Pull image**
+#### Pull Image
 
 ```sh
 docker-compose -f docker-compose.faas.yml pull <service_name>
@@ -135,7 +133,7 @@ docker-compose -f docker-compose.faas.yml pull <service_name>
 docker-compose -f docker-compose.faas.yml pull text-keywords-extractor
 ```
 
-**Build image**
+#### Build Image
 
 To explicitly build the image from source, specify the path to the build `.yml` :
 
@@ -145,7 +143,7 @@ docker-compose -f docker-compose.faas.yml -f docker-compose.faas.build.yml build
 docker-compose -f docker-compose.faas.yml -f docker-compose.faas.build.yml build text-keywords-extractor
 ```
 
-**Push image**
+#### Push Image
 
 Push image to container registry:
 
@@ -160,13 +158,13 @@ docker-compose -f docker-compose.faas.yml push text-keywords-extractor
 We use a slightly customized image for Airflow. The definitions for Airflow
 are specified in`docker-compose.airflow.yml`.
 
-**Pull image**
+#### Pull Image
 
 ```sh
 docker pull ghcr.io/fraunhoferisst/diva/airflow:<version>
 ```
 
-**Build image**
+#### Build Image
 
 To explicitly build the image from source, specify the path to the build `.yml` :
 
@@ -174,7 +172,7 @@ To explicitly build the image from source, specify the path to the build `.yml` 
 docker-compose -f docker-compose.airflow.build.yml build airflow
 ```
 
-**Push image**
+#### Push Image
 
 Push image to container registry:
 
@@ -182,15 +180,16 @@ Push image to container registry:
 docker-compose -f docker-compose.airflow.yml push airflow
 ```
 
-### Manage base images
+### Manage Base Images
 
-We have several images that serve as the basis for our FaaS. They are located in `./base-images`, so first
-change the working directory:
+We have several images that serve as the basis for our FaaS.
+They are located in `./base-images`, so first change the working directory:
 
 ```sh
 cd base-images
 ```
-**Pull image**
+
+#### Pull Image
 
 ```sh
 docker-compose pull <service_name>
@@ -198,7 +197,7 @@ docker-compose pull <service_name>
 docker-compose pull base-python3
 ```
 
-**Build image**
+#### Build Image
 
 ```sh
 docker-compose build <service_name>
@@ -206,7 +205,7 @@ docker-compose build <service_name>
 docker-compose build base-python3
 ```
 
-**Push image**
+#### Push Image
 
 Push image to container registry:
 
