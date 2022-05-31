@@ -18,3 +18,5 @@ One can view all workflow runs in an overview.
 In the detailed view you can see which tasks were successfully or incorrectly processed.
 
 ![DIVA Airflow Profiling](/diva_4.0.0/screenshots/airflow_dag_details.png)
+
+Any additional information can be obtained by the official [documentation](https://airflow.apache.org/docs/apache-airflow/2.3.0/)

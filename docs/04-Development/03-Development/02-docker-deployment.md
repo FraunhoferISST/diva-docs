@@ -3,24 +3,20 @@ id: docker-deployment
 title: Docker Deployment
 ---
 
-# Docker Deployment
-
-DIVA is built with a focus on scalability, modularisation and expandability using a microservice architecture. Our team 
-relies on the latest technologies for container-based development and deployment of the system using Docker.
-All system components are containerized and have current images that are
-continuously built in the CI pipeline. In this guide we will learn how to get DIVA running with `docker-compose`.
-
+DIVA is built with a focus on scalability, modularization and expandability using a microservice architecture.
+Our team relies on the latest technologies for container-based development and deployment of the system using Docker.
+All system components are containerized and have current images that are continuously built in the CI pipeline.
+In this guide we will learn how to get DIVA running with `docker-compose`.
 
 :::tip
 Make sure to read the [prerequisites](../prerequisites) to know what you need to get started with Docker and Docker Compose.
-Also note that deployment with docker is not suitable for Production. Nonetheless, it is convenient for local development 
-environment to quickly spin up most of the components like Kafka, Gateway and other services.
+Also note that deployment with docker is not suitable for Production.
+Nonetheless, it is convenient for local development environment to quickly spin up most of the components like Kafka, Gateway and other services.
 :::
 
 All things related to docker are located in the [`docker/`](https://github.com/FraunhoferISST/diva/blob/master/docker)
-directory. Here we have prepared a script which you can use to directly boot 
-all components, with default environment setup. If you need a quick start,
-just execute the following commands:
+directory. Here we have prepared a script which you can use to directly boot all components, with default environment setup.
+If you need a quick start, just execute the following commands:
 
 ```bash
 # navigate to docker/ directory
@@ -29,38 +25,36 @@ cd docker
 ./up_core.sh
 ```
 
-The script starts all core services, profiling workflow engine, DSC and the web client application. It may take some 
-time until all components are up and running. By default, the client should be available on `localhost:70`.
+The script starts all core services, profiling workflow engine, DSC and the web client application.
+It may take some time until all components are up and running.
+By default, the client should be available on `localhost`.
 
-If you want to learn more about the configuration options, the following chapters will show you 
-how to manage Docker containers, images and deployment.
+If you want to learn more about the configuration options, the following chapters will show you how to manage Docker containers, images and deployment.
 
 ## Environment variables
 
-First with the environment variables you have the possibility to propagate settings to the containers on run time. 
-The ENV's are used to configure exposed ports, Kafka topics, database connections, credentials etc. This makes the deployment 
-of containers more flexible and provides you a way to configure the environment without potential collisions with other software
-on your machines.
+First with the environment variables you have the possibility to propagate settings to the containers on run time.
+The ENV's are used to configure exposed ports, Kafka topics, database connections, credentials etc.
+This makes the deployment of containers more flexible and provides you a way to configure the environment without potential collisions with other software on your machines.
 
 :::caution Ports allocation
-DIVA components allocate many default ports like 80, 3000 or 27017. To avoid potential conflicts on deployment, most of the allocated ports can
-be configured in `docker/.env` file.
+DIVA components allocate many default ports like 80, 3000 or 27017.
+To avoid potential conflicts on deployment, most of the allocated ports can be configured in `docker/.env` file.
 :::
 
 All available configuration possibilities are listed in the [`docker/.env.default`](https://github.com/FraunhoferISST/diva/blob/master/docker/.env.default) file.
-This ENV template is used by default to boot the system with `up_core.sh` script. To override default settings, create 
-a `.env` file in the `docker/` directory and copy the contents of `.env.default` to it. There you can adjust the deployment,  
-and e.g. change the port of the web application as follows:
+This ENV template is used by default to boot the system with `up_core.sh` script.
+To override default settings, create a `.env` file in the `docker/` directory and copy the contents of `.env.default` to it.
+There you can adjust the deployment, and e.g. change the port of the web application as follows:
 
 ```env
 WEB_CLIENT_PORT=90
 ```
 
-## Container and images management
+## Container and Image Management
 
 Now we will briefly go through the lifecycle of containers and images, from configuration to deployment in the container registry.
-This chapter is interesting for those who want to actively participate in the development of the system or manage
-containers and images in a more granular way. 
+This chapter is interesting for those who want to actively participate in the development of the system or manage containers and images in a more granular way.
 
 :::caution Environment variables
 Make sure to create `.env` file on your machine like described in [Environment variables](#environment-variables)
