@@ -30,17 +30,17 @@ If the change can be assigned to an issue, you can derive the scopes from the la
 
 To give you an orientation consider some examples of good commits.
 
-```
+```text
 feat!(UM): change the response for GET operation
 
 This commit introduces changes to the response format 
 of the User Management GET operation to adher to new OpenAPI specification 
 ```
 
-```
+```text
 release(client): v20.0.0
 ```
 
-```
+```text
 ci: update actions
 ```
