@@ -4,8 +4,13 @@ title: Profiling Metadata
 ---
 
 Currently we support automatic analysis of **5** different file types.
-The metadata is only populated by our automatic profiling and cannot be edited.
+Most of the metadata is only populated by our automatic profiling and cannot be edited.
 This is because we want to preserve the objective analysis by a computer system here.
+To start a profiling you can click the profiling button at the top of the details page.
+
+:::tip
+Depending on the resource, the profiling can take a while. Just come back a few minutes later.
+:::
 
 ## Text Files
 
