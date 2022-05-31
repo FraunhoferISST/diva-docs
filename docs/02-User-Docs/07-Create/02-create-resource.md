@@ -3,8 +3,6 @@ id: create-resource
 title: Create Resource
 ---
 
-# Create Resource
-
 Through the user interface, you can choose what type of resource you want to inventory in DIVA.
 Currently, DIVA offers the following types of resources:
 
@@ -13,7 +11,7 @@ Currently, DIVA offers the following types of resources:
   - [File Resource](#file-resource)
   - [DKSR Urban Pulse Sensor](#dksr-urban-pulse-sensor)
 
-![DIVA Create Resources](/img/screenshots/create/create_resources.png)
+![DIVA Create Resources](/diva_4.0.0/screenshots/create_resource.png)
 
 ## Generic Resource
 
@@ -25,7 +23,7 @@ Titles may be allocated more than once.
 After creating the resource, it is advisable to enrich it with further metadata.
 :::
 
-![DIVA Create Resource Generic](/img/screenshots/create/create_resources_generic.png)
+![DIVA Create Resource Generic](/diva_4.0.0/screenshots/create_resources_generic.png)
 
 ## File Resource
 
@@ -37,7 +35,7 @@ Any file type can be inventoried in DIVA.
 However, only certain types of files are automatically analyzed to extract further metadata.
 :::
 
-![DIVA Create Resource File](/img/screenshots/create/create_resources_file.png)
+![DIVA Create Resource File](/diva_4.0.0/screenshots/create_resources_file.png)
 
 ## DKSR Urban Pulse Sensor
 
@@ -45,4 +43,4 @@ This is a special importer to inventory sensors from an **Urban Pulse** into **D
 You need to provide the necessary data such as URL, username and password that **DIVA** can use to connect to the Urban Pulse.
 If you do not want to import all sensors but only specific ones, just add their `uuid` in the list of **specific sensors**.
 
-![DIVA Create Resource Urban Pulse Sensor](/img/screenshots/create/create_resources_up_sensor.png)
+![DIVA Create Resource Urban Pulse Sensor](/diva_4.0.0/screenshots/create_resources_up_sensor.png)

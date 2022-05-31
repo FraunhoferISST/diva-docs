@@ -26,7 +26,7 @@ Click on the green checkmark to confirm the change.
 If you want to change your email or password, you can click on the Keycloak link.
 You will be redirected to our trusted identity management page provided by Keycloak.
 
-![Keycloak edit data](/img/screenshots/keycloak/keycloak_edit.png)
+![Keycloak edit data](/diva_4.0.0/screenshots/keycloak_edit.png)
 
 ## ⚠️ Delete User
 

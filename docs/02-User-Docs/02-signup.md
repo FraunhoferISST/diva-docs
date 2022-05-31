@@ -22,8 +22,8 @@ Perform the following steps to access Keycloak and sign up:
 3. Enter your email address and password
 4. Click "Register" button
 
-![DIVA login](/img/screenshots/login.png)
-![DIVA login](/img/screenshots/keycloak/keycloak_register.png)
+![DIVA login](/diva_4.0.0/screenshots/login.png)
+![DIVA login](/diva_4.0.0/screenshots/keycloak_register.png)
 
 After successful registration you will be logged in automatically.
 
@@ -36,7 +36,7 @@ Perform the following steps to log in onto the DIVA application with your email 
 3. Enter your email and password
 4. Click "Login" button
 
-![DIVA login](/img/screenshots/keycloak/keycloak_signin.png)
+![DIVA login](/diva_4.0.0/screenshots/keycloak_signin.png)
 
 After successful login you will be automatically redirected to the [Home Page](/docs/User-Docs/home).
 
