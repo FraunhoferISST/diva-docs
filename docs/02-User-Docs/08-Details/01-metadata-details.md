@@ -9,5 +9,5 @@ Depending on the type of result, the detail page may differ.
 
 + [General Metadata](general-metadata)
 + [Data Network](datanetwork)
-+ [Asset Data Network](asset-data-network)
++ [Asset Data Network](asset-entities)
 + [Profiling Metadata](profiling-metadata)
