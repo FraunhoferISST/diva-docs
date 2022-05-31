@@ -9,7 +9,7 @@ All system components are containerized and have current images that are continu
 In this guide we will learn how to get DIVA running with `docker-compose`.
 
 :::tip
-Make sure to read the [prerequisites](../prerequisites) to know what you need to get started with Docker and Docker Compose.
+Make sure to read the [prerequisites](prerequisites) to know what you need to get started with Docker and Docker Compose.
 Also note that deployment with docker is not suitable for Production.
 Nonetheless, it is convenient for local development environment to quickly spin up most of the components like Kafka, Gateway and other services.
 :::
