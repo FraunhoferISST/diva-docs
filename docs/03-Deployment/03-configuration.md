@@ -3,8 +3,6 @@ id: configuration
 title: Configuration
 ---
 
-# Configuration
-
 When building DIVA we rely on established opens source solutions for creating a scalable and transparent architecture.
 We try to pick the best technologies like MongoDB, Elasticsearch or Kafka and others for communication of internal 
 components and persistent storage to focus on DIVA specific logic. Since we cannot know in which environments DIVA could 
@@ -64,7 +62,6 @@ KEYCLOAK_DB_PASSWORD=my_secure_password
 Make sure to use secure Keycloak and Postgres usernames and passwords passed through the ENV's!
 :::
 
-
 ### Realm
 
 The pre-configured realm is automatically loaded into DIVA Keycloak at startup and has a client for DIVA Web app.
@@ -97,7 +94,7 @@ If you change token settings in Keycloak, probably the adjustment in the API Gat
 to [Kong configuration](#kong-gateway).
 :::
 
-### Users management
+### Users Management
 
 DIVA uses Keycloak **only** as identity management and log in service. That means all users date except `email` and `password`
 are still managed in DIVA. DIVA users have additional fields like `username`, `jobTitle`, `company` etc. and a profile image.
@@ -167,8 +164,7 @@ to fetch the Keycloak public key and authenticate the user. It is important to n
 in Keycloak (e.g. signature algorithm), the provided token authentication may fail and you have to fix it on your own in your
 `my-production-config.yml` or create an issue and request the changes.
 
-
-## Web client
+## Web Client
 
 DIVA is a complex system with many services and different interfaces that drive the core functionality of the system.
 Operating the system requires a solid understanding of the underlying architecture and the technologies used.
@@ -227,4 +223,3 @@ You can read more about how to use environment variables in the [Docker guide](.
 Please note that for the client to successfully and securely connect to Keycloak in the production environment and authenticate
 in Kong, Kong and Keycloak must be configured correctly as well. At this point we refer the reader to the corresponding
 [Kong Gateway](#kong-gateway) and [Keycloak](#keycloak) guides.
-

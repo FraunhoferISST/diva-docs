@@ -3,8 +3,6 @@ id: docker
 title: Docker Deployment
 ---
 
-# Docker Deployment
-
 DIVA is built with a focus on scalability, modularization and expandability using a microservice architecture.
 Our team relies on the latest technologies for container-based development and deployment of the system using Docker.
 All system components are containerized and have current images that are continuously built in the CI pipeline.
@@ -38,7 +36,7 @@ If you plan to make DIVA available publicity through the deployment with Docker,
 Refer to the [Environment variables](#environment-variables) section.
 :::
 
-## Environment variables
+## Environment Variables
 
 First with the environment variables you have the possibility to propagate settings to the containers on run time.
 The ENV's are used to configure exposed ports, Kafka topics, database connections, credentials etc.
@@ -50,9 +48,9 @@ To avoid potential conflicts on deployment, most of the allocated ports can be c
 :::
 
 All available configuration possibilities are listed in the [`docker/.env.default`](https://github.com/FraunhoferISST/diva/blob/master/docker/.env.default) file.
-This ENV template is used by default to boot the system with `up_core.sh` script. To override default settings, create 
-a `.env` file in the `docker/` directory and copy the contents of `.env.default` to it. There you can adjust the deployment, 
-should change all passwords and usernames and e.g. change the port of the web application as follows:
+This ENV template is used by default to boot the system with `up_core.sh` script.
+To override default settings, create a `.env` file in the `docker/` directory and copy the contents of `.env.default` to it.
+There you can adjust the deployment, should change all passwords and usernames and e.g. change the port of the web application as follows:
 
 ```env
 WEB_CLIENT_PORT=90
@@ -62,26 +60,25 @@ In the development environment, the configuration in `.env.default` and other te
 However, in order to make DIVA "production-ready" in Docker, we need to do some tweaks. Just follow the configuration guides for
 [Keycloak](/docs/Development/Architecture/keycloak#configuration), [API Gateway](/docs/Development/Architecture/gateway#configuration) and [Web-Client](/docs/Development/Architecture/web-client#configuration), in that order.
 
-## Deployment with nginx reverse proxy
+## Deployment with Nginx Reverse Proxy
 
-As mentioned earlier, docker is not optimal for production deployment. However, it could be useful to quickly deliver to the world a 
-DIVA instance in an experimental environment. For this purpose, we provide an example reverse proxy configuration in 
-[`docker/proxy/`](https://github.com/FraunhoferISST/diva/blob/master/docker/proxy/) that allows 
-to easily expose DIVA with Docker Compose.
+As mentioned earlier, docker is not optimal for production deployment.
+However, it could be useful to quickly deliver to the world a DIVA instance in an experimental environment.
+For this purpose, we provide an example reverse proxy configuration in [`docker/proxy/`](https://github.com/FraunhoferISST/diva/blob/master/docker/proxy/) that allows to easily expose DIVA with Docker Compose.
 
-This simple nginx reverse proxy configuration serves as an example of how Diva could be exposed to the world. The proxy
-configuration in `nginx.example.conf` is minimalistic and **not** suitable for production!
+This simple nginx reverse proxy configuration serves as an example of how Diva could be exposed to the world.
+The proxy configuration in `nginx.example.conf` is minimalistic and **not** suitable for production!
 
 In general, the [Web client](/docs/Development/Architecture/web-client) application and the [API Gateway](/docs/Development/Architecture/gateway)
 should be accessible through the network behind the proxy.
-In addition, the client needs a running [Keycloak](/docs/Development/Architecture/keycloak) instance, which does not necessarily have to be delivered by the same 
-reverse proxy server. So the rule is that only 3 DIVA components must be accessible over the internet - Web Client, 
-Kong Gateway and Keycloak. Furthermore, for the Web-Client app the access to API Gateway and Keycloak should be configured 
-through the [environment variables](#environment-variables) on runtime.
+In addition, the client needs a running [Keycloak](/docs/Development/Architecture/keycloak) instance, which does not necessarily have to be delivered by the same reverse proxy server.
+So the rule is that only 3 DIVA components must be accessible over the internet - Web Client, Kong Gateway and Keycloak.
+Furthermore, for the Web-Client app the access to API Gateway and Keycloak should be configured through the [environment variables](#environment-variables) on runtime.
 
 In the following we will go through an example configuration, which must give a rough idea of how DIVA could be delivered with a secured reverse proxy server.
 To make things look more realistic, we will not be working with `localhost`. We will simply imagine the domain name `diva.com` and map it to `localhost`
 in `/etc/hosts` on our machine:
+
 ```shell
 127.0.0.1 localhost diva.com
 ```
@@ -138,15 +135,12 @@ in `/etc/hosts` on our machine:
    ```bash
    docker-compose up -d
    ```
-On your local machine with the default nginx config the Web client is available on `https://diva.com/`. Now just visit the URL,
-log in to the application through Keycloak, and make sure... that the authentication does not work! You will probably see something like:
 
-<!-- <div class="flex justify-center">
-    <img class="rounded-lg" :src="$withBase('/assets/proxy_client_error.png')" alt="authentication error">
-</div> -->
+On your local machine with the default nginx config the Web client is available on `https://diva.com/`.
+Now just visit the URL, log in to the application through Keycloak, and make sure that the authentication does not work!
+You will probably see something like:
 
-And this is fine. Since Kong and Keycloak are running in the container in Docker and we are working with `diva.com` fake domain, 
-which maps to `localhost`, Kong cannot communicate with Keycloak for authentication. In the real production environment this wouldn't be
-an issue, as Keycloak would be running on a real URL. Make sure to take a look at [API Gateway](/docs/Deployment/Configuration#kong-gateway),
-[Keycloak](/docs/Deployment/Configuration#keycloak) and [Web-client](/docs/Deployment/Configuration#web-client) configurations to better prepare
-DIVA for production.
+![DIVA Login Error](/diva_4.0.0/screenshots/proxy_client_error.png)
+
+And this is fine. Since Kong and Keycloak are running in the container in Docker and we are working with `diva.com` fake domain, which maps to `localhost`, Kong cannot communicate with Keycloak for authentication.
+In the real production environment this wouldn't be an issue, as Keycloak would be running on a real URL. Make sure to take a look at [API Gateway](/docs/Deployment/Configuration#kong-gateway), [Keycloak](/docs/Deployment/Configuration#keycloak) and [Web-client](/docs/Deployment/Configuration#web-client) configurations to better prepare DIVA for production.

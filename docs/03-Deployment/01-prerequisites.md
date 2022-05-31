@@ -3,8 +3,6 @@ id: prerequisites
 title: Prerequisites
 ---
 
-# Prerequisites
-
 DIVA can be deployed anywhere you can run containers, be it your laptop or cloud infrastructure.
 The following instructions are not mandatory, it should be possible to use other operating systems or software versions, but we can not guarantee a flawless experience.
 
@@ -12,7 +10,7 @@ The following instructions are not mandatory, it should be possible to use other
 
 The following is a list of requirements that must be met in order to work comfortably with all DIVA components during local development or deployment:
 
-+ Linux distribution (We recommend to use Ubuntu 18.04 or 20.04)
++ Linux distribution (We recommend to use Ubuntu 18.04, 20.04 or 22.04)
 + Docker 20.10.x
 + Docker Compose 1.28.x
 
@@ -23,11 +21,11 @@ On our development machines we run DIVA without any problems with the following 
 + 16GB RAM
 + 150GB SSD
 
-The production environment for DIVA must of course take into account a much higher volume of storage capacity requirements
+The production environment for DIVA must of course take into account a much higher volume of storage capacity, network and computing requirements.
 
-## Find latest release
+## Find latest Release
 
-All DIVA repositories are freely accessible on GitHub and can be cloned without authentication. Below is the list of existing repos:
+All DIVA repositories are freely accessible on GitHub and can be cloned without authentication. Below is the list of existing repositories:
 
 + [diva](https://github.com/FraunhoferISST/diva) - DIVA System Core containing all necessary components
 + [diva-docs](https://github.com/FraunhoferISST/diva-docs) - Repository for this documentation
@@ -35,7 +33,6 @@ All DIVA repositories are freely accessible on GitHub and can be cloned without 
 You can always find the latest Docker distribution under [releases](https://github.com/FraunhoferISST/diva/releases).
 Follow our [docker guide](docker) to  deploy DIVA.
 
-## Access to container registry
+## Access to Container Registry
 
-All docker images are continuously built in the CI 
-pipeline and publicly available to pull without authentication in GitHub container registry.
+All docker images are continuously built in the CI pipeline and publicly available to pull without authentication in GitHub container registry.
