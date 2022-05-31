@@ -46,7 +46,7 @@ In this way we can achieve a flat hierarchy, loose coupling and flexible relatio
 This in turn allows us to develop services with transparent API according to the single responsibility principle.
 You will learn more about our [REST API](rest-api) design rules in the corresponding section.
 
-:::caution Relations
+:::info Relations
 Note that even if the entities have relations, they remain (mostly) fully independent and can be managed on their own.
 The existence of one entity is not bound to another one.
 Sometimes you want this behavior.
@@ -55,14 +55,14 @@ it can be achieved by writing a business rule that e.g. deletes reviews of an de
 
 ### DCAT Compatibility
 
-:::caution DCAT 3
+:::info DCAT 3
 In this case, **compatible** means that a parser (that currently does not exist) can transform our internal metadata model into DCAT 3.
 It may be that DCAT allows a higher cardinality than the metadata model in DIVA.
 Nevertheless, DIVA would be compatible at this point.
 The reverse case may also occur. However, then we would not have compatibility.
 :::
 
-:::danger TBD
+:::caution
 Currently we do not have a complete overview of which fields are DCAT compatible.
 This is still to be done.
 :::
