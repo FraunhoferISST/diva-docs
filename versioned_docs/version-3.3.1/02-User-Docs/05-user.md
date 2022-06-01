@@ -9,7 +9,7 @@ To navigate to the page with your account settings, click on the user icon in th
 
 ![User Menu](/img/screenshots/user_menu.png)
 
-## Edit User Data
+## Change User Data
 
 The above step will take you to the overview of your personal data.
 You can log out or edit your information. To switch to the edit mode, click on the "Edit profile" button.
@@ -24,7 +24,7 @@ Click on "Save changes" to apply the modifications. The changes should be immedi
 
 ![User Edited](/img/screenshots/user_edited.png)
 
-## Edit User Credentials
+## Change User Credentials
 
 If you want to change your email or password, you can click on the Keycloak link.
 You will be redirected to our trusted identity management page provided by Keycloak.

@@ -213,13 +213,31 @@ html[data-theme="dark"] .navbar .navbar__link[href*=github]:before {
   background-image: url('/static/img/logos/github-brand-dark.svg');
 }
 
+@media screen and (max-width: 1600px) {
+  .hero.hero--primary .hero__image {
+    width: 40vw;
+  }
+}
+
+@media screen and (max-width: 1270px) {
+  .hero.hero--primary .hero__subtitle {
+    font-size: 2rem;
+    text-align: left;
+    max-width: inherit;
+  }
+
+  .hero.hero--primary .hero__image {
+    width: 45vw;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .hero.hero--primary .hero__subtitle {
     font-size: 2rem;
   }
 
-  .hero.hero--primary .container img {
-    height: 260px;
+  .hero.hero--primary .hero__container {
+    height: 35vh;
   }
 }
 
@@ -234,8 +252,19 @@ html[data-theme="dark"] .navbar .navbar__link[href*=github]:before {
     max-width: inherit !important;
   }
 
+  .buttons_src-pages-index-module {
+    display: flex;
+    align-items: center;
+    justify-content: center !important;
+    flex-wrap: wrap;
+  }
+
   .hero.hero--primary .container img {
     display: none;
+  }
+
+  .hero.hero--primary .hero__container {
+    height: auto;
   }
 }
 
@@ -246,6 +275,10 @@ html[data-theme="dark"] .navbar .navbar__link[href*=github]:before {
 
   .buttons_src-pages- {
     margin: 0 -30px;
+  }
+
+  .hero.hero--primary .hero__container {
+    height: auto;
   }
 }
 
