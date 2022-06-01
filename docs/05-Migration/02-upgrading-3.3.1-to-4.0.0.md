@@ -53,6 +53,8 @@ We merged the different entity collections (`resources`, `assets`, `users`, `rev
 * Please change the field name `created` to `createdAt`.
 * Please change the field name `modified` to `modifiedAt`.
 * Please change the field name `belongsTo` to `attributedTo`.
+* Please change the field name `fileCreated` to `fileCreatedAt`.
+* Please change the field name `fileModified` to `fileModifiedAt`.
 
 ## Upgrade MinIO Buckets
 
