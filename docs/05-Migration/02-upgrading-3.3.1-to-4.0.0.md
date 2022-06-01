@@ -7,24 +7,30 @@ title: Upgrading from 3.3.1 to 4.0.0
 Currently, there is no automatic migration from 3.3.1 to 4.0.0.
 This is due to the fact that an extremely large number of things have changed in the system.
 We think it is saver to do a migration by hand.
+Please contact us if anything is still missing in this guide.
+:::
+
+:::warning
+Please make BackUps from every Database.
+We recommend to work in a cloned environment.
+On success, link production to the cloned environment.
 :::
 
 ## First Steps
 
 * We recommend stopping a large part of the DIVA deployment first.
 * However, keep **MongoDB**, **Elasticsearch** and **MinIO** running.
-* make backups from these three databases
 
 ## Remove outdated Services
 
-* remove container and image for **resource-management**
-* remove container and image for **asset-management**
-* remove container and image for **review-management**
-* remove container and image for **user-management**
-* remove container and image for **dsc-adapter**
-* remove container and image for **schema-registry**
-* remove container and image for **resource-management-sink**
-* remove container and image for **service-management**
+* Remove container and image for **resource-management**
+* Remove container and image for **asset-management**
+* Remove container and image for **review-management**
+* Remove container and image for **user-management**
+* Remove container and image for **dsc-adapter**
+* Remove container and image for **schema-registry**
+* Remove container and image for **resource-management-sink**
+* Remove container and image for **service-management**
 
 ## Remove Kafka Volume
 
