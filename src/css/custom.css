@@ -253,10 +253,12 @@ html[data-theme="dark"] .navbar .navbar__link[href*=github]:before {
   }
 
   .buttons_src-pages-index-module {
+    display: -webkit-flex;
+    -webkit-flex-wrap: wrap;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center !important;
-    flex-wrap: wrap;
   }
 
   .hero.hero--primary .container img {
