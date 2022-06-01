@@ -76,5 +76,7 @@ You can delete the whole Elasticsearch Volume as we need to reindex the system.
 * Start Elasticsearch (using our docker-compose with settings)
 * To trigger a complete reindex we currently need a little hack:
   * Start our `entity-management` and wait till it is booted.
+  * Start our new `elasticsearch-connector`.
+  * Kafka needs to run.
   * Use the API to create a new JSON Schema (see `/api` when `entity-management` is running).
   * Now just delete that JSON Schema you created. This will trigger a complete reindex of the Elasticsearch data.
