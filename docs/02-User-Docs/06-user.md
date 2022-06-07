@@ -14,14 +14,14 @@ Click on your name above your mail address to go to your user details page.
 
 ![User](/diva_4.0.0/screenshots/user_details.png)
 
-## Edit User Data
+## Change User Data
 
 On the details page, you can edit your information.
 Just click on the field you want to edit.
 You can then adjust the data.
 Click on the green checkmark to confirm the change.
 
-## Edit User Credentials
+## Change User Credentials
 
 If you want to change your email or password, you can click on the Keycloak link.
 You will be redirected to our trusted identity management page provided by Keycloak.
