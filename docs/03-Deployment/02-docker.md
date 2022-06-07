@@ -79,7 +79,7 @@ In the following we will go through an example configuration, which must give a 
 To make things look more realistic, we will not be working with `localhost`. We will simply imagine the domain name `diva.com` and map it to `localhost`
 in `/etc/hosts` on our machine:
 
-```bashell
+```bash
 127.0.0.1 localhost diva.com
 ```
 
