@@ -56,7 +56,7 @@ For example, to upgrade from `v3.0.3` to `3.2.0`, you have to deploy `3.2.0` and
 
 Execute the migration service with the following:
 
-```sh
+```bash
 ./migrate.sh
 ```
 

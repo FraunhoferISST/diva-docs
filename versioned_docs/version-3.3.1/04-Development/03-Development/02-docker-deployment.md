@@ -91,7 +91,7 @@ normal configurations to build an image locally explicitly from source. The diff
 is that the services are executed in the context of the corresponding folder.
 Generally, the configuration can be overwritten as follows:
 
-```sh
+```bash
 docker-compose -f docker-compose.build.yml build resource-management
 ```
 
@@ -103,7 +103,7 @@ All microservices and their dependencies are defined in `docker-compose.yml`. Yo
 
 Simply run the command:
 
-```sh
+```bash
 docker-compose pull <service_name>
 # for example
 docker-compose pull user-management
@@ -113,7 +113,7 @@ docker-compose pull user-management
 
 To explicitly build the image from source, specify the path to the override `.yml` :
 
-```sh
+```bash
 docker-compose f docker-compose.yml -f docker-compose.override.yml build <service_name>
 # for example
 docker-compose f docker-compose.yml -f docker-compose.override.yml build user-management
@@ -123,7 +123,7 @@ docker-compose f docker-compose.yml -f docker-compose.override.yml build user-ma
 
 Push image to container registry:
 
-```sh
+```bash
 docker-compose push <service_name>
 # for example
 docker-compose push user-management
@@ -135,7 +135,7 @@ All FaaS are defined in `docker-compose.faas.yml`.
 
 **Pull image**
 
-```sh
+```bash
 docker-compose -f docker-compose.faas.yml pull <service_name>
 # for example
 docker-compose -f docker-compose.faas.yml pull text-keywords-extractor
@@ -145,7 +145,7 @@ docker-compose -f docker-compose.faas.yml pull text-keywords-extractor
 
 To explicitly build the image from source, specify the path to the build `.yml` :
 
-```sh
+```bash
 docker-compose -f docker-compose.faas.yml -f docker-compose.faas.build.yml build <service_name>
 # for example
 docker-compose -f docker-compose.faas.yml -f docker-compose.faas.build.yml build text-keywords-extractor
@@ -155,7 +155,7 @@ docker-compose -f docker-compose.faas.yml -f docker-compose.faas.build.yml build
 
 Push image to container registry:
 
-```sh
+```bash
 docker-compose -f docker-compose.faas.yml push text-keywords-extractor
 # for example
 docker-compose -f docker-compose.faas.yml push text-keywords-extractor
@@ -168,7 +168,7 @@ are specified in`docker-compose.airflow.yml`.
 
 **Pull image**
 
-```sh
+```bash
 docker pull ghcr.io/fraunhoferisst/diva/airflow:<version>
 ```
 
@@ -176,7 +176,7 @@ docker pull ghcr.io/fraunhoferisst/diva/airflow:<version>
 
 To explicitly build the image from source, specify the path to the build `.yml` :
 
-```sh
+```bash
 docker-compose -f docker-compose.airflow.build.yml build airflow
 ```
 
@@ -184,7 +184,7 @@ docker-compose -f docker-compose.airflow.build.yml build airflow
 
 Push image to container registry:
 
-```sh
+```bash
 docker-compose -f docker-compose.airflow.yml push airflow
 ```
 
@@ -193,12 +193,12 @@ docker-compose -f docker-compose.airflow.yml push airflow
 We have several images that serve as the basis for our FaaS. They are located in `./base-images`, so first
 change the working directory:
 
-```sh
+```bash
 cd base-images
 ```
 **Pull image**
 
-```sh
+```bash
 docker-compose pull <service_name>
 # for example
 docker-compose pull base-python3
@@ -206,7 +206,7 @@ docker-compose pull base-python3
 
 **Build image**
 
-```sh
+```bash
 docker-compose build <service_name>
 # for example
 docker-compose build base-python3
@@ -216,7 +216,7 @@ docker-compose build base-python3
 
 Push image to container registry:
 
-```sh
+```bash
 docker-compose push <service_name>
 # for example
 docker-compose push base-python3

@@ -82,7 +82,7 @@ through the [environment variables](#environment-variables) on runtime.
 In the following we will go through an example configuration, which must give a rough idea of how DIVA could be delivered with a secured reverse proxy server.
 To make things look more realistic, we will not be working with `localhost`. We will simply imagine the domain name `diva.com` and map it to `localhost`
 in `/etc/hosts` on our machine:
-```shell
+```bashell
 127.0.0.1 localhost diva.com
 ```
 
