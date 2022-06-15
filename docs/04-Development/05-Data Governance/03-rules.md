@@ -3,13 +3,17 @@ id: rules
 title: Rules
 ---
 
-# Rules
+DIVA provides an RESTful API that allows an administrator to create, update and delete so called business rules. Business rules can be used to define specific reactions to events on the platform. For example, they are used to delete reviews for entities when the entity to which the review refers is deleted.
 
-## Basic Behaviour
+:::tip
+Rules have many similarities with [policies](./policies), to better understand the following you can start with them first.
+:::
 
-## Structure
+Business rules are triggered by events that are available in a Kafka topic.
+A business rule has a specific data model that you need to consider.
+Here you can see an example:
 
-```js
+```json
 {
     id: "rule:uuid:8622b14e-6ad4-4083-8748-2d0ea462a7ee",
     title: "Delete review if corresponding entity was deleted",
@@ -49,7 +53,21 @@ title: Rules
         ],
       },
     ],
-},
+  }
 ```
 
+If you are using our RESTful API, you don't need to set an `id` when you create a new business rule.
+Please take care, that you set all the other fields.
+
+|field|description|
+|---|---|
+|title|give a good title so you can understand what this rule should do|
+|isActive|DIVA only considers rules if they are active (true)|
+|isEditable|Prevents the accidental deletion of a rule. WARNING: If you want to delete this rule if this is set to false, ask a system admin to delete this rule insode our MongoDB|
+|scope|Here you can specify what must be present in a kafka message. You can use RegEx on the right hand of the key-value pais.|
+|condition|Here you can specify additional conditions that must be met, before we execute actions. There are different kinds of conditions. You can check in mongoDB or neo4j. For more examples check our code.|
+|actions|This is what should be triggered if scope and conditions are met. Currently only HTTP requests can be executed. You can ignore specific HTTP status code that are fine to you.|
+
 ## Business Rules Executor
+
+The business-rules-executor is the service that processes the reactions defined by the rules and based on events in the Kafka topic. It also handles template substitution and query execution. Many of the specifics (e.g. re-caching of rules etc.) for this service are similar to the (business-decision-point)[./policies/#business-decision-point].
